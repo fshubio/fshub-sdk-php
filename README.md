@@ -4,7 +4,7 @@
 
 This repository contains the official PHP SDK client for the FsHub platform integration services.
 
-> This client library (SDK) is supported on PHP 8.0+
+> This client library (SDK) is supported on PHP 8.1+
 
 This SDK is available to download using Composer into your own projects, the package repository can be found
 here:
