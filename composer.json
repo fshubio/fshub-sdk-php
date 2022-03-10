@@ -32,7 +32,7 @@
   "autoload": {
     "psr-4": {
       "FsHub\\Sdk\\": "src/",
-      "FsHub\\Sdk\\Tests": "tests/"
+      "FsHub\\Sdk\\Tests\\": "tests/"
     }
   }
 }
