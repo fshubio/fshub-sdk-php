@@ -1,0 +1,1317 @@
+{
+  "data": [
+    {
+      "id": 169540,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "A320",
+        "icao_name": "Airbus A320",
+        "name": "Airbus A320 SL easyJet G",
+        "type": "AIRBUS",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 0,
+      "landing_rate": -258,
+      "distance": {
+        "nm": 663,
+        "km": 358
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 3550,
+      "departure": null,
+      "arrival": {
+        "icao": "LOWS",
+        "iata": "SZG",
+        "name": "Salzburg",
+        "time": "2016-10-10T14:56:22.000000Z",
+        "geo": {
+          "lat": 47.799298,
+          "lng": 13.000151
+        },
+        "hdg": {
+          "mag": 156,
+          "true": 158
+        },
+        "spd": {
+          "tas": 109
+        },
+        "fuel": 3680,
+        "pitch": -6,
+        "bank": 0,
+        "wind": {
+          "spd": 3,
+          "dir": 290
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/169540"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/LOWS"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/169540\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 172936,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "A320",
+        "icao_name": "Airbus A320",
+        "name": "Airbus A320 SL easyJet G",
+        "type": "AIRBUS",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 3795,
+      "landing_rate": -330,
+      "distance": {
+        "nm": 1070,
+        "km": 578
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 5334,
+      "departure": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2016-10-17T20:21:29.000000Z",
+        "geo": {
+          "lat": 51.884435,
+          "lng": 0.233965
+        },
+        "hdg": {
+          "mag": 225,
+          "true": 223
+        },
+        "spd": {
+          "tas": 152
+        },
+        "fuel": 9120,
+        "pitch": -10,
+        "bank": 0,
+        "wind": {
+          "spd": 7,
+          "dir": 230
+        }
+      },
+      "arrival": {
+        "icao": "LOWS",
+        "iata": "SZG",
+        "name": "Salzburg",
+        "time": "2016-10-17T21:50:24.000000Z",
+        "geo": {
+          "lat": 47.797585,
+          "lng": 13.001145
+        },
+        "hdg": {
+          "mag": 155,
+          "true": 157
+        },
+        "spd": {
+          "tas": 117
+        },
+        "fuel": 5325,
+        "pitch": -8,
+        "bank": 0,
+        "wind": {
+          "spd": 1,
+          "dir": 129
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/172936"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/LOWS"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/172936\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 313730,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "PC12",
+        "icao_name": "Pilatus PC-12",
+        "name": "CARENADO PC12 5",
+        "type": "Pilatus",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 80,
+      "landing_rate": -140,
+      "distance": {
+        "nm": 156,
+        "km": 84
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 1909,
+      "departure": {
+        "icao": "LOWI",
+        "iata": "INN",
+        "name": "Innsbruck",
+        "time": "2017-10-02T14:00:52.000000Z",
+        "geo": {
+          "lat": 47.260712,
+          "lng": 11.348338
+        },
+        "hdg": {
+          "mag": 259,
+          "true": 261
+        },
+        "spd": {
+          "tas": 94
+        },
+        "fuel": 1229,
+        "pitch": -8,
+        "bank": 0,
+        "wind": {
+          "spd": 10,
+          "dir": 300
+        }
+      },
+      "arrival": {
+        "icao": "LOWS",
+        "iata": "SZG",
+        "name": "Salzburg",
+        "time": "2017-10-02T14:32:42.000000Z",
+        "geo": {
+          "lat": 47.799398,
+          "lng": 13.000111
+        },
+        "hdg": {
+          "mag": 156,
+          "true": 158
+        },
+        "spd": {
+          "tas": 78
+        },
+        "fuel": 1149,
+        "pitch": -1,
+        "bank": 0,
+        "wind": {
+          "spd": 10,
+          "dir": 300
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/313730"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/LOWI"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/LOWS"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/313730\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 352003,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "B738",
+        "icao_name": "Boeing 737-800",
+        "name": "PMDG 737-800NGX THOMSON ",
+        "type": "BOEING",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 3950,
+      "landing_rate": -195,
+      "distance": {
+        "nm": 1070,
+        "km": 578
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 4868,
+      "departure": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2017-11-18T13:32:42.000000Z",
+        "geo": {
+          "lat": 51.886718,
+          "lng": 0.237461
+        },
+        "hdg": {
+          "mag": 45,
+          "true": 43
+        },
+        "spd": {
+          "tas": 157
+        },
+        "fuel": 20463,
+        "pitch": -9,
+        "bank": 0,
+        "wind": {
+          "spd": 5,
+          "dir": 270
+        }
+      },
+      "arrival": {
+        "icao": "LOWS",
+        "iata": "SZG",
+        "name": "Salzburg",
+        "time": "2017-11-18T14:53:51.000000Z",
+        "geo": {
+          "lat": 47.796319,
+          "lng": 13.001875
+        },
+        "hdg": {
+          "mag": 155,
+          "true": 157
+        },
+        "spd": {
+          "tas": 132
+        },
+        "fuel": 16513,
+        "pitch": -5,
+        "bank": 0,
+        "wind": {
+          "spd": 5,
+          "dir": 319
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/352003"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/LOWS"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/352003\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 364475,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "B738",
+        "icao_name": "Boeing 737-800",
+        "name": "PMDG 737-800NGX THOMSON ",
+        "type": "BOEING",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 4318,
+      "landing_rate": -117,
+      "distance": {
+        "nm": 578,
+        "km": 1071
+      },
+      "max": {
+        "alt": 35411,
+        "spd": 456
+      },
+      "time": 5547,
+      "departure": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2017-12-03T07:49:37.000000Z",
+        "geo": {
+          "lat": 51.888826,
+          "lng": 0.240717
+        },
+        "hdg": {
+          "mag": 45,
+          "true": 43
+        },
+        "spd": {
+          "tas": 166
+        },
+        "fuel": 20473,
+        "pitch": -11,
+        "bank": 0,
+        "wind": {
+          "spd": 5,
+          "dir": 305
+        }
+      },
+      "arrival": {
+        "icao": "LOWS",
+        "iata": "SZG",
+        "name": "Salzburg",
+        "time": "2017-12-03T09:22:05.000000Z",
+        "geo": {
+          "lat": 47.798049,
+          "lng": 13.000972
+        },
+        "hdg": {
+          "mag": 155,
+          "true": 157
+        },
+        "spd": {
+          "tas": 129
+        },
+        "fuel": 16155,
+        "pitch": -5,
+        "bank": 0,
+        "wind": {
+          "spd": 1,
+          "dir": 297
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/364475"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/LOWS"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/364475\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 371211,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "B738",
+        "icao_name": "Boeing 737-800",
+        "name": "PMDG 737-800NGX THOMSON ",
+        "type": "BOEING",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 4320,
+      "landing_rate": -64,
+      "distance": {
+        "nm": 587,
+        "km": 1087
+      },
+      "max": {
+        "alt": 34131,
+        "spd": 466
+      },
+      "time": 5691,
+      "departure": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2017-12-11T13:30:42.000000Z",
+        "geo": {
+          "lat": 51.887565,
+          "lng": 0.238774
+        },
+        "hdg": {
+          "mag": 45,
+          "true": 43
+        },
+        "spd": {
+          "tas": 163
+        },
+        "fuel": 20532,
+        "pitch": -8,
+        "bank": 0,
+        "wind": {
+          "spd": 8,
+          "dir": 10
+        }
+      },
+      "arrival": {
+        "icao": "LOWS",
+        "iata": "SZG",
+        "name": "Salzburg",
+        "time": "2017-12-11T15:05:34.000000Z",
+        "geo": {
+          "lat": 47.798011,
+          "lng": 13.001021
+        },
+        "hdg": {
+          "mag": 154,
+          "true": 156
+        },
+        "spd": {
+          "tas": 169
+        },
+        "fuel": 16212,
+        "pitch": -1,
+        "bank": 0,
+        "wind": {
+          "spd": 1,
+          "dir": 327
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/371211"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/LOWS"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/371211\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 1361027,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": {
+        "id": 1033,
+        "name": "easyAir",
+        "abbr": "EZA",
+        "owner": {
+          "id": 2,
+          "name": "Bobby Allen",
+          "bio": "Developer of FsHub and the LRM Client. Airbus and GA virtual pilot!",
+          "handles": {
+            "facebook": null,
+            "twitter": "@allebb87",
+            "website": null,
+            "vatsim": "1167426",
+            "ivao": "458562"
+          },
+          "base": "EGSS",
+          "locale": "EGSS",
+          "gps": {
+            "lat": 49.984254,
+            "lng": 11.092914
+          },
+          "timezone": "Europe\/London",
+          "country": "GB",
+          "is_online": true,
+          "online_at": "2022-03-09T11:18:59.042326Z",
+          "created_at": "2016-10-09T13:41:46.000000Z",
+          "links": [
+            {
+              "rel": "self",
+              "uri": "\/pilot\/2"
+            },
+            {
+              "rel": "statistics",
+              "uri": "\/pilot\/2\/stats"
+            },
+            {
+              "rel": "flights",
+              "uri": "\/pilot\/2\/flight"
+            },
+            {
+              "rel": "screenshots",
+              "uri": "\/pilot\/2\/screenshot"
+            }
+          ]
+        },
+        "handles": {
+          "facebook": null,
+          "twitter": null,
+          "website": null
+        },
+        "links": [
+          {
+            "rel": "self",
+            "uri": "\/airline\/1033"
+          },
+          {
+            "rel": "statistics",
+            "uri": "\/airline\/1033\/stats"
+          },
+          {
+            "rel": "pilots",
+            "uri": "\/airline\/1033\/pilot"
+          },
+          {
+            "rel": "flights",
+            "uri": "\/airline\/1033\/flight"
+          },
+          {
+            "rel": "screenshots",
+            "uri": "\/airline\/1033\/screenshot"
+          }
+        ]
+      },
+      "aircraft": {
+        "icao": "A320",
+        "icao_name": "Airbus A320",
+        "name": "FlightFactor A320 Ultima",
+        "type": "FlightFactor A320 Ultima",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 3535,
+      "landing_rate": -128,
+      "distance": {
+        "nm": 569,
+        "km": 1054
+      },
+      "max": {
+        "alt": 37384,
+        "spd": 470
+      },
+      "time": 5081,
+      "departure": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2020-04-14T15:21:08.000000Z",
+        "geo": {
+          "lat": 51.884267,
+          "lng": 0.233821
+        },
+        "hdg": {
+          "mag": 223,
+          "true": 223
+        },
+        "spd": {
+          "tas": 142
+        },
+        "fuel": 7189,
+        "pitch": -13,
+        "bank": 0,
+        "wind": {
+          "spd": 0,
+          "dir": 0
+        }
+      },
+      "arrival": {
+        "icao": "LOWS",
+        "iata": "SZG",
+        "name": "Salzburg",
+        "time": "2020-04-14T16:45:50.000000Z",
+        "geo": {
+          "lat": 47.799708,
+          "lng": 12.999907
+        },
+        "hdg": {
+          "mag": 153,
+          "true": 157
+        },
+        "spd": {
+          "tas": 130
+        },
+        "fuel": 3654,
+        "pitch": -7,
+        "bank": 0,
+        "wind": {
+          "spd": 3,
+          "dir": 340
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/1361027"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/LOWS"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/1361027\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 1619946,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": {
+        "id": 1033,
+        "name": "easyAir",
+        "abbr": "EZA",
+        "owner": {
+          "id": 2,
+          "name": "Bobby Allen",
+          "bio": "Developer of FsHub and the LRM Client. Airbus and GA virtual pilot!",
+          "handles": {
+            "facebook": null,
+            "twitter": "@allebb87",
+            "website": null,
+            "vatsim": "1167426",
+            "ivao": "458562"
+          },
+          "base": "EGSS",
+          "locale": "EGSS",
+          "gps": {
+            "lat": 49.984254,
+            "lng": 11.092914
+          },
+          "timezone": "Europe\/London",
+          "country": "GB",
+          "is_online": true,
+          "online_at": "2022-03-09T11:18:59.042326Z",
+          "created_at": "2016-10-09T13:41:46.000000Z",
+          "links": [
+            {
+              "rel": "self",
+              "uri": "\/pilot\/2"
+            },
+            {
+              "rel": "statistics",
+              "uri": "\/pilot\/2\/stats"
+            },
+            {
+              "rel": "flights",
+              "uri": "\/pilot\/2\/flight"
+            },
+            {
+              "rel": "screenshots",
+              "uri": "\/pilot\/2\/screenshot"
+            }
+          ]
+        },
+        "handles": {
+          "facebook": null,
+          "twitter": null,
+          "website": null
+        },
+        "links": [
+          {
+            "rel": "self",
+            "uri": "\/airline\/1033"
+          },
+          {
+            "rel": "statistics",
+            "uri": "\/airline\/1033\/stats"
+          },
+          {
+            "rel": "pilots",
+            "uri": "\/airline\/1033\/pilot"
+          },
+          {
+            "rel": "flights",
+            "uri": "\/airline\/1033\/flight"
+          },
+          {
+            "rel": "screenshots",
+            "uri": "\/airline\/1033\/screenshot"
+          }
+        ]
+      },
+      "aircraft": {
+        "icao": "A320",
+        "icao_name": "Airbus A320",
+        "name": "FlightFactor A320 Ultima",
+        "type": "FlightFactor A320 Ultima",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 5409,
+      "landing_rate": -226,
+      "distance": {
+        "nm": 952,
+        "km": 1762
+      },
+      "max": {
+        "alt": 33327,
+        "spd": 456
+      },
+      "time": 8314,
+      "departure": {
+        "icao": "EIDW",
+        "iata": "DUB",
+        "name": "Dublin Intl",
+        "time": "2021-05-02T15:04:02.000000Z",
+        "geo": {
+          "lat": 53.421354,
+          "lng": -6.270198
+        },
+        "hdg": {
+          "mag": 275,
+          "true": 272
+        },
+        "spd": {
+          "tas": 138
+        },
+        "fuel": 8831,
+        "pitch": -10,
+        "bank": 2,
+        "wind": {
+          "spd": 5,
+          "dir": 80
+        }
+      },
+      "arrival": {
+        "icao": "LOWS",
+        "iata": "SZG",
+        "name": "Salzburg",
+        "time": "2021-05-02T17:22:38.000000Z",
+        "geo": {
+          "lat": 47.799426,
+          "lng": 13.000081
+        },
+        "hdg": {
+          "mag": 153,
+          "true": 157
+        },
+        "spd": {
+          "tas": 123
+        },
+        "fuel": 3422,
+        "pitch": -8,
+        "bank": 0,
+        "wind": {
+          "spd": 2,
+          "dir": 343
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/1619946"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EIDW"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/LOWS"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/1619946\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 1697935,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": {
+        "id": 1033,
+        "name": "easyAir",
+        "abbr": "EZA",
+        "owner": {
+          "id": 2,
+          "name": "Bobby Allen",
+          "bio": "Developer of FsHub and the LRM Client. Airbus and GA virtual pilot!",
+          "handles": {
+            "facebook": null,
+            "twitter": "@allebb87",
+            "website": null,
+            "vatsim": "1167426",
+            "ivao": "458562"
+          },
+          "base": "EGSS",
+          "locale": "EGSS",
+          "gps": {
+            "lat": 49.984254,
+            "lng": 11.092914
+          },
+          "timezone": "Europe\/London",
+          "country": "GB",
+          "is_online": true,
+          "online_at": "2022-03-09T11:18:59.042326Z",
+          "created_at": "2016-10-09T13:41:46.000000Z",
+          "links": [
+            {
+              "rel": "self",
+              "uri": "\/pilot\/2"
+            },
+            {
+              "rel": "statistics",
+              "uri": "\/pilot\/2\/stats"
+            },
+            {
+              "rel": "flights",
+              "uri": "\/pilot\/2\/flight"
+            },
+            {
+              "rel": "screenshots",
+              "uri": "\/pilot\/2\/screenshot"
+            }
+          ]
+        },
+        "handles": {
+          "facebook": null,
+          "twitter": null,
+          "website": null
+        },
+        "links": [
+          {
+            "rel": "self",
+            "uri": "\/airline\/1033"
+          },
+          {
+            "rel": "statistics",
+            "uri": "\/airline\/1033\/stats"
+          },
+          {
+            "rel": "pilots",
+            "uri": "\/airline\/1033\/pilot"
+          },
+          {
+            "rel": "flights",
+            "uri": "\/airline\/1033\/flight"
+          },
+          {
+            "rel": "screenshots",
+            "uri": "\/airline\/1033\/screenshot"
+          }
+        ]
+      },
+      "aircraft": {
+        "icao": "A20N",
+        "icao_name": "Airbus A320 neo",
+        "name": "Airbus A320neo Easyjet N",
+        "type": "TT:ATCCOM.ATC_NAME AIRB",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": {
+        "callsign": "EZY973",
+        "cruise_lvl": 330,
+        "route": "EGSS CLN EVMEK FERDI BUPAL REMBA SPI PELIX MATUG AMASI UBIDU RUDUS MOVUM HAREM ELMOX PIGAB DKB LEVBU ANORA XERUM BURAM WLD OLETU EBEDA LOWS"
+      },
+      "fuel_used": 3236,
+      "landing_rate": -131,
+      "distance": {
+        "nm": 594,
+        "km": 1100
+      },
+      "max": {
+        "alt": 33217,
+        "spd": 461
+      },
+      "time": 5136,
+      "departure": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2021-09-12T14:56:20.000000Z",
+        "geo": {
+          "lat": 51.886972,
+          "lng": 0.237791
+        },
+        "hdg": {
+          "mag": 0,
+          "true": 225
+        },
+        "spd": {
+          "tas": 148
+        },
+        "fuel": 7917,
+        "pitch": -9,
+        "bank": 0,
+        "wind": {
+          "spd": 4,
+          "dir": 10
+        }
+      },
+      "arrival": {
+        "icao": "LOWS",
+        "iata": "SZG",
+        "name": "Salzburg",
+        "time": "2021-09-12T16:22:27.000000Z",
+        "geo": {
+          "lat": 47.792431,
+          "lng": 13.004449
+        },
+        "hdg": {
+          "mag": 155,
+          "true": 157
+        },
+        "spd": {
+          "tas": 113
+        },
+        "fuel": 4681,
+        "pitch": -5,
+        "bank": 0,
+        "wind": {
+          "spd": 5,
+          "dir": 338
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/1697935"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/LOWS"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/1697935\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 1753990,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "A20N",
+        "icao_name": "Airbus A320 neo",
+        "name": "Airbus A320 Finnair Rein",
+        "type": "TT:ATCCOM.ATC_NAME AIRB",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": {
+        "callsign": "AY379",
+        "cruise_lvl": 320,
+        "route": "EFRO SLU KETEL LAPIX UMSOM LENSO EDAXA RESNA TRS NILUG NIT OKR TOVKA LOWS"
+      },
+      "fuel_used": 6848,
+      "landing_rate": -98,
+      "distance": {
+        "nm": 1389,
+        "km": 2573
+      },
+      "max": {
+        "alt": 31711,
+        "spd": 477
+      },
+      "time": 12272,
+      "departure": {
+        "icao": "EFRO",
+        "iata": "RVN",
+        "name": "Rovaniemi",
+        "time": "2021-12-24T15:30:48.000000Z",
+        "geo": {
+          "lat": 66.5646,
+          "lng": 25.829908
+        },
+        "hdg": {
+          "mag": 0,
+          "true": 205
+        },
+        "spd": {
+          "tas": 143
+        },
+        "fuel": 12336,
+        "pitch": -8,
+        "bank": 1,
+        "wind": {
+          "spd": 11,
+          "dir": 10
+        }
+      },
+      "arrival": {
+        "icao": "LOWS",
+        "iata": "SZG",
+        "name": "Salzburg",
+        "time": "2021-12-24T18:55:50.000000Z",
+        "geo": {
+          "lat": 47.797412,
+          "lng": 13.001229
+        },
+        "hdg": {
+          "mag": 153,
+          "true": 157
+        },
+        "spd": {
+          "tas": 105
+        },
+        "fuel": 5488,
+        "pitch": -6,
+        "bank": 0,
+        "wind": {
+          "spd": 5,
+          "dir": 159
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/1753990"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EFRO"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/LOWS"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/1753990\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 1763162,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "A20N",
+        "icao_name": "Airbus A320 neo",
+        "name": "Airbus A320 Neo LRM - A3",
+        "type": "TT:ATCCOM.ATC_NAME AIRB",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": {
+        "callsign": "FSH2669",
+        "cruise_lvl": 290,
+        "route": "EDDH TOMKI CRABE GISAT VALAR IGL ALUTU GOMIG LOWS"
+      },
+      "fuel_used": 2184,
+      "landing_rate": -185,
+      "distance": {
+        "nm": 419,
+        "km": 777
+      },
+      "max": {
+        "alt": 27985,
+        "spd": 441
+      },
+      "time": 3793,
+      "departure": {
+        "icao": "EDDH",
+        "iata": "HAM",
+        "name": "Hamburg",
+        "time": "2022-01-08T11:08:50.000000Z",
+        "geo": {
+          "lat": 53.631556,
+          "lng": 9.990653
+        },
+        "hdg": {
+          "mag": 0,
+          "true": 226
+        },
+        "spd": {
+          "tas": 141
+        },
+        "fuel": 6431,
+        "pitch": -7,
+        "bank": 0,
+        "wind": {
+          "spd": 9,
+          "dir": 230
+        }
+      },
+      "arrival": {
+        "icao": "LOWS",
+        "iata": "SZG",
+        "name": "Salzburg",
+        "time": "2022-01-08T12:12:34.000000Z",
+        "geo": {
+          "lat": 47.794923,
+          "lng": 13.002943
+        },
+        "hdg": {
+          "mag": 158,
+          "true": 162
+        },
+        "spd": {
+          "tas": 103
+        },
+        "fuel": 4247,
+        "pitch": -5,
+        "bank": 0,
+        "wind": {
+          "spd": 9,
+          "dir": 260
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/1763162"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EDDH"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/LOWS"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/1763162\/screenshot"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "cursor": {
+      "current": 0,
+      "prev": 0,
+      "next": 1763162,
+      "count": 11
+    }
+  }
+}

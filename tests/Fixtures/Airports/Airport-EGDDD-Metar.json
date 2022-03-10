@@ -1,0 +1,7 @@
+{
+  "error": true,
+  "message": "Airport not found.",
+  "details": {
+    "icao": "EGDDD"
+  }
+}

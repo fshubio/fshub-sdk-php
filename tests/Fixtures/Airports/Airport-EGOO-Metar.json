@@ -1,0 +1,33 @@
+{
+  "data": {
+    "icao": "EGOO",
+    "iata": "",
+    "name": "Calton Moor Airfield",
+    "metar": {
+      "error": true,
+      "report": "No METAR information available for this airport."
+    },
+    "links": [
+      {
+        "rel": "self",
+        "uri": "\/airport\/EGOO\/metar"
+      },
+      {
+        "rel": "airport",
+        "uri": "\/airport\/EGOO"
+      },
+      {
+        "rel": "arrivals",
+        "uri": "\/airport\/EGOO\/arrivals"
+      },
+      {
+        "rel": "departures",
+        "uri": "\/airport\/EGOO\/departures"
+      },
+      {
+        "rel": "screenshots",
+        "uri": "\/airport\/EGOO\/screenshots"
+      }
+    ]
+  }
+}

@@ -1,0 +1,2466 @@
+{
+  "data": [
+    {
+      "id": 169324,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "A320",
+        "icao_name": "Airbus A320",
+        "name": "Airbus A320 IAE British ",
+        "type": "AIRBUS",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 3717,
+      "landing_rate": -151,
+      "distance": {
+        "nm": 910,
+        "km": 491
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 5718,
+      "departure": {
+        "icao": "LSGG",
+        "iata": "GVA",
+        "name": "Geneva",
+        "time": "2016-10-09T21:14:20.000000Z",
+        "geo": {
+          "lat": 46.237592,
+          "lng": 6.108025
+        },
+        "hdg": {
+          "mag": 43,
+          "true": 44
+        },
+        "spd": {
+          "tas": 154
+        },
+        "fuel": 6336,
+        "pitch": -9,
+        "bank": 0,
+        "wind": {
+          "spd": 6,
+          "dir": 9
+        }
+      },
+      "arrival": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2016-10-09T22:49:39.000000Z",
+        "geo": {
+          "lat": 51.884976,
+          "lng": 0.23501
+        },
+        "hdg": {
+          "mag": 44,
+          "true": 42
+        },
+        "spd": {
+          "tas": 103
+        },
+        "fuel": 2619,
+        "pitch": -7,
+        "bank": 0,
+        "wind": {
+          "spd": 5,
+          "dir": 20
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/169324"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/LSGG"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/169324\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 169540,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "A320",
+        "icao_name": "Airbus A320",
+        "name": "Airbus A320 SL easyJet G",
+        "type": "AIRBUS",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 0,
+      "landing_rate": -258,
+      "distance": {
+        "nm": 663,
+        "km": 358
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 3550,
+      "departure": null,
+      "arrival": {
+        "icao": "LOWS",
+        "iata": "SZG",
+        "name": "Salzburg",
+        "time": "2016-10-10T14:56:22.000000Z",
+        "geo": {
+          "lat": 47.799298,
+          "lng": 13.000151
+        },
+        "hdg": {
+          "mag": 156,
+          "true": 158
+        },
+        "spd": {
+          "tas": 109
+        },
+        "fuel": 3680,
+        "pitch": -6,
+        "bank": 0,
+        "wind": {
+          "spd": 3,
+          "dir": 290
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/169540"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/LOWS"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/169540\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 169580,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "A320",
+        "icao_name": "Airbus A320",
+        "name": "Airbus A320 SL easyJet G",
+        "type": "AIRBUS",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 4255,
+      "landing_rate": -341,
+      "distance": {
+        "nm": 1165,
+        "km": 629
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 6634,
+      "departure": {
+        "icao": "LOWS",
+        "iata": "SZG",
+        "name": "Salzburg",
+        "time": "2016-10-10T15:43:37.000000Z",
+        "geo": {
+          "lat": 47.792609,
+          "lng": 13.004384
+        },
+        "hdg": {
+          "mag": 335,
+          "true": 337
+        },
+        "spd": {
+          "tas": 157
+        },
+        "fuel": 7364,
+        "pitch": -6,
+        "bank": 0,
+        "wind": {
+          "spd": 3,
+          "dir": 292
+        }
+      },
+      "arrival": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2016-10-10T17:34:12.000000Z",
+        "geo": {
+          "lat": 51.879935,
+          "lng": 0.227591
+        },
+        "hdg": {
+          "mag": 44,
+          "true": 42
+        },
+        "spd": {
+          "tas": 103
+        },
+        "fuel": 3109,
+        "pitch": -5,
+        "bank": 0,
+        "wind": {
+          "spd": 7,
+          "dir": 12
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/169580"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/LOWS"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/169580\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 170089,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "BE36",
+        "icao_name": "Beechcraft Bonanza (36)",
+        "name": "Carenado A36 Bonanza Str",
+        "type": "Beechcraft",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 0,
+      "landing_rate": -186,
+      "distance": {
+        "nm": 1,
+        "km": 0
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 19,
+      "departure": null,
+      "arrival": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2016-10-11T20:22:41.000000Z",
+        "geo": {
+          "lat": 51.88339,
+          "lng": 0.232533
+        },
+        "hdg": {
+          "mag": 223,
+          "true": 221
+        },
+        "spd": {
+          "tas": 75
+        },
+        "fuel": 217,
+        "pitch": -2,
+        "bank": 0,
+        "wind": {
+          "spd": 7,
+          "dir": 60
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/170089"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/170089\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 170092,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "BE36",
+        "icao_name": "Beechcraft Bonanza (36)",
+        "name": "Carenado A36 Bonanza Str",
+        "type": "Beechcraft",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 4,
+      "landing_rate": -123,
+      "distance": {
+        "nm": 16,
+        "km": 8
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 364,
+      "departure": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2016-10-11T20:24:47.000000Z",
+        "geo": {
+          "lat": 51.878057,
+          "lng": 0.224594
+        },
+        "hdg": {
+          "mag": 220,
+          "true": 218
+        },
+        "spd": {
+          "tas": 65
+        },
+        "fuel": 217,
+        "pitch": -9,
+        "bank": 0,
+        "wind": {
+          "spd": 7,
+          "dir": 60
+        }
+      },
+      "arrival": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2016-10-11T20:30:52.000000Z",
+        "geo": {
+          "lat": 51.891385,
+          "lng": 0.244337
+        },
+        "hdg": {
+          "mag": 224,
+          "true": 222
+        },
+        "spd": {
+          "tas": 58
+        },
+        "fuel": 213,
+        "pitch": -4,
+        "bank": 0,
+        "wind": {
+          "spd": 7,
+          "dir": 60
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/170092"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/170092\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 170150,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "A319",
+        "icao_name": "Airbus A319",
+        "name": "Airbus A319 Thomson Airw",
+        "type": "AIRBUS",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 3985,
+      "landing_rate": -158,
+      "distance": {
+        "nm": 1080,
+        "km": 583
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 6086,
+      "departure": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2016-10-11T20:52:41.000000Z",
+        "geo": {
+          "lat": 51.885364,
+          "lng": 0.235379
+        },
+        "hdg": {
+          "mag": 46,
+          "true": 44
+        },
+        "spd": {
+          "tas": 150
+        },
+        "fuel": 7364,
+        "pitch": -7,
+        "bank": 0,
+        "wind": {
+          "spd": 6,
+          "dir": 60
+        }
+      },
+      "arrival": {
+        "icao": "LOWI",
+        "iata": "INN",
+        "name": "Innsbruck",
+        "time": "2016-10-11T22:34:08.000000Z",
+        "geo": {
+          "lat": 47.26077,
+          "lng": 11.34844
+        },
+        "hdg": {
+          "mag": 261,
+          "true": 263
+        },
+        "spd": {
+          "tas": 104
+        },
+        "fuel": 3379,
+        "pitch": -6,
+        "bank": 0,
+        "wind": {
+          "spd": 3,
+          "dir": 29
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/170150"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/LOWI"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/170150\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 170443,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "A319",
+        "icao_name": "Airbus A319",
+        "name": "Airbus A319 Thomson Airw",
+        "type": "AIRBUS",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 4063,
+      "landing_rate": -154,
+      "distance": {
+        "nm": 1051,
+        "km": 567
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 5904,
+      "departure": {
+        "icao": "LOWI",
+        "iata": "INN",
+        "name": "Innsbruck",
+        "time": "2016-10-12T17:06:06.000000Z",
+        "geo": {
+          "lat": 47.260787,
+          "lng": 11.349178
+        },
+        "hdg": {
+          "mag": 80,
+          "true": 82
+        },
+        "spd": {
+          "tas": 149
+        },
+        "fuel": 7391,
+        "pitch": -9,
+        "bank": 1,
+        "wind": {
+          "spd": 4,
+          "dir": 128
+        }
+      },
+      "arrival": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2016-10-12T18:44:42.000000Z",
+        "geo": {
+          "lat": 51.881438,
+          "lng": 0.229636
+        },
+        "hdg": {
+          "mag": 47,
+          "true": 45
+        },
+        "spd": {
+          "tas": 102
+        },
+        "fuel": 3328,
+        "pitch": -7,
+        "bank": 0,
+        "wind": {
+          "spd": 12,
+          "dir": 60
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/170443"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/LOWI"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/170443\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 170566,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "A319",
+        "icao_name": "Airbus A319",
+        "name": "Airbus A319 Thomson Airw",
+        "type": "AIRBUS",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 8346,
+      "landing_rate": -148,
+      "distance": {
+        "nm": 2807,
+        "km": 1516
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 12014,
+      "departure": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2016-10-12T19:42:17.000000Z",
+        "geo": {
+          "lat": 51.885718,
+          "lng": 0.235972
+        },
+        "hdg": {
+          "mag": 45,
+          "true": 43
+        },
+        "spd": {
+          "tas": 152
+        },
+        "fuel": 11875,
+        "pitch": -7,
+        "bank": 0,
+        "wind": {
+          "spd": 12,
+          "dir": 50
+        }
+      },
+      "arrival": {
+        "icao": "LPMA",
+        "iata": "FNC",
+        "name": "Madeira",
+        "time": "2016-10-12T23:02:32.000000Z",
+        "geo": {
+          "lat": 32.696022,
+          "lng": -16.776448
+        },
+        "hdg": {
+          "mag": 48,
+          "true": 42
+        },
+        "spd": {
+          "tas": 104
+        },
+        "fuel": 3529,
+        "pitch": -6,
+        "bank": 0,
+        "wind": {
+          "spd": 9,
+          "dir": 289
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/170566"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/LPMA"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/170566\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 170972,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "A319",
+        "icao_name": "Airbus A319",
+        "name": "Airbus A319 Thomson Airw",
+        "type": "AIRBUS",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 9488,
+      "landing_rate": -620,
+      "distance": {
+        "nm": 2927,
+        "km": 1580
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 13948,
+      "departure": {
+        "icao": "LPMA",
+        "iata": "FNC",
+        "name": "Madeira",
+        "time": "2016-10-13T19:44:41.000000Z",
+        "geo": {
+          "lat": 32.696442,
+          "lng": -16.776249
+        },
+        "hdg": {
+          "mag": 50,
+          "true": 44
+        },
+        "spd": {
+          "tas": 154
+        },
+        "fuel": 11878,
+        "pitch": -8,
+        "bank": 0,
+        "wind": {
+          "spd": 11,
+          "dir": 357
+        }
+      },
+      "arrival": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2016-10-13T23:37:09.000000Z",
+        "geo": {
+          "lat": 51.878252,
+          "lng": 0.22468
+        },
+        "hdg": {
+          "mag": 45,
+          "true": 43
+        },
+        "spd": {
+          "tas": 92
+        },
+        "fuel": 2390,
+        "pitch": -9,
+        "bank": 0,
+        "wind": {
+          "spd": 5,
+          "dir": 40
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/170972"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/LPMA"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/170972\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 171177,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "A320",
+        "icao_name": "Airbus A320",
+        "name": "Airbus A320 IAE British ",
+        "type": "AIRBUS",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 2499,
+      "landing_rate": -170,
+      "distance": {
+        "nm": 626,
+        "km": 338
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 3619,
+      "departure": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2016-10-14T11:33:25.000000Z",
+        "geo": {
+          "lat": 51.887266,
+          "lng": 0.238408
+        },
+        "hdg": {
+          "mag": 46,
+          "true": 44
+        },
+        "spd": {
+          "tas": 141
+        },
+        "fuel": 5363,
+        "pitch": -8,
+        "bank": 0,
+        "wind": {
+          "spd": 6,
+          "dir": 60
+        }
+      },
+      "arrival": {
+        "icao": "EGPF",
+        "iata": "GLA",
+        "name": "Glasgow",
+        "time": "2016-10-14T12:33:45.000000Z",
+        "geo": {
+          "lat": 55.871836,
+          "lng": -4.433397
+        },
+        "hdg": {
+          "mag": 53,
+          "true": 49
+        },
+        "spd": {
+          "tas": 109
+        },
+        "fuel": 2864,
+        "pitch": -5,
+        "bank": 0,
+        "wind": {
+          "spd": 10,
+          "dir": 80
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/171177"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/EGPF"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/171177\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 171222,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "A320",
+        "icao_name": "Airbus A320",
+        "name": "Airbus A320 IAE British ",
+        "type": "AIRBUS",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 0,
+      "landing_rate": -256,
+      "distance": {
+        "nm": 649,
+        "km": 351
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 4044,
+      "departure": {
+        "icao": "EGPF",
+        "iata": "GLA",
+        "name": "Glasgow",
+        "time": "2016-10-14T14:01:41.000000Z",
+        "geo": {
+          "lat": 55.879174,
+          "lng": -4.4196670000000005
+        },
+        "hdg": {
+          "mag": 51,
+          "true": 47
+        },
+        "spd": {
+          "tas": 146
+        },
+        "fuel": 2789,
+        "pitch": -9,
+        "bank": 0,
+        "wind": {
+          "spd": 9,
+          "dir": 80
+        }
+      },
+      "arrival": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2016-10-14T15:09:06.000000Z",
+        "geo": {
+          "lat": 51.881938,
+          "lng": 0.230474
+        },
+        "hdg": {
+          "mag": 47,
+          "true": 45
+        },
+        "spd": {
+          "tas": 119
+        },
+        "fuel": 2789,
+        "pitch": -7,
+        "bank": 0,
+        "wind": {
+          "spd": 8,
+          "dir": 80
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/171222"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EGPF"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/171222\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 171340,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "A320",
+        "icao_name": "Airbus A320",
+        "name": "Airbus A320 SL easyJet G",
+        "type": "AIRBUS",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 4461,
+      "landing_rate": -303,
+      "distance": {
+        "nm": 353,
+        "km": 190
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 5732,
+      "departure": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2016-10-14T19:11:06.000000Z",
+        "geo": {
+          "lat": 51.888539,
+          "lng": 0.240236
+        },
+        "hdg": {
+          "mag": 46,
+          "true": 44
+        },
+        "spd": {
+          "tas": 149
+        },
+        "fuel": 8933,
+        "pitch": -12,
+        "bank": 0,
+        "wind": {
+          "spd": 11,
+          "dir": 60
+        }
+      },
+      "arrival": {
+        "icao": "LOWI",
+        "iata": "INN",
+        "name": "Innsbruck",
+        "time": "2016-10-14T20:46:39.000000Z",
+        "geo": {
+          "lat": 47.259894,
+          "lng": 11.341015
+        },
+        "hdg": {
+          "mag": 83,
+          "true": 85
+        },
+        "spd": {
+          "tas": 139
+        },
+        "fuel": 4472,
+        "pitch": -3,
+        "bank": 0,
+        "wind": {
+          "spd": 12,
+          "dir": 13094
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/171340"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/LOWI"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/171340\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 171623,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "A320",
+        "icao_name": "Airbus A320",
+        "name": "Airbus A320 IAE British ",
+        "type": "AIRBUS",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 3323,
+      "landing_rate": -189,
+      "distance": {
+        "nm": 1016,
+        "km": 548
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 4946,
+      "departure": {
+        "icao": "LOWI",
+        "iata": "INN",
+        "name": "Innsbruck",
+        "time": "2016-10-15T10:16:12.000000Z",
+        "geo": {
+          "lat": 47.259047,
+          "lng": 11.333147
+        },
+        "hdg": {
+          "mag": 259,
+          "true": 261
+        },
+        "spd": {
+          "tas": 154
+        },
+        "fuel": 8959,
+        "pitch": -9,
+        "bank": 0,
+        "wind": {
+          "spd": 2,
+          "dir": 230
+        }
+      },
+      "arrival": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2016-10-15T11:38:39.000000Z",
+        "geo": {
+          "lat": 51.888887,
+          "lng": 0.240585
+        },
+        "hdg": {
+          "mag": 224,
+          "true": 222
+        },
+        "spd": {
+          "tas": 131
+        },
+        "fuel": 5636,
+        "pitch": -4,
+        "bank": 0,
+        "wind": {
+          "spd": 5,
+          "dir": 163
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/171623"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/LOWI"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/171623\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 171816,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "A320",
+        "icao_name": "Airbus A320",
+        "name": "Airbus A320 SL easyJet G",
+        "type": "AIRBUS",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 2949,
+      "landing_rate": -247,
+      "distance": {
+        "nm": 602,
+        "km": 325
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 3602,
+      "departure": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2016-10-15T18:58:09.000000Z",
+        "geo": {
+          "lat": 51.88603,
+          "lng": 0.236536
+        },
+        "hdg": {
+          "mag": 224,
+          "true": 222
+        },
+        "spd": {
+          "tas": 152
+        },
+        "fuel": 7501,
+        "pitch": -7,
+        "bank": 0,
+        "wind": {
+          "spd": 9,
+          "dir": 173
+        }
+      },
+      "arrival": {
+        "icao": "EGPH",
+        "iata": "EDI",
+        "name": "Edinburgh",
+        "time": "2016-10-15T19:58:12.000000Z",
+        "geo": {
+          "lat": 55.949072,
+          "lng": -3.3749219999999998
+        },
+        "hdg": {
+          "mag": 63,
+          "true": 59
+        },
+        "spd": {
+          "tas": 120
+        },
+        "fuel": 4552,
+        "pitch": -6,
+        "bank": 0,
+        "wind": {
+          "spd": 4,
+          "dir": 50
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/171816"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/EGPH"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/171816\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 172141,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "A320",
+        "icao_name": "Airbus A320",
+        "name": "Airbus A320 SL easyJet G",
+        "type": "AIRBUS",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 3100,
+      "landing_rate": -246,
+      "distance": {
+        "nm": 674,
+        "km": 364
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 4211,
+      "departure": {
+        "icao": "EGPH",
+        "iata": "EDI",
+        "name": "Edinburgh",
+        "time": "2016-10-16T10:49:18.000000Z",
+        "geo": {
+          "lat": 55.950947,
+          "lng": -3.369796
+        },
+        "hdg": {
+          "mag": 63,
+          "true": 59
+        },
+        "spd": {
+          "tas": 150
+        },
+        "fuel": 7577,
+        "pitch": -10,
+        "bank": 0,
+        "wind": {
+          "spd": 7,
+          "dir": 40
+        }
+      },
+      "arrival": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2016-10-16T11:59:30.000000Z",
+        "geo": {
+          "lat": 51.883413,
+          "lng": 0.232579
+        },
+        "hdg": {
+          "mag": 50,
+          "true": 48
+        },
+        "spd": {
+          "tas": 121
+        },
+        "fuel": 4477,
+        "pitch": -6,
+        "bank": 0,
+        "wind": {
+          "spd": 13,
+          "dir": 120
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/172141"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EGPH"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/172141\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 172255,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "A36",
+        "icao_name": null,
+        "name": "Carenado A36 Bonanza 60t",
+        "type": "Beechcraft",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 4,
+      "landing_rate": -190,
+      "distance": {
+        "nm": 19,
+        "km": 10
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 395,
+      "departure": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2016-10-16T17:16:28.000000Z",
+        "geo": {
+          "lat": 51.889802,
+          "lng": 0.242187
+        },
+        "hdg": {
+          "mag": 225,
+          "true": 223
+        },
+        "spd": {
+          "tas": 80
+        },
+        "fuel": 217,
+        "pitch": -2,
+        "bank": -1,
+        "wind": {
+          "spd": 12,
+          "dir": 190
+        }
+      },
+      "arrival": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2016-10-16T17:23:04.000000Z",
+        "geo": {
+          "lat": 51.879305,
+          "lng": 0.226345
+        },
+        "hdg": {
+          "mag": 222,
+          "true": 220
+        },
+        "spd": {
+          "tas": 51
+        },
+        "fuel": 213,
+        "pitch": -7,
+        "bank": 1,
+        "wind": {
+          "spd": 12,
+          "dir": 190
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/172255"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/172255\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 172257,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "A36",
+        "icao_name": null,
+        "name": "Carenado A36 Bonanza 60t",
+        "type": "Beechcraft",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 2,
+      "landing_rate": -96,
+      "distance": {
+        "nm": 6,
+        "km": 3
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 141,
+      "departure": {
+        "icao": "EGAA",
+        "iata": "BFS",
+        "name": "Aldergrove",
+        "time": "2016-10-16T17:27:57.000000Z",
+        "geo": {
+          "lat": 54.656267,
+          "lng": -6.220343
+        },
+        "hdg": {
+          "mag": 246,
+          "true": 241
+        },
+        "spd": {
+          "tas": 87
+        },
+        "fuel": 213,
+        "pitch": -2,
+        "bank": -4,
+        "wind": {
+          "spd": 12,
+          "dir": 179
+        }
+      },
+      "arrival": {
+        "icao": "EGAA",
+        "iata": "BFS",
+        "name": "Aldergrove",
+        "time": "2016-10-16T17:30:19.000000Z",
+        "geo": {
+          "lat": 54.655749,
+          "lng": -6.2225909999999995
+        },
+        "hdg": {
+          "mag": 80,
+          "true": 75
+        },
+        "spd": {
+          "tas": 63
+        },
+        "fuel": 211,
+        "pitch": -3,
+        "bank": -1,
+        "wind": {
+          "spd": 12,
+          "dir": 177
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/172257"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EGAA"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/EGAA"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/172257\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 172264,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "BE36",
+        "icao_name": "Beechcraft Bonanza (36)",
+        "name": "Carenado A36 Bonanza Str",
+        "type": "Beechcraft",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 1,
+      "landing_rate": -65,
+      "distance": {
+        "nm": 1055,
+        "km": 569
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 107,
+      "departure": {
+        "icao": "EGPH",
+        "iata": "EDI",
+        "name": "Edinburgh",
+        "time": "2016-10-16T17:46:42.000000Z",
+        "geo": {
+          "lat": 55.948839,
+          "lng": -3.375972
+        },
+        "hdg": {
+          "mag": 63,
+          "true": 59
+        },
+        "spd": {
+          "tas": 73
+        },
+        "fuel": 217,
+        "pitch": -4,
+        "bank": 2,
+        "wind": {
+          "spd": 8,
+          "dir": 110
+        }
+      },
+      "arrival": {
+        "icao": "EGPH",
+        "iata": "EDI",
+        "name": "Edinburgh",
+        "time": "2016-10-16T17:48:30.000000Z",
+        "geo": {
+          "lat": 55.952565,
+          "lng": -3.365252
+        },
+        "hdg": {
+          "mag": 238,
+          "true": 234
+        },
+        "spd": {
+          "tas": 60
+        },
+        "fuel": 216,
+        "pitch": -5,
+        "bank": 0,
+        "wind": {
+          "spd": 8,
+          "dir": 110
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/172264"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EGPH"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/EGPH"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/172264\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 172435,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "BE36",
+        "icao_name": "Beechcraft Bonanza (36)",
+        "name": "Carenado A36 Bonanza Str",
+        "type": "Beechcraft",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 0,
+      "landing_rate": -70,
+      "distance": {
+        "nm": 5,
+        "km": 3
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 99,
+      "departure": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2016-10-16T22:21:34.000000Z",
+        "geo": {
+          "lat": 51.880089,
+          "lng": 0.22988
+        },
+        "hdg": {
+          "mag": 65,
+          "true": 63
+        },
+        "spd": {
+          "tas": 102
+        },
+        "fuel": 217,
+        "pitch": -5,
+        "bank": 0,
+        "wind": {
+          "spd": 6,
+          "dir": 150
+        }
+      },
+      "arrival": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2016-10-16T22:23:14.000000Z",
+        "geo": {
+          "lat": 51.884509,
+          "lng": 0.234097
+        },
+        "hdg": {
+          "mag": 221,
+          "true": 219
+        },
+        "spd": {
+          "tas": 60
+        },
+        "fuel": 217,
+        "pitch": -7,
+        "bank": 0,
+        "wind": {
+          "spd": 6,
+          "dir": 150
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/172435"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/172435\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 172447,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "BE36",
+        "icao_name": "Beechcraft Bonanza (36)",
+        "name": "Carenado A36 Bonanza Str",
+        "type": "Beechcraft",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 0,
+      "landing_rate": -191,
+      "distance": {
+        "nm": 3,
+        "km": 1
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 94,
+      "departure": {
+        "icao": "EGJJ",
+        "iata": "JER",
+        "name": "Jersey",
+        "time": "2016-10-16T22:27:20.000000Z",
+        "geo": {
+          "lat": 49.204145,
+          "lng": -2.198766
+        },
+        "hdg": {
+          "mag": 244,
+          "true": 242
+        },
+        "spd": {
+          "tas": 63
+        },
+        "fuel": 217,
+        "pitch": -9,
+        "bank": -1,
+        "wind": {
+          "spd": 13,
+          "dir": 210
+        }
+      },
+      "arrival": {
+        "icao": "EGJJ",
+        "iata": "JER",
+        "name": "Jersey",
+        "time": "2016-10-16T22:28:55.000000Z",
+        "geo": {
+          "lat": 49.207973,
+          "lng": -2.196115
+        },
+        "hdg": {
+          "mag": 87,
+          "true": 85
+        },
+        "spd": {
+          "tas": 71
+        },
+        "fuel": 217,
+        "pitch": -3,
+        "bank": 0,
+        "wind": {
+          "spd": 13,
+          "dir": 210
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/172447"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EGJJ"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/EGJJ"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/172447\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 172460,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "BE36",
+        "icao_name": "Beechcraft Bonanza (36)",
+        "name": "Carenado A36 Bonanza Str",
+        "type": "Beechcraft",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 0,
+      "landing_rate": -14,
+      "distance": {
+        "nm": 10,
+        "km": 5
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 211,
+      "departure": {
+        "icao": "EGAA",
+        "iata": "BFS",
+        "name": "Aldergrove",
+        "time": "2016-10-16T22:33:08.000000Z",
+        "geo": {
+          "lat": 54.657495,
+          "lng": -6.215516
+        },
+        "hdg": {
+          "mag": 244,
+          "true": 239
+        },
+        "spd": {
+          "tas": 70
+        },
+        "fuel": 217,
+        "pitch": -7,
+        "bank": 0,
+        "wind": {
+          "spd": 8,
+          "dir": 124
+        }
+      },
+      "arrival": {
+        "icao": "EGAA",
+        "iata": "BFS",
+        "name": "Aldergrove",
+        "time": "2016-10-16T22:36:40.000000Z",
+        "geo": {
+          "lat": 54.654792,
+          "lng": -6.226282
+        },
+        "hdg": {
+          "mag": 77,
+          "true": 72
+        },
+        "spd": {
+          "tas": 66
+        },
+        "fuel": 217,
+        "pitch": -1,
+        "bank": 0,
+        "wind": {
+          "spd": 8,
+          "dir": 129
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/172460"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EGAA"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/EGAA"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/172460\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 172465,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "BE36",
+        "icao_name": "Beechcraft Bonanza (36)",
+        "name": "Carenado A36 Bonanza Str",
+        "type": "Beechcraft",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 0,
+      "landing_rate": -155,
+      "distance": {
+        "nm": 5,
+        "km": 3
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 130,
+      "departure": {
+        "icao": "EGPF",
+        "iata": "GLA",
+        "name": "Glasgow",
+        "time": "2016-10-16T22:41:11.000000Z",
+        "geo": {
+          "lat": 55.865959,
+          "lng": -4.439426
+        },
+        "hdg": {
+          "mag": 224,
+          "true": 220
+        },
+        "spd": {
+          "tas": 65
+        },
+        "fuel": 217,
+        "pitch": -7,
+        "bank": 1,
+        "wind": {
+          "spd": 10,
+          "dir": 120
+        }
+      },
+      "arrival": {
+        "icao": "EGPF",
+        "iata": "GLA",
+        "name": "Glasgow",
+        "time": "2016-10-16T22:43:22.000000Z",
+        "geo": {
+          "lat": 55.873137,
+          "lng": -4.431062
+        },
+        "hdg": {
+          "mag": 221,
+          "true": 217
+        },
+        "spd": {
+          "tas": 63
+        },
+        "fuel": 217,
+        "pitch": -4,
+        "bank": 0,
+        "wind": {
+          "spd": 10,
+          "dir": 120
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/172465"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EGPF"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/EGPF"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/172465\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 172473,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "BE36",
+        "icao_name": "Beechcraft Bonanza (36)",
+        "name": "Carenado A36 Bonanza Str",
+        "type": "Beechcraft",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 0,
+      "landing_rate": -206,
+      "distance": {
+        "nm": 14,
+        "km": 7
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 261,
+      "departure": {
+        "icao": "EGPH",
+        "iata": "EDI",
+        "name": "Edinburgh",
+        "time": "2016-10-16T22:47:59.000000Z",
+        "geo": {
+          "lat": 55.946378,
+          "lng": -3.377263
+        },
+        "hdg": {
+          "mag": 239,
+          "true": 235
+        },
+        "spd": {
+          "tas": 67
+        },
+        "fuel": 217,
+        "pitch": -7,
+        "bank": 0,
+        "wind": {
+          "spd": 6,
+          "dir": 120
+        }
+      },
+      "arrival": {
+        "icao": "EGPH",
+        "iata": "EDI",
+        "name": "Edinburgh",
+        "time": "2016-10-16T22:52:58.000000Z",
+        "geo": {
+          "lat": 55.94695,
+          "lng": -3.381968
+        },
+        "hdg": {
+          "mag": 239,
+          "true": 235
+        },
+        "spd": {
+          "tas": 85
+        },
+        "fuel": 217,
+        "pitch": -4,
+        "bank": 0,
+        "wind": {
+          "spd": 6,
+          "dir": 120
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/172473"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EGPH"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/EGPH"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/172473\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 172936,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "A320",
+        "icao_name": "Airbus A320",
+        "name": "Airbus A320 SL easyJet G",
+        "type": "AIRBUS",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 3795,
+      "landing_rate": -330,
+      "distance": {
+        "nm": 1070,
+        "km": 578
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 5334,
+      "departure": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2016-10-17T20:21:29.000000Z",
+        "geo": {
+          "lat": 51.884435,
+          "lng": 0.233965
+        },
+        "hdg": {
+          "mag": 225,
+          "true": 223
+        },
+        "spd": {
+          "tas": 152
+        },
+        "fuel": 9120,
+        "pitch": -10,
+        "bank": 0,
+        "wind": {
+          "spd": 7,
+          "dir": 230
+        }
+      },
+      "arrival": {
+        "icao": "LOWS",
+        "iata": "SZG",
+        "name": "Salzburg",
+        "time": "2016-10-17T21:50:24.000000Z",
+        "geo": {
+          "lat": 47.797585,
+          "lng": 13.001145
+        },
+        "hdg": {
+          "mag": 155,
+          "true": 157
+        },
+        "spd": {
+          "tas": 117
+        },
+        "fuel": 5325,
+        "pitch": -8,
+        "bank": 0,
+        "wind": {
+          "spd": 1,
+          "dir": 129
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/172936"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/LOWS"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/172936\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 173963,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "A320",
+        "icao_name": "Airbus A320",
+        "name": "Airbus A320 SL easyJet G",
+        "type": "AIRBUS",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 4507,
+      "landing_rate": -261,
+      "distance": {
+        "nm": 1142,
+        "km": 617
+      },
+      "max": {
+        "alt": null,
+        "spd": null
+      },
+      "time": 6353,
+      "departure": {
+        "icao": "LOWS",
+        "iata": "SZG",
+        "name": "Salzburg",
+        "time": "2016-10-19T19:46:50.000000Z",
+        "geo": {
+          "lat": 47.797011,
+          "lng": 13.001685
+        },
+        "hdg": {
+          "mag": 335,
+          "true": 337
+        },
+        "spd": {
+          "tas": 164
+        },
+        "fuel": 9137,
+        "pitch": -7,
+        "bank": 0,
+        "wind": {
+          "spd": 1,
+          "dir": 6
+        }
+      },
+      "arrival": {
+        "icao": "EGSS",
+        "iata": "STN",
+        "name": "Stansted",
+        "time": "2016-10-19T21:32:44.000000Z",
+        "geo": {
+          "lat": 51.885421,
+          "lng": 0.235432
+        },
+        "hdg": {
+          "mag": 41,
+          "true": 39
+        },
+        "spd": {
+          "tas": 122
+        },
+        "fuel": 4630,
+        "pitch": -5,
+        "bank": 0,
+        "wind": {
+          "spd": 8,
+          "dir": 326
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/173963"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/LOWS"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/EGSS"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/173963\/screenshot"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "cursor": {
+      "current": 0,
+      "prev": 0,
+      "next": 173963,
+      "count": 25
+    }
+  }
+}

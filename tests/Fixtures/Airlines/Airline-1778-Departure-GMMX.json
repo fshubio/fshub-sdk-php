@@ -1,0 +1,8 @@
+{
+  "error": true,
+  "message": "No records found",
+  "details": {
+    "airline": 1778,
+    "departure": "GMMX"
+  }
+}

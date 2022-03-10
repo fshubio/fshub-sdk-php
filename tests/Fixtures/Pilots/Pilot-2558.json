@@ -1,0 +1,43 @@
+{
+  "data": {
+    "id": 2558,
+    "name": "thunfischbaum",
+    "bio": "You might see this Bio Text update from time to time. If so, I'm just testing my Webhook integration. :D\r\nTesting the webhook rn. again.test test test\r\n\r\nAnother Test right here, 25. Feb.",
+    "handles": {
+      "facebook": null,
+      "twitter": "twitter.com\/thunfischbaum",
+      "website": null,
+      "vatsim": null,
+      "ivao": null
+    },
+    "base": "EDDH",
+    "locale": "EDDF",
+    "gps": {
+      "lat": 50.041543,
+      "lng": 8.564141
+    },
+    "timezone": "Europe\/Berlin",
+    "country": "DE",
+    "is_online": false,
+    "online_at": "2022-02-27T18:36:34.655048Z",
+    "created_at": "2019-12-15T16:53:46.000000Z",
+    "links": [
+      {
+        "rel": "self",
+        "uri": "\/pilot\/2558"
+      },
+      {
+        "rel": "statistics",
+        "uri": "\/pilot\/2558\/stats"
+      },
+      {
+        "rel": "flights",
+        "uri": "\/pilot\/2558\/flight"
+      },
+      {
+        "rel": "screenshots",
+        "uri": "\/pilot\/2558\/screenshot"
+      }
+    ]
+  }
+}

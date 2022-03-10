@@ -1,0 +1,1228 @@
+{
+  "data": [
+    {
+      "id": 1798840,
+      "user": {
+        "id": 1,
+        "name": "Anonymous"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "????",
+        "icao_name": "Unknown",
+        "name": "CRJ1000 Lufthansa",
+        "type": "BOMBARDIER",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 1314,
+      "landing_rate": -98,
+      "distance": {
+        "nm": 194,
+        "km": 360
+      },
+      "max": {
+        "alt": 22568,
+        "spd": 486
+      },
+      "time": 2161,
+      "departure": {
+        "icao": "EDDF",
+        "iata": "FRA",
+        "name": "Frankfurt-Main",
+        "time": "2022-02-26T15:55:46.000000Z",
+        "geo": {
+          "lat": 50.02238,
+          "lng": 8.526043
+        },
+        "hdg": {
+          "mag": 0,
+          "true": 176
+        },
+        "spd": {
+          "tas": 145
+        },
+        "fuel": 2208,
+        "pitch": -12,
+        "bank": 0,
+        "wind": {
+          "spd": 6,
+          "dir": 71
+        }
+      },
+      "arrival": {
+        "icao": "EDDM",
+        "iata": "MUC",
+        "name": "Munich",
+        "time": "2022-02-26T16:32:18.000000Z",
+        "geo": {
+          "lat": 48.36591,
+          "lng": 11.808618
+        },
+        "hdg": {
+          "mag": 261,
+          "true": 265
+        },
+        "spd": {
+          "tas": 107
+        },
+        "fuel": 894,
+        "pitch": -6,
+        "bank": 1,
+        "wind": {
+          "spd": 6,
+          "dir": 340
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/1798840"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/1"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EDDF"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/EDDM"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/1798840\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 1798841,
+      "user": {
+        "id": 1,
+        "name": "Anonymous"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "A320",
+        "icao_name": "Airbus A320",
+        "name": "FMGS A320-214",
+        "type": "Airbus",
+        "user_conf": {
+          "tail": "RUN010",
+          "icao": "LTAC"
+        }
+      },
+      "plan": null,
+      "fuel_used": 1007,
+      "landing_rate": -434,
+      "distance": {
+        "nm": 56,
+        "km": 104
+      },
+      "max": {
+        "alt": 4027,
+        "spd": 222
+      },
+      "time": 1108,
+      "departure": {
+        "icao": "LTBA",
+        "iata": "IST",
+        "name": "Ataturk",
+        "time": "2022-02-26T16:14:13.000000Z",
+        "geo": {
+          "lat": 40.971577,
+          "lng": 28.822648
+        },
+        "hdg": {
+          "mag": 0,
+          "true": 57
+        },
+        "spd": {
+          "tas": 146
+        },
+        "fuel": 5657,
+        "pitch": -8,
+        "bank": 0,
+        "wind": {
+          "spd": 10,
+          "dir": 40
+        }
+      },
+      "arrival": {
+        "icao": "LTFJ",
+        "iata": "SAW",
+        "name": "Sabiha Gokcen",
+        "time": "2022-02-26T16:32:41.000000Z",
+        "geo": {
+          "lat": 40.893903,
+          "lng": 29.296589
+        },
+        "hdg": {
+          "mag": 58,
+          "true": 62
+        },
+        "spd": {
+          "tas": 127
+        },
+        "fuel": 4650,
+        "pitch": -1,
+        "bank": 0,
+        "wind": {
+          "spd": 10,
+          "dir": 30
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/1798841"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/1"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/LTBA"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/LTFJ"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/1798841\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 1798842,
+      "user": {
+        "id": 3627,
+        "name": "John Gould"
+      },
+      "airline": {
+        "id": 213,
+        "name": "EAS - Europe and North America",
+        "abbr": "EAS",
+        "owner": {
+          "id": 1222,
+          "name": "Ian Tyrrell",
+          "bio": "Been flying with MS FS in various forms since the 1980's. Still looking at MSFS and maybe one day I will move across, when I can afford a PC that can run it. I have been running (with a lot of help) EAS since 2018.",
+          "handles": {
+            "facebook": null,
+            "twitter": null,
+            "website": null,
+            "vatsim": null,
+            "ivao": null
+          },
+          "base": "EGPF",
+          "locale": "EGPF",
+          "gps": {
+            "lat": 55.866419,
+            "lng": -4.426619
+          },
+          "timezone": "Europe\/Vilnius",
+          "country": "LT",
+          "is_online": false,
+          "online_at": "2022-03-03T18:29:29.968860Z",
+          "created_at": "2018-03-26T13:49:18.000000Z",
+          "links": [
+            {
+              "rel": "self",
+              "uri": "\/pilot\/1222"
+            },
+            {
+              "rel": "statistics",
+              "uri": "\/pilot\/1222\/stats"
+            },
+            {
+              "rel": "flights",
+              "uri": "\/pilot\/1222\/flight"
+            },
+            {
+              "rel": "screenshots",
+              "uri": "\/pilot\/1222\/screenshot"
+            }
+          ]
+        },
+        "handles": {
+          "facebook": "https:\/\/www.facebook.com\/easeucom\/",
+          "twitter": null,
+          "website": null
+        },
+        "links": [
+          {
+            "rel": "self",
+            "uri": "\/airline\/213"
+          },
+          {
+            "rel": "statistics",
+            "uri": "\/airline\/213\/stats"
+          },
+          {
+            "rel": "pilots",
+            "uri": "\/airline\/213\/pilot"
+          },
+          {
+            "rel": "flights",
+            "uri": "\/airline\/213\/flight"
+          },
+          {
+            "rel": "screenshots",
+            "uri": "\/airline\/213\/screenshot"
+          }
+        ]
+      },
+      "aircraft": {
+        "icao": "B752",
+        "icao_name": "Boeing 757-200",
+        "name": "QWSim Boeing 757-200F UP",
+        "type": "BOEING",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 0,
+      "landing_rate": -156,
+      "distance": {
+        "nm": 980,
+        "km": 1815
+      },
+      "max": {
+        "alt": 35004,
+        "spd": 506
+      },
+      "time": 7928,
+      "departure": {
+        "icao": "KPHX",
+        "iata": "PHX",
+        "name": "Phoenix Sky Harbor Intl",
+        "time": "2022-02-26T14:20:18.000000Z",
+        "geo": {
+          "lat": 33.428874,
+          "lng": -112.013575
+        },
+        "hdg": {
+          "mag": 0,
+          "true": 259
+        },
+        "spd": {
+          "tas": 157
+        },
+        "fuel": 31,
+        "pitch": -5,
+        "bank": 0,
+        "wind": {
+          "spd": 0,
+          "dir": 0
+        }
+      },
+      "arrival": {
+        "icao": "MMLO",
+        "iata": "BJX",
+        "name": "De Guanajuato Intl",
+        "time": "2022-02-26T16:32:57.000000Z",
+        "geo": {
+          "lat": 20.988015,
+          "lng": -101.475402
+        },
+        "hdg": {
+          "mag": 310,
+          "true": 316
+        },
+        "spd": {
+          "tas": 142
+        },
+        "fuel": 31,
+        "pitch": -5,
+        "bank": 0,
+        "wind": {
+          "spd": 0,
+          "dir": 0
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/1798842"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/3627"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/KPHX"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/MMLO"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/1798842\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 1798843,
+      "user": {
+        "id": 4736,
+        "name": "Green Hornet"
+      },
+      "airline": {
+        "id": 1552,
+        "name": "Emirates",
+        "abbr": "ETD",
+        "owner": {
+          "id": 4729,
+          "name": "Bronator",
+          "bio": null,
+          "handles": {
+            "facebook": null,
+            "twitter": null,
+            "website": null,
+            "vatsim": null,
+            "ivao": null
+          },
+          "base": "OMAA",
+          "locale": "YMML",
+          "gps": {
+            "lat": -37.674065,
+            "lng": 144.838845
+          },
+          "timezone": "Europe\/Berlin",
+          "country": "DE",
+          "is_online": false,
+          "online_at": "2022-02-25T13:58:18.155603Z",
+          "created_at": "2021-03-29T20:02:20.000000Z",
+          "links": [
+            {
+              "rel": "self",
+              "uri": "\/pilot\/4729"
+            },
+            {
+              "rel": "statistics",
+              "uri": "\/pilot\/4729\/stats"
+            },
+            {
+              "rel": "flights",
+              "uri": "\/pilot\/4729\/flight"
+            },
+            {
+              "rel": "screenshots",
+              "uri": "\/pilot\/4729\/screenshot"
+            }
+          ]
+        },
+        "handles": {
+          "facebook": null,
+          "twitter": null,
+          "website": null
+        },
+        "links": [
+          {
+            "rel": "self",
+            "uri": "\/airline\/1552"
+          },
+          {
+            "rel": "statistics",
+            "uri": "\/airline\/1552\/stats"
+          },
+          {
+            "rel": "pilots",
+            "uri": "\/airline\/1552\/pilot"
+          },
+          {
+            "rel": "flights",
+            "uri": "\/airline\/1552\/flight"
+          },
+          {
+            "rel": "screenshots",
+            "uri": "\/airline\/1552\/screenshot"
+          }
+        ]
+      },
+      "aircraft": {
+        "icao": "????",
+        "icao_name": "Unknown",
+        "name": "787 Green Air",
+        "type": "TT:ATCCOM.ATC_NAME BOEI",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 0,
+      "landing_rate": -60,
+      "distance": {
+        "nm": 1442,
+        "km": 2671
+      },
+      "max": {
+        "alt": 34501,
+        "spd": 516
+      },
+      "time": 13097,
+      "departure": {
+        "icao": "LTAI",
+        "iata": "AYT",
+        "name": "Antalya",
+        "time": "2022-02-26T12:56:26.000000Z",
+        "geo": {
+          "lat": 36.900261,
+          "lng": 30.790287
+        },
+        "hdg": {
+          "mag": 0,
+          "true": 181
+        },
+        "spd": {
+          "tas": 195
+        },
+        "fuel": 129856,
+        "pitch": -6,
+        "bank": 0,
+        "wind": {
+          "spd": 7,
+          "dir": 180
+        }
+      },
+      "arrival": {
+        "icao": "LEIB",
+        "iata": "IBZ",
+        "name": "Ibiza",
+        "time": "2022-02-26T16:35:15.000000Z",
+        "geo": {
+          "lat": 38.8711,
+          "lng": 1.369311
+        },
+        "hdg": {
+          "mag": 61,
+          "true": 62
+        },
+        "spd": {
+          "tas": 132
+        },
+        "fuel": 129856,
+        "pitch": -4,
+        "bank": 0,
+        "wind": {
+          "spd": 10,
+          "dir": 91
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/1798843"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/4736"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/LTAI"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/LEIB"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/1798843\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 1798844,
+      "user": {
+        "id": 1,
+        "name": "Anonymous"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "????",
+        "icao_name": "Unknown",
+        "name": "FWB Austrian OE-LBU",
+        "type": "TT:ATCCOM.ATC_NAME AIRB",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 0,
+      "landing_rate": -185,
+      "distance": {
+        "nm": 374,
+        "km": 693
+      },
+      "max": {
+        "alt": 32896,
+        "spd": 457
+      },
+      "time": 3703,
+      "departure": {
+        "icao": "LOWW",
+        "iata": "VIE",
+        "name": "Schwechat",
+        "time": "2022-02-26T15:34:38.000000Z",
+        "geo": {
+          "lat": 48.114266,
+          "lng": 16.559568
+        },
+        "hdg": {
+          "mag": 0,
+          "true": 293
+        },
+        "spd": {
+          "tas": 150
+        },
+        "fuel": 0,
+        "pitch": -9,
+        "bank": 0,
+        "wind": {
+          "spd": 11,
+          "dir": 0
+        }
+      },
+      "arrival": {
+        "icao": "EDDF",
+        "iata": "FRA",
+        "name": "Frankfurt-Main",
+        "time": "2022-02-26T16:36:23.000000Z",
+        "geo": {
+          "lat": 50.029066,
+          "lng": 8.54053
+        },
+        "hdg": {
+          "mag": 65,
+          "true": 68
+        },
+        "spd": {
+          "tas": 123
+        },
+        "fuel": 0,
+        "pitch": -4,
+        "bank": -1,
+        "wind": {
+          "spd": 4,
+          "dir": 60
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/1798844"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/1"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/LOWW"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/EDDF"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/1798844\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 1798845,
+      "user": {
+        "id": 870,
+        "name": "Dragonflight"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "B738",
+        "icao_name": "Boeing 737-800",
+        "name": "B737-800X New Lufthansa",
+        "type": "B737-800X New Lufthansa",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 6278,
+      "landing_rate": -164,
+      "distance": {
+        "nm": 1055,
+        "km": 1953
+      },
+      "max": {
+        "alt": 36412,
+        "spd": 450
+      },
+      "time": 9475,
+      "departure": {
+        "icao": "LEMG",
+        "iata": "AGP",
+        "name": "Malaga",
+        "time": "2022-02-26T14:00:31.000000Z",
+        "geo": {
+          "lat": 36.676238,
+          "lng": -4.500979
+        },
+        "hdg": {
+          "mag": 0,
+          "true": 132
+        },
+        "spd": {
+          "tas": 162
+        },
+        "fuel": 9485,
+        "pitch": -8,
+        "bank": -3,
+        "wind": {
+          "spd": 14,
+          "dir": 109
+        }
+      },
+      "arrival": {
+        "icao": "EDDS",
+        "iata": "STR",
+        "name": "Stuttgart",
+        "time": "2022-02-26T16:38:57.000000Z",
+        "geo": {
+          "lat": 48.68824,
+          "lng": 9.213394
+        },
+        "hdg": {
+          "mag": 71,
+          "true": 74
+        },
+        "spd": {
+          "tas": 141
+        },
+        "fuel": 3207,
+        "pitch": -1,
+        "bank": 0,
+        "wind": {
+          "spd": 5,
+          "dir": 90
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/1798845"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/870"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/LEMG"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/EDDS"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/1798845\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 1798846,
+      "user": {
+        "id": 1,
+        "name": "Anonymous"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "DA40",
+        "icao_name": "Diamond Star",
+        "name": "DA40-NG Red",
+        "type": "TT:ATCCOM.ATC_NAME DIAM",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 4,
+      "landing_rate": -84,
+      "distance": {
+        "nm": 36,
+        "km": 68
+      },
+      "max": {
+        "alt": 1386,
+        "spd": 117
+      },
+      "time": 1304,
+      "departure": {
+        "icao": "EHTX",
+        "iata": "",
+        "name": "Texel",
+        "time": "2022-02-26T16:17:26.000000Z",
+        "geo": {
+          "lat": 53.116215,
+          "lng": 4.832766
+        },
+        "hdg": {
+          "mag": 0,
+          "true": 217
+        },
+        "spd": {
+          "tas": 76
+        },
+        "fuel": 37,
+        "pitch": -4,
+        "bank": -3,
+        "wind": {
+          "spd": 9,
+          "dir": 149
+        }
+      },
+      "arrival": {
+        "icao": "EHTX",
+        "iata": "",
+        "name": "Texel",
+        "time": "2022-02-26T16:39:11.000000Z",
+        "geo": {
+          "lat": 53.118197,
+          "lng": 4.834358
+        },
+        "hdg": {
+          "mag": 208,
+          "true": 210
+        },
+        "spd": {
+          "tas": 60
+        },
+        "fuel": 33,
+        "pitch": -6,
+        "bank": 0,
+        "wind": {
+          "spd": 9,
+          "dir": 151
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/1798846"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/1"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EHTX"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/EHTX"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/1798846\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 1798847,
+      "user": {
+        "id": 1,
+        "name": "Anonymous"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "B738",
+        "icao_name": "Boeing 737-800",
+        "name": "B737-800X TUIfly D-ATYA",
+        "type": "B737-800X TUIfly D-ATYA",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 3863,
+      "landing_rate": -80,
+      "distance": {
+        "nm": 527,
+        "km": 976
+      },
+      "max": {
+        "alt": 41479,
+        "spd": 458
+      },
+      "time": 5289,
+      "departure": {
+        "icao": "EDDF",
+        "iata": "FRA",
+        "name": "Frankfurt-Main",
+        "time": "2022-02-26T15:11:03.000000Z",
+        "geo": {
+          "lat": 50.038822,
+          "lng": 8.560574
+        },
+        "hdg": {
+          "mag": 0,
+          "true": 66
+        },
+        "spd": {
+          "tas": 150
+        },
+        "fuel": 6296,
+        "pitch": -8,
+        "bank": 1,
+        "wind": {
+          "spd": 4,
+          "dir": 72
+        }
+      },
+      "arrival": {
+        "icao": "LDZD",
+        "iata": "ZAD",
+        "name": "Zemunik",
+        "time": "2022-02-26T16:39:42.000000Z",
+        "geo": {
+          "lat": 44.110141,
+          "lng": 15.344009
+        },
+        "hdg": {
+          "mag": 126,
+          "true": 130
+        },
+        "spd": {
+          "tas": 135
+        },
+        "fuel": 2433,
+        "pitch": -1,
+        "bank": -1,
+        "wind": {
+          "spd": 15,
+          "dir": 59
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/1798847"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/1"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EDDF"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/LDZD"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/1798847\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 1798848,
+      "user": {
+        "id": 6899,
+        "name": "Alex P. Keaton"
+      },
+      "airline": null,
+      "aircraft": {
+        "icao": "????",
+        "icao_name": "Unknown",
+        "name": "BlueStar_LU738",
+        "type": "BlueStar_LU738",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 0,
+      "landing_rate": -34,
+      "distance": {
+        "nm": 14,
+        "km": 25
+      },
+      "max": {
+        "alt": 12538,
+        "spd": 194
+      },
+      "time": 312,
+      "departure": {
+        "icao": "VQPR",
+        "iata": "PBH",
+        "name": "Paro",
+        "time": "2022-02-26T16:35:10.000000Z",
+        "geo": {
+          "lat": 27.397121,
+          "lng": 89.428528
+        },
+        "hdg": {
+          "mag": 0,
+          "true": 150
+        },
+        "spd": {
+          "tas": 167
+        },
+        "fuel": 5188,
+        "pitch": -7,
+        "bank": 0,
+        "wind": {
+          "spd": 4,
+          "dir": 89
+        }
+      },
+      "arrival": {
+        "icao": "VQPR",
+        "iata": "PBH",
+        "name": "Paro",
+        "time": "2022-02-26T16:40:53.000000Z",
+        "geo": {
+          "lat": 27.402458,
+          "lng": 89.425137
+        },
+        "hdg": {
+          "mag": 330,
+          "true": 330
+        },
+        "spd": {
+          "tas": 140
+        },
+        "fuel": 5188,
+        "pitch": 0,
+        "bank": 0,
+        "wind": {
+          "spd": 0,
+          "dir": 0
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/1798848"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/6899"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/VQPR"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/VQPR"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/1798848\/screenshot"
+        }
+      ]
+    },
+    {
+      "id": 1798849,
+      "user": {
+        "id": 3430,
+        "name": "Chris"
+      },
+      "airline": {
+        "id": 1134,
+        "name": "Eurolux-va",
+        "abbr": "ELX",
+        "owner": {
+          "id": 3419,
+          "name": "Dudusax",
+          "bio": null,
+          "handles": {
+            "facebook": "dudusax",
+            "twitter": null,
+            "website": null,
+            "vatsim": null,
+            "ivao": "470489"
+          },
+          "base": "LFJL",
+          "locale": "LFPG",
+          "gps": {
+            "lat": 48.995501,
+            "lng": 2.589632
+          },
+          "timezone": "Europe\/Paris",
+          "country": "FR",
+          "is_online": false,
+          "online_at": "2022-03-02T17:10:06.166898Z",
+          "created_at": "2020-05-29T13:21:25.000000Z",
+          "links": [
+            {
+              "rel": "self",
+              "uri": "\/pilot\/3419"
+            },
+            {
+              "rel": "statistics",
+              "uri": "\/pilot\/3419\/stats"
+            },
+            {
+              "rel": "flights",
+              "uri": "\/pilot\/3419\/flight"
+            },
+            {
+              "rel": "screenshots",
+              "uri": "\/pilot\/3419\/screenshot"
+            }
+          ]
+        },
+        "handles": {
+          "facebook": null,
+          "twitter": null,
+          "website": "https:\/\/dudusax.wixsite.com\/eurolux-va"
+        },
+        "links": [
+          {
+            "rel": "self",
+            "uri": "\/airline\/1134"
+          },
+          {
+            "rel": "statistics",
+            "uri": "\/airline\/1134\/stats"
+          },
+          {
+            "rel": "pilots",
+            "uri": "\/airline\/1134\/pilot"
+          },
+          {
+            "rel": "flights",
+            "uri": "\/airline\/1134\/flight"
+          },
+          {
+            "rel": "screenshots",
+            "uri": "\/airline\/1134\/screenshot"
+          }
+        ]
+      },
+      "aircraft": {
+        "icao": "????",
+        "icao_name": "Unknown",
+        "name": "NextGen EMB-110P1 Luftha",
+        "type": "TT:ATCCOM.ATC_NAME EMBR",
+        "user_conf": {
+          "tail": "",
+          "icao": ""
+        }
+      },
+      "plan": null,
+      "fuel_used": 385,
+      "landing_rate": -158,
+      "distance": {
+        "nm": 260,
+        "km": 481
+      },
+      "max": {
+        "alt": 18812,
+        "spd": 274
+      },
+      "time": 3945,
+      "departure": {
+        "icao": "LFLB",
+        "iata": "CMF",
+        "name": "Aix-les-Bains",
+        "time": "2022-02-26T15:35:26.000000Z",
+        "geo": {
+          "lat": 45.637188,
+          "lng": 5.8803
+        },
+        "hdg": {
+          "mag": 0,
+          "true": 355
+        },
+        "spd": {
+          "tas": 115
+        },
+        "fuel": 665,
+        "pitch": -4,
+        "bank": -1,
+        "wind": {
+          "spd": 8,
+          "dir": 340
+        }
+      },
+      "arrival": {
+        "icao": "LFMN",
+        "iata": "NCE",
+        "name": "Nice-Cote dAzur",
+        "time": "2022-02-26T16:41:41.000000Z",
+        "geo": {
+          "lat": 43.667515,
+          "lng": 7.225682
+        },
+        "hdg": {
+          "mag": 222,
+          "true": 225
+        },
+        "spd": {
+          "tas": 80
+        },
+        "fuel": 280,
+        "pitch": -1,
+        "bank": 0,
+        "wind": {
+          "spd": 10,
+          "dir": 209
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/1798849"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/3430"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/LFLB"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/LFMN"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/1798849\/screenshot"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "cursor": {
+      "current": 1798839,
+      "prev": 0,
+      "next": 1798849,
+      "count": 10
+    }
+  }
+}

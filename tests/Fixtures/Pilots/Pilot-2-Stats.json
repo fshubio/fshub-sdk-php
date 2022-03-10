@@ -1,0 +1,35 @@
+{
+  "data": {
+    "id": 2,
+    "all_time": {
+      "total_flights": 536,
+      "total_hours": 572.7,
+      "total_distance": 215426,
+      "average_landing": -140
+    },
+    "month": {
+      "total_flights": 39,
+      "total_hours": 56.2,
+      "total_distance": 21122,
+      "average_landing": -159
+    },
+    "links": [
+      {
+        "rel": "self",
+        "uri": "\/pilot\/2\/stats"
+      },
+      {
+        "rel": "pilot",
+        "uri": "\/pilot\/2"
+      },
+      {
+        "rel": "flights",
+        "uri": "\/pilot\/2\/flight"
+      },
+      {
+        "rel": "screenshots",
+        "uri": "\/pilot\/2\/screenshot"
+      }
+    ]
+  }
+}

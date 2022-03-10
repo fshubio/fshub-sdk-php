@@ -1,0 +1,33 @@
+{
+  "data": {
+    "icao": "EGSS",
+    "iata": "STN",
+    "name": "Stansted",
+    "metar": {
+      "error": false,
+      "report": "EGSS 061220Z AUTO 06015KT 9999 BKN039 OVC045 06\/00 Q1030"
+    },
+    "links": [
+      {
+        "rel": "self",
+        "uri": "\/airport\/EGSS\/metar"
+      },
+      {
+        "rel": "airport",
+        "uri": "\/airport\/EGSS"
+      },
+      {
+        "rel": "arrivals",
+        "uri": "\/airport\/EGSS\/arrivals"
+      },
+      {
+        "rel": "departures",
+        "uri": "\/airport\/EGSS\/departures"
+      },
+      {
+        "rel": "screenshots",
+        "uri": "\/airport\/EGSS\/screenshots"
+      }
+    ]
+  }
+}

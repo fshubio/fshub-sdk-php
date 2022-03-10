@@ -1,0 +1,84 @@
+{
+  "data": {
+    "icao": "EGSS",
+    "iata": "STN",
+    "name": "Stansted",
+    "locale": {
+      "city": "London",
+      "state": null,
+      "county": "United Kingdom"
+    },
+    "geo": {
+      "lat": 51.884998,
+      "lng": 0.235
+    },
+    "alt": 348,
+    "mag_var": -3,
+    "frequencies": {
+      "atis": "127.170",
+      "cd": null,
+      "gnd": "121.720",
+      "tower": "123.800",
+      "unicom": null,
+      "multicom": null,
+      "app": "120.620",
+      "dep": "126.950"
+    },
+    "runways": [
+      {
+        "name": "04",
+        "type": "Asphalt",
+        "length": 9984,
+        "hdg": 46,
+        "geo": {
+          "lat": 51.875076,
+          "lng": 0.219898
+        },
+        "ils": {
+          "id": "ISED",
+          "frequency": "110.500",
+          "hdg": 46,
+          "slope": 3
+        }
+      },
+      {
+        "name": "22",
+        "type": "Asphalt",
+        "length": 9984,
+        "hdg": 226,
+        "geo": {
+          "lat": 51.895157,
+          "lng": 0.250072
+        },
+        "ils": {
+          "id": "ISX",
+          "frequency": "110.500",
+          "hdg": 226,
+          "slope": 3
+        }
+      }
+    ],
+    "links": [
+      {
+        "rel": "self",
+        "uri": "\/airport\/EGSS"
+      },
+      {
+        "rel": "metar",
+        "uri": "\/airport\/EGSS\/metar"
+      },
+      {
+        "rel": "arrivals",
+        "uri": "\/airport\/EGSS\/arrivals"
+      },
+      {
+        "rel": "departures",
+        "uri": "\/airport\/EGSS\/departures"
+      },
+      {
+        "rel": "screenshots",
+        "uri": "\/airport\/EGSS\/screenshots"
+      }
+    ]
+  }
+}

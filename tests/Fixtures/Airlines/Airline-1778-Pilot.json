@@ -1,0 +1,60 @@
+{
+  "data": [
+    {
+      "id": 2,
+      "name": "Bobby Allen",
+      "base": "EGSS",
+      "locale": "EGVN",
+      "gps": {
+        "lat": 42.402887,
+        "lng": 33.557422
+      },
+      "is_online": true,
+      "online_at": "2022-03-06T22:55:02.038745Z"
+    },
+    {
+      "id": 3603,
+      "name": "auroraisluna",
+      "base": "LGAV",
+      "locale": "LFPG",
+      "gps": {
+        "lat": 0.000408,
+        "lng": 0.013975
+      },
+      "is_online": false,
+      "online_at": "2022-02-21T02:20:38.332461Z"
+    },
+    {
+      "id": 2385,
+      "name": "Clorix",
+      "base": "KFSM",
+      "locale": "KFSM",
+      "gps": {
+        "lat": 0.000408,
+        "lng": 0.013975
+      },
+      "is_online": false,
+      "online_at": "2022-03-06T06:55:50.610428Z"
+    },
+    {
+      "id": 6541,
+      "name": "Euan Andrew \/ Caspy1Uk",
+      "base": "LEIB",
+      "locale": "LEPA",
+      "gps": {
+        "lat": 50.070151,
+        "lng": 21.958654
+      },
+      "is_online": true,
+      "online_at": "2022-03-06T22:54:51.258447Z"
+    }
+  ],
+  "meta": {
+    "cursor": {
+      "current": 0,
+      "prev": 0,
+      "next": 6541,
+      "count": 4
+    }
+  }
+}

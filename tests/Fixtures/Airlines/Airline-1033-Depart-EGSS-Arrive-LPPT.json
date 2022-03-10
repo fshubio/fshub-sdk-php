@@ -1,0 +1,9 @@
+{
+  "error": true,
+  "message": "No records found",
+  "details": {
+    "airline": 1033,
+    "departure": "EGSS",
+    "arrival": "LPPT"
+  }
+}

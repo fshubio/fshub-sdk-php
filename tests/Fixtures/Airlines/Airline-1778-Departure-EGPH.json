@@ -1,0 +1,188 @@
+{
+  "data": [
+    {
+      "id": 1796723,
+      "user": {
+        "id": 2,
+        "name": "Bobby Allen"
+      },
+      "airline": {
+        "id": 1778,
+        "name": "British Airways",
+        "abbr": "BAW",
+        "owner": {
+          "id": 2,
+          "name": "Bobby Allen",
+          "bio": "Developer of FsHub and the LRM Client. Airbus and GA virtual pilot!",
+          "handles": {
+            "facebook": null,
+            "twitter": "@allebb87",
+            "website": null,
+            "vatsim": "1167426",
+            "ivao": "458562"
+          },
+          "base": "EGSS",
+          "locale": "EGVN",
+          "gps": {
+            "lat": 42.402887,
+            "lng": 33.557422
+          },
+          "timezone": "Europe\/London",
+          "country": "GB",
+          "is_online": true,
+          "online_at": "2022-03-06T23:23:34.256233Z",
+          "created_at": "2016-10-09T13:41:46.000000Z",
+          "links": [
+            {
+              "rel": "self",
+              "uri": "\/pilot\/2"
+            },
+            {
+              "rel": "statistics",
+              "uri": "\/pilot\/2\/stats"
+            },
+            {
+              "rel": "flights",
+              "uri": "\/pilot\/2\/flight"
+            },
+            {
+              "rel": "screenshots",
+              "uri": "\/pilot\/2\/screenshot"
+            }
+          ]
+        },
+        "handles": {
+          "facebook": null,
+          "twitter": null,
+          "website": null
+        },
+        "links": [
+          {
+            "rel": "self",
+            "uri": "\/airline\/1778"
+          },
+          {
+            "rel": "statistics",
+            "uri": "\/airline\/1778\/stats"
+          },
+          {
+            "rel": "pilots",
+            "uri": "\/airline\/1778\/pilot"
+          },
+          {
+            "rel": "flights",
+            "uri": "\/airline\/1778\/flight"
+          },
+          {
+            "rel": "screenshots",
+            "uri": "\/airline\/1778\/screenshot"
+          }
+        ]
+      },
+      "aircraft": {
+        "icao": "A20N",
+        "icao_name": "Airbus A320 neo",
+        "name": "British Airways Dirty Op",
+        "type": "TT:ATCCOM.ATC_NAME AIRB",
+        "user_conf": {
+          "tail": "G-TTNB",
+          "icao": "A20N"
+        }
+      },
+      "plan": {
+        "callsign": "BA1439",
+        "cruise_lvl": 370,
+        "route": "EGPH TLA6C TLA UN864 DCS UL612 LAKEY DCT NUGRA BOVA1B EGLL"
+      },
+      "fuel_used": 0,
+      "landing_rate": -125,
+      "distance": {
+        "nm": 322,
+        "km": 596
+      },
+      "max": {
+        "alt": 40084,
+        "spd": 463
+      },
+      "time": 3826,
+      "departure": {
+        "icao": "EGPH",
+        "iata": "EDI",
+        "name": "Edinburgh",
+        "time": "2022-02-23T11:39:10.000000Z",
+        "geo": {
+          "lat": 55.951468,
+          "lng": -3.368304
+        },
+        "hdg": {
+          "mag": 0,
+          "true": 238
+        },
+        "spd": {
+          "tas": 151
+        },
+        "fuel": 0,
+        "pitch": -7,
+        "bank": -3,
+        "wind": {
+          "spd": 25,
+          "dir": 210
+        }
+      },
+      "arrival": {
+        "icao": "EGLL",
+        "iata": "LHR",
+        "name": "Heathrow",
+        "time": "2022-02-23T12:43:27.000000Z",
+        "geo": {
+          "lat": 51.47774,
+          "lng": -0.44360999999999995
+        },
+        "hdg": {
+          "mag": 266,
+          "true": 266
+        },
+        "spd": {
+          "tas": 115
+        },
+        "fuel": 0,
+        "pitch": -3,
+        "bank": -1,
+        "wind": {
+          "spd": 13,
+          "dir": 219
+        }
+      },
+      "links": [
+        {
+          "rel": "self",
+          "uri": "\/flight\/1796723"
+        },
+        {
+          "rel": "pilot",
+          "uri": "\/pilot\/2"
+        },
+        {
+          "rel": "departure-airport",
+          "uri": "\/airport\/EGPH"
+        },
+        {
+          "rel": "arrival-airport",
+          "uri": "\/airport\/EGLL"
+        },
+        {
+          "rel": "screenshots",
+          "uri": "\/flight\/1796723\/screenshot"
+        }
+      ]
+    }
+  ],
+  "meta": {
+    "cursor": {
+      "current": 0,
+      "prev": 0,
+      "next": 1796723,
+      "count": 1
+    }
+  }
+}

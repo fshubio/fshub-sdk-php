@@ -1,0 +1,6 @@
+{
+  "error": {
+    "status_code": 429,
+    "message": "Too many API requests."
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "data": {
+    "id": 1,
+    "user": {
+      "id": 1,
+      "name": "Anonymous"
+    },
+    "airline": null,
+    "aircraft": {
+      "icao": "A36",
+      "icao_name": null,
+      "name": "Carenado A36 Bonanza 60t",
+      "type": "Beechcraft",
+      "user_conf": {
+        "tail": "",
+        "icao": ""
+      }
+    },
+    "plan": null,
+    "fuel_used": 0,
+    "landing_rate": -331,
+    "distance": {
+      "nm": 0,
+      "km": 0
+    },
+    "max": {
+      "alt": null,
+      "spd": null
+    },
+    "time": 0,
+    "departure": null,
+    "arrival": {
+      "icao": "EGSS",
+      "iata": "STN",
+      "name": "Stansted",
+      "time": "2015-03-31T21:50:35.000000Z",
+      "geo": {
+        "lat": 51.891648,
+        "lng": 0.244799
+      },
+      "hdg": {
+        "mag": 225,
+        "true": 223
+      },
+      "spd": {
+        "tas": 0
+      },
+      "fuel": 0,
+      "pitch": 0,
+      "bank": 0,
+      "wind": {
+        "spd": 0,
+        "dir": 0
+      }
+    },
+    "links": [
+      {
+        "rel": "self",
+        "uri": "\/flight\/1"
+      },
+      {
+        "rel": "pilot",
+        "uri": "\/pilot\/1"
+      },
+      {
+        "rel": "departure-airport",
+        "uri": "\/airport\/"
+      },
+      {
+        "rel": "arrival-airport",
+        "uri": "\/airport\/EGSS"
+      },
+      {
+        "rel": "screenshots",
+        "uri": "\/flight\/1\/screenshot"
+      }
+    ]
+  }
+}

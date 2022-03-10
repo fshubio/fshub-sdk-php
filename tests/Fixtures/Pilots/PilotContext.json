@@ -1,0 +1,14 @@
+{
+  "data": {
+    "id": 2,
+    "name": "Bobby Allen",
+    "base": "EGSS",
+    "locale": "EGPE",
+    "gps": {
+      "lat": 57.538012,
+      "lng": -4.063036
+    },
+    "is_online": true,
+    "online_at": "2022-03-03T11:42:32.991295Z"
+  }
+}

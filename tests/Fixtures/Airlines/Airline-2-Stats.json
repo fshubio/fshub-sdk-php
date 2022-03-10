@@ -1,0 +1,39 @@
+{
+  "data": {
+    "id": 2,
+    "all_time": {
+      "total_flights": 289,
+      "total_hours": 762.56,
+      "total_distance": 326178,
+      "average_landing": -182
+    },
+    "month": {
+      "total_flights": 1,
+      "total_hours": 1.08,
+      "total_distance": 348,
+      "average_landing": -85
+    },
+    "links": [
+      {
+        "rel": "self",
+        "uri": "\/airline\/2\/stats"
+      },
+      {
+        "rel": "airline",
+        "uri": "\/airline\/2"
+      },
+      {
+        "rel": "pilots",
+        "uri": "\/airline\/2\/pilot"
+      },
+      {
+        "rel": "flights",
+        "uri": "\/airline\/2\/flight"
+      },
+      {
+        "rel": "screenshots",
+        "uri": "\/airline\/2\/screenshot"
+      }
+    ]
+  }
+}

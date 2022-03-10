@@ -1,0 +1,106 @@
+{
+  "data": {
+    "id": 1798819,
+    "user": {
+      "id": 2,
+      "name": "Bobby Allen"
+    },
+    "airline": null,
+    "aircraft": {
+      "icao": "A20N",
+      "icao_name": "Airbus A320 neo",
+      "name": "British Airways Dirty Op",
+      "type": "TT:ATCCOM.ATC_NAME AIRB",
+      "user_conf": {
+        "tail": "G-TTNB",
+        "icao": "A20N"
+      }
+    },
+    "plan": {
+      "callsign": "BA711",
+      "cruise_lvl": 320,
+      "route": "EGLL\/09L ULTI1K ULTIB T420 TNT UN57 POL UN601 RIBEL RIBE1G EGPF\/23"
+    },
+    "fuel_used": 0,
+    "landing_rate": -145,
+    "distance": {
+      "nm": 356,
+      "km": 659
+    },
+    "max": {
+      "alt": 31499,
+      "spd": 453
+    },
+    "time": 3805,
+    "departure": {
+      "icao": "EGLL",
+      "iata": "LHR",
+      "name": "Heathrow",
+      "time": "2022-02-26T14:48:20.000000Z",
+      "geo": {
+        "lat": 51.47746,
+        "lng": -0.463419
+      },
+      "hdg": {
+        "mag": 0,
+        "true": 96
+      },
+      "spd": {
+        "tas": 145
+      },
+      "fuel": 0,
+      "pitch": -10,
+      "bank": 5,
+      "wind": {
+        "spd": 11,
+        "dir": 160
+      }
+    },
+    "arrival": {
+      "icao": "EGPF",
+      "iata": "GLA",
+      "name": "Glasgow",
+      "time": "2022-02-26T15:52:16.000000Z",
+      "geo": {
+        "lat": 55.875761,
+        "lng": -4.426379
+      },
+      "hdg": {
+        "mag": 225,
+        "true": 223
+      },
+      "spd": {
+        "tas": 126
+      },
+      "fuel": 0,
+      "pitch": -4,
+      "bank": 0,
+      "wind": {
+        "spd": 14,
+        "dir": 180
+      }
+    },
+    "links": [
+      {
+        "rel": "self",
+        "uri": "\/flight\/1798819"
+      },
+      {
+        "rel": "pilot",
+        "uri": "\/pilot\/2"
+      },
+      {
+        "rel": "departure-airport",
+        "uri": "\/airport\/EGLL"
+      },
+      {
+        "rel": "arrival-airport",
+        "uri": "\/airport\/EGPF"
+      },
+      {
+        "rel": "screenshots",
+        "uri": "\/flight\/1798819\/screenshot"
+      }
+    ]
+  }
+}

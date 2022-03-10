@@ -1,0 +1,6 @@
+{
+  "error": {
+    "status_code": 401,
+    "message": "Valid token was not provided."
+  }
+}
