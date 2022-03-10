@@ -1,0 +1,38 @@
+{
+  "name": "fshub/sdk",
+  "description": "The official FsHub SDK (API Client).",
+  "type": "library",
+  "keywords": [
+    "fshub",
+    "fshub.io",
+    "lrm",
+    "flightsim",
+    "msfs2020",
+    "xplane",
+    "fsx",
+    "ICAO"
+  ],
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "Bobby Allen",
+      "email": "ballen@bobbyallen.me",
+      "homepage": "http://bobbyallen.me",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^8.1",
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "FsHub\\Sdk\\": "src/",
+      "FsHub\\Sdk\\Tests": "tests/"
+    }
+  }
+}
