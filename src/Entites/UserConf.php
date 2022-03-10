@@ -11,6 +11,11 @@ class UserConf
 
     use CastableEntity;
 
+    public static array $castMap = [
+        'tail' => 'tailNumber',
+        'icao' => 'icao',
+    ];
+
     public string $tailNumber = self::DEFAULT_STRING_VALUE;
     public string $icao = self::DEFAULT_STRING_VALUE;
 

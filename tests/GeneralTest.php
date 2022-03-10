@@ -13,7 +13,7 @@ class GeneralTest extends TestCase
     public function testWeCanCastToAnEntityUsingBaseCastMethod()
     {
         $userConfEntity = UserConf::cast([
-            'tailNumber' => 'G-BOBY',
+            'tail' => 'G-BOBY',
             'icao' => 'A20N',
         ]);
         $this->assertEquals('G-BOBY', $userConfEntity->tailNumber);
