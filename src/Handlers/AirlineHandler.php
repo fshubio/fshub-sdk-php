@@ -90,9 +90,8 @@ class AirlineHandler extends BaseFeatureHandler
     }
 
     /**
-     * Return a single airline entity by it's ID.
-     * @param int $id
-     * @return Airline
+     * Return a collection of airlines from the current airline ID (use "Offset" method to set the cursor)
+     * @return Airlines
      */
     public function get(): Airlines
     {

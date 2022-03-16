@@ -9,6 +9,8 @@ class BaseFeatureHandler
 {
     protected FsHubConnectorInterface $_connector;
 
+    private const ERROR_MESSAGE = "No context has been set, use the Select(x) fluent method to set/select a context!";
+
     /**
      *The configured record (API collection) limit.
      */
@@ -20,13 +22,11 @@ class BaseFeatureHandler
      */
     protected int $cursor = 0;
 
-    private const ERROR_MESSAGE = "No context has been set, use the Select(x) fluent method to set/select a context!";
-
     protected function requiresSetContext($value): void
     {
-        if ($value == null || $value == "") {
+        if ($value == null || $value == "" || $value == 0) {
             throw new ContextNotSetException(self::ERROR_MESSAGE);
         }
     }
-    
+
 }

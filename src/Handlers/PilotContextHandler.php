@@ -15,8 +15,12 @@ class PilotContextHandler extends BaseFeatureHandler
         $this->_connector = $connector;
     }
 
+    /**
+     * Return the current pilot context - The API token owner pilot object.
+     * @return PilotContext
+     */
     public function Context(): PilotContext
     {
-        return PilotContext::fromJson($this->_connector->get("user"));
+        return PilotContext::fromJson($this->_connector->get("user")->body);
     }
 }
