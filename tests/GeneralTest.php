@@ -18,7 +18,7 @@ class GeneralTest extends TestCase
 
     }
 
-    public function invalidApiKeyThrowsCorrectException()
+    public function testInvalidApiKeyThrowsCorrectException()
     {
         $client = new Client("FIXTURE_KEY", new TestConnector());
 
@@ -28,7 +28,7 @@ class GeneralTest extends TestCase
 
     }
 
-    public function tooManyApiAttemptsRateLimitShowsCorrectException()
+    public function testTooManyApiAttemptsRateLimitShowsCorrectException()
     {
         $client = new Client("FIXTURE_KEY", new TestConnector());
 
