@@ -10,7 +10,7 @@ class AirlineHandler
 
     public function __construct(FsHubConnectorInterface $connector)
     {
-        reset();
+        //$this->reset();
         $this->_connector = $connector;
     }
 }

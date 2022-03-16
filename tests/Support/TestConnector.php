@@ -2,7 +2,13 @@
 
 namespace FsHub\Sdk\Tests\Support;
 
-class TestConnector implements FsHubConnectorInterface, \FsHub\Sdk\Contracts\FsHubConnectorInterface
-{
+use FsHub\Sdk\Connectors\ConnectorResponse;
+use FsHub\Sdk\Contracts\FsHubConnectorInterface;
 
+class TestConnector implements FsHubConnectorInterface
+{
+    public function Get(string $resourceIdentifier): ConnectorResponse
+    {
+        return new ConnectorResponse();
+    }
 }

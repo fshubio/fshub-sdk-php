@@ -1,14 +1,43 @@
 <?php
 
+use FsHub\Sdk\Client;
 use FsHub\Sdk\Entites\UserConf;
+use FsHub\Sdk\Tests\Support\TestConnector;
 use PHPUnit\Framework\TestCase;
 
 class GeneralTest extends TestCase
 {
-    public function testExample()
+
+    public function testSelectedContextThrowsExceptionIfNotSet()
     {
-        $this->assertTrue(true);
+        $client = new Client("FIXTURE_KEY", new TestConnector());
+
+        $this->expectException(\FsHub\Sdk\Exceptions\ContextNotSetException::class);
+        $this->expectExceptionMessage('No context has been set, use the Select(x) fluent method to set/select a context!');
+        $client->airlines->screenshots();
+
     }
+
+    public function invalidApiKeyThrowsCorrectException()
+    {
+        $client = new Client("FIXTURE_KEY", new TestConnector());
+
+        $this->expectException(\FsHub\Sdk\Exceptions\InvalidApiKeyException::class);
+        $this->expectExceptionMessage('The API key specified is not valid, please check and try again.');
+        $client->flights->find(9997);
+
+    }
+
+    public function tooManyApiAttemptsRateLimitShowsCorrectException()
+    {
+        $client = new Client("FIXTURE_KEY", new TestConnector());
+
+        $this->expectException(\FsHub\Sdk\Exceptions\RateLimitExceededException::class);
+        $this->expectExceptionMessage('You have been rate limited due to the number of API requests you have performed, please wait before trying again.');
+        $client->flights->find(9998);
+
+    }
+
 
     public function testWeCanCastToAnEntityUsingBaseCastMethod()
     {
