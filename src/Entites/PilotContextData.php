@@ -12,16 +12,6 @@ class PilotContextData
 
     use CastableEntity;
 
-    protected static $castMap = [
-        'id' => 'id',
-        'name' => 'name',
-        'base' => 'base',
-        'locale' => 'location',
-        'gps' => 'gps',
-        'is_online' => 'isOnline',
-        'online_at' => 'onlineAt'
-    ];
-
     /**
      * The Pilot ID (User ID)
      * @var int
@@ -42,9 +32,9 @@ class PilotContextData
 
     /**
      * The location as to where the pilot is current (airport ICAO code)
-     * @var Location|null
+     * @var string
      */
-    public ?Location $location;
+    public string $location;
 
     /**
      * The current or last known location for the pilot/aircraft.
@@ -63,4 +53,22 @@ class PilotContextData
      * @var DateTime
      */
     public ?DateTime $onlineAt;
+
+    /**
+     * @throws \Exception
+     */
+    public function fromArray(array $data)
+    {
+
+        $this->id = $data['id'];
+        $this->name = $data['name'];
+        $this->base = $data['base'];
+        $this->location = $data['locale'];
+        $this->isOnline = (bool)$data['is_online'];
+        $this->onlineAt = new DateTime($data['online_at']);
+
+        $this->gps = new LatLng();
+        $this->gps->latitude = $data['gps']['lat'];
+        $this->gps->longitude = $data['gps']['lng'];
+    }
 }

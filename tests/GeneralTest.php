@@ -50,6 +50,21 @@ class GeneralTest extends TestCase
 
     }
 
+    public function testCastFlightMaxValues()
+    {
+        $test = new \FsHub\Sdk\Entites\FlightMaxValues();
+        $this->assertEquals(null, $test->altitude);
+        $this->assertEquals(null, $test->speed);
+
+        $test = \FsHub\Sdk\Entites\FlightMaxValues::cast([
+            'spd' => 198,
+            'alt' => 18734,
+        ]);
+        $this->assertEquals(18734, $test->altitude);
+        $this->assertEquals(198, $test->speed);
+
+    }
+
     public function testThatAFreshEntityHasEmptyValues()
     {
         $userConfEntity = new UserConf();

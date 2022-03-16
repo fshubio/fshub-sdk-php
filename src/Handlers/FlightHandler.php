@@ -3,7 +3,8 @@
 namespace FsHub\Sdk\Handlers;
 
 use FsHub\Sdk\Contracts\FsHubConnectorInterface;
-use FsHub\Sdk\Entites\Airline;
+use FsHub\Sdk\Entites\Flight;
+use FsHub\Sdk\Entites\Flights;
 
 class FlightHandler extends BaseFeatureHandler
 {

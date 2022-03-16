@@ -11,12 +11,14 @@ class PilotContext implements PilotInterface
 
     use CastableEntity;
 
-    public ?PilotContextData $data;
+    public PilotContextData $data;
 
     public static function fromJson(string $json): PilotContext
     {
-        // @todo Convert the JSON to the data structure as required (this is normally automatically taken care of in .NET but I'll need
-        // to do this manually...
+        $pilot = new PilotContext();
+        $data = json_decode($json, true);
+        $pilot->data = (new PilotContextData())->fromArray($data['data']);
+        return $pilot;
     }
 
     public function getPilotId(): int

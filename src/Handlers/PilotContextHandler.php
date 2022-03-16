@@ -21,6 +21,6 @@ class PilotContextHandler extends BaseFeatureHandler
      */
     public function Context(): PilotContext
     {
-        return PilotContext::fromJson($this->_connector->get("user")->body);
+        return (new PilotContext())->fromJson($this->_connector->get("user")->body);
     }
 }
