@@ -17,7 +17,11 @@ class PilotContext implements PilotInterface
     {
         $pilot = new PilotContext();
         $data = json_decode($json, true);
-        $pilot->data = (new PilotContextData())->fromArray($data['data']);
+
+        $casted = new PilotContextData();
+        $casted->fromArray($data['data']);
+        $pilot->data = $casted;
+
         return $pilot;
     }
 

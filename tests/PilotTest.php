@@ -42,7 +42,7 @@ class PilotTest extends TestCase
 
         $this->assertEquals(2558, $pilot->data->id);
         $this->assertEquals('thunfischbaum', $pilot->data->name);
-        $this->assertTrue(str_contains($pilot->data->name, 'You might see this Bio Text'));
+        $this->assertTrue(str_contains($pilot->data->bio, 'You might see this Bio Text'));
         $this->assertNull($pilot->data->handles->facebook);
         $this->assertNull($pilot->data->handles->website);
         $this->assertNull($pilot->data->handles->vatsim);
@@ -55,7 +55,7 @@ class PilotTest extends TestCase
 
         $onlineAt = new DateTime('2022-02-27T18:36:34.6550480Z');
         $this->assertEquals($onlineAt, $pilot->data->onlineAt);
-        $this->assertEquals(1646307752, $pilot->data->onlineAt->getTimestamp());
+        $this->assertEquals(1645986994, $pilot->data->onlineAt->getTimestamp());
 
         $createdAt = new DateTime('2019-12-15T16:53:46.000000Z');
         $this->assertEquals($createdAt, $pilot->data->createdAt);
@@ -66,7 +66,7 @@ class PilotTest extends TestCase
     {
         $client = new Client("FIXTURE_KEY", new TestConnector());
         $pilot = $client->pilots
-            ->find(0);
+            ->find($client->user->context()->getPilotId());
 
         $this->assertEquals(2, $pilot->data->id);
         $this->assertEquals('Bobby Allen', $pilot->data->name);

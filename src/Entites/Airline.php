@@ -4,6 +4,7 @@ namespace FsHub\Sdk\Entites;
 
 use FsHub\Sdk\Types\CastableEntity;
 use FsHub\Sdk\Types\Common;
+use FsHub\Sdk\Types\SocialHandles;
 
 class Airline
 {

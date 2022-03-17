@@ -12,8 +12,12 @@ class Flight
 
         $flight = new Flight();
         $data = json_decode($json, true);
-        $flight->data = (new FlightData())->fromArray($data['data']);
-        return $flight->data;
+
+        $casted = new FlightData();
+        $casted->fromArray($data['data']);
+        $flight->data = $casted;
+
+        return $flight;
     }
 
 }
