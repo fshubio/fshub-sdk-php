@@ -16,8 +16,8 @@ class AirportTest extends TestCase
         $this->assertEquals('EGSS', $airport->data->icao);
         $this->assertEquals('STN', $airport->data->iata);
         $this->assertEquals('Stansted', $airport->data->name);
-        $this->assertEquals(348, $airport->data->alt);
-        $this->assertEquals(-3, $airport->data->magVar);
+        $this->assertEquals(348, $airport->data->elevation);
+        $this->assertEquals(-3, $airport->data->magneticVariation);
 
         $this->assertEquals(51.884998, $airport->data->geo->latitude);
         $this->assertEquals(0.235, $airport->data->geo->longitude);
@@ -33,7 +33,7 @@ class AirportTest extends TestCase
         $this->assertEquals("120.620", $airport->data->frequencies->approach);
         $this->assertEquals("126.950", $airport->data->frequencies->departure);
 
-        $totalRunways = $airport->data->runways->count();
+        $totalRunways = count($airport->data->runways);
         $this->assertEquals(2, $totalRunways);
 
         $this->assertEquals("22", $airport->data->runways[1]->name);
@@ -44,7 +44,7 @@ class AirportTest extends TestCase
         $this->assertEquals(51.895157, $airport->data->runways[1]->geo->latitude);
         $this->assertEquals(0.250072, $airport->data->runways[1]->geo->longitude);
 
-        $this->assertEquals('ISX', $airport->data->runways[1]->ils->id);
+        $this->assertEquals('ISX', $airport->data->runways[1]->ils->ident);
         $this->assertEquals('110.500', $airport->data->runways[1]->ils->frequency);
         $this->assertEquals(226, $airport->data->runways[1]->ils->heading);
         $this->assertEquals(3, $airport->data->runways[1]->ils->slope);
@@ -57,11 +57,8 @@ class AirportTest extends TestCase
     {
         $client = new Client("FIXTURE_KEY", new TestConnector());
 
-        $airport = $client->airports
-            ->find('EGSS');
-
         $metar = $client->airports
-            ->select($airport)
+            ->select('EGSS')
             ->metar();
 
         $this->assertEquals('EGSS', $metar->data->icao);
@@ -101,7 +98,7 @@ class AirportTest extends TestCase
             ->select('EGSS')
             ->arrivals();
 
-        $this->assertEquals(10, $flights->data->count());
+        $this->assertEquals(10, $flights->count());
 
         $this->assertEquals(1, $flights->data[0]->id);
         $this->assertEquals("Carenado A36 Bonanza 60t", $flights->data[0]->aircraft->name);
@@ -115,7 +112,7 @@ class AirportTest extends TestCase
             ->select('EGSS')
             ->departures();
 
-        $this->assertEquals(10, $flights->data->count());
+        $this->assertEquals(10, $flights->count());
 
         $this->assertEquals(136708, $flights->data[0]->id);
         $this->assertEquals("F22", $flights->data[0]->aircraft->icao);
@@ -132,7 +129,7 @@ class AirportTest extends TestCase
             ->take(25)
             ->departuresTo('LOWS');
 
-        $this->assertEquals(11, $flights->data->count());
+        $this->assertEquals(11, $flights->count());
 
         $this->assertEquals(800000,
             $flights->meta->cursor->current); // Our test fixture is taken from cursor position 800000, lets just validate that here!
@@ -158,7 +155,7 @@ class AirportTest extends TestCase
             ->take(25)
             ->arrivalsFrom('EGPH');
 
-        $this->assertEquals(3, $flights->data->count());
+        $this->assertEquals(3, $flights->count());
 
         $this->assertEquals(1700000, $flights->meta->cursor->current);
 

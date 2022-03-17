@@ -7,7 +7,6 @@ use FsHub\Sdk\Entities\Airline;
 use FsHub\Sdk\Entities\Airlines;
 use FsHub\Sdk\Entities\AirlineStats;
 use FsHub\Sdk\Entities\Flights;
-use FsHub\Sdk\Entities\Pilot;
 use FsHub\Sdk\Entities\Pilots;
 use FsHub\Sdk\Entities\Screenshots;
 
