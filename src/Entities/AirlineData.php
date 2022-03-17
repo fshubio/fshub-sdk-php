@@ -2,9 +2,6 @@
 
 namespace FsHub\Sdk\Entities;
 
-use FsHub\Sdk\Types\CastableEntity;
-use FsHub\Sdk\Types\Common;
-use FsHub\Sdk\Types\LatLng;
 use FsHub\Sdk\Types\SocialHandles;
 
 class AirlineData

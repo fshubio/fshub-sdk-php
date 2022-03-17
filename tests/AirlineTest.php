@@ -44,7 +44,7 @@ class AirlineTest extends TestCase
             ->offset(20)
             ->get();
 
-        $total = $airlines->data->count();
+        $total = $airlines->count();
         $this->assertEquals(10, $total);
 
         $testAirline1 = $airlines->data[0];
@@ -53,12 +53,12 @@ class AirlineTest extends TestCase
         $this->assertEquals('UAE', $testAirline1->abbreviation);
 
         // Test cursor values...
-        $this->assertEquals(10, $testAirline1->meta->cursor->count);
-        $this->assertEquals(20, $testAirline1->meta->cursor->current);
-        $this->assertEquals(52, $testAirline1->meta->cursor->next);
+        $this->assertEquals(10, $airlines->meta->cursor->count);
+        $this->assertEquals(20, $airlines->meta->cursor->current);
+        $this->assertEquals(52, $airlines->meta->cursor->next);
 
         // Now switch and get the next batch of results...
-        $nextCursor = $testAirline1->meta->cursor->next;
+        $nextCursor = $airlines->meta->cursor->next;
 
         $airlines = $client->airlines->offset($nextCursor)->get();
 
@@ -67,9 +67,9 @@ class AirlineTest extends TestCase
         $this->assertEquals('Turkish Airlines', $testAirline1->name);
         $this->assertEquals('THY', $testAirline1->abbreviation);
 
-        $this->assertEquals(10, $testAirline1->meta->cursor->count);
-        $this->assertEquals(52, $testAirline1->meta->cursor->current);
-        $this->assertEquals(85, $testAirline1->meta->cursor->next);
+        $this->assertEquals(10, $airlines->meta->cursor->count);
+        $this->assertEquals(52, $airlines->meta->cursor->current);
+        $this->assertEquals(85, $airlines->meta->cursor->next);
 
 
     }
@@ -97,7 +97,7 @@ class AirlineTest extends TestCase
         $client = new Client("FIXTURE_KEY", new TestConnector());
         $airlinePilots = $client->airlines->select(1778)->pilots()->data; // Should be a collection (from ballen/collection library)
 
-        $this->assertEquals(4, $airlinePilots[0]->name);
+        $this->assertEquals('Bobby Allen', $airlinePilots[0]->name);
         $this->assertEquals('EGSS', ($client->pilots->first($airlinePilots[0]->id))->data->base);
 
         $this->assertEquals('auroraisluna', $airlinePilots[1]->name);
@@ -111,7 +111,7 @@ class AirlineTest extends TestCase
         $client = new Client("FIXTURE_KEY", new TestConnector());
         $airlineDepartures = $client->airlines->select(1778)->departures("EGPH");
 
-        $this->assertEquals(1, $airlineDepartures->deta->count());
+        $this->assertEquals(1, $airlineDepartures->count());
 
         // All departures should have the same ICAO.
         foreach ($airlineDepartures->data as $flight) {
@@ -127,7 +127,7 @@ class AirlineTest extends TestCase
         $client = new Client("FIXTURE_KEY", new TestConnector());
         $airlineArrivals = $client->airlines->select(1778)->arrivals("EGSS");
 
-        $this->assertEquals(6, $airlineArrivals->deta->count());
+        $this->assertEquals(6, $airlineArrivals->count());
 
         // All departures should have the same ICAO.
         foreach ($airlineArrivals->data as $flight) {
@@ -148,7 +148,7 @@ class AirlineTest extends TestCase
 
         $this->expectException(\FsHub\Sdk\Exceptions\NoRecordsFoundException::class);
 
-        $airlineRoutes = $client->airlines->select(1778)->route(
+        $client->airlines->select(1033)->route(
             departure: $departureIcao,
             arrival: $arrivalIcao,
         );
@@ -159,14 +159,14 @@ class AirlineTest extends TestCase
         $client = new Client("FIXTURE_KEY", new TestConnector());
 
         $departureIcao = "EGSS";
-        $arrivalIcao = "LOWI";
+        $arrivalIcao = "LOWS";
 
-        $airlineRoutes = $client->airlines->select(1778)->route(
+        $airlineRoutes = $client->airlines->select(1033)->route(
             departure: $departureIcao,
             arrival: $arrivalIcao,
         );
 
-        $this->assertEquals(2, $airlineRoutes->data->count());
+        $this->assertEquals(2, $airlineRoutes->count());
 
         foreach ($airlineRoutes->data as $flight) {
             $this->assertEquals($departureIcao, $flight->departure->icao);
@@ -182,7 +182,7 @@ class AirlineTest extends TestCase
             ->select(1778)
             ->screenshots();
 
-        $this->assertEquals(10, $screenshots->data->count());
+        $this->assertEquals(10, $screenshots->count());
 
         $this->assertEquals(54785, $screenshots->data[0]->id);
         $this->assertEquals('27996e3cc0cc63b708a2f60682e7987c.png', $screenshots->data[0]->name);
@@ -192,7 +192,7 @@ class AirlineTest extends TestCase
         $this->assertEquals(55395, $screenshots->data[9]->id);
         $this->assertEquals('fec80f19e83c740c6f2a563116c4a191.png', $screenshots->data[9]->name);
         $this->assertEquals('https://fshub.ams3.digitaloceanspaces.com/uploads/fec80f19e83c740c6f2a563116c4a191.png',
-            $screenshots->data[9]->url->thumbnailUrl);
+            $screenshots->data[9]->url->fullsizeUrl);
     }
 
 

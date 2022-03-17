@@ -3,9 +3,13 @@
 namespace FsHub\Sdk\Handlers;
 
 use FsHub\Sdk\Contracts\FsHubConnectorInterface;
-use FsHub\Sdk\Entites\Airline;
-use SebastianBergmann\CodeCoverage\Driver\Selector;
-use function PHPUnit\Framework\isInstanceOf;
+use FsHub\Sdk\Entities\Airline;
+use FsHub\Sdk\Entities\Airlines;
+use FsHub\Sdk\Entities\AirlineStats;
+use FsHub\Sdk\Entities\Flights;
+use FsHub\Sdk\Entities\Pilot;
+use FsHub\Sdk\Entities\Pilots;
+use FsHub\Sdk\Entities\Screenshots;
 
 class AirlineHandler extends BaseFeatureHandler
 {
@@ -96,7 +100,7 @@ class AirlineHandler extends BaseFeatureHandler
     public function get(): Airlines
     {
         return Airlines::fromJson(
-            $this->_connector->Get("airline?cursor={$this->cursor}&limit={$this->imit}")->body
+            $this->_connector->Get("airline?cursor={$this->cursor}&limit={$this->limit}")->body
         );
     }
 
@@ -109,19 +113,19 @@ class AirlineHandler extends BaseFeatureHandler
     {
         $this->requiresSetContext($this->selectedId);
         return AirlineStats::fromJson(
-            $this->_connector->Get("airline?cursor={$this->cursor}&limit={$this->imit}")->body
+            $this->_connector->Get("airline/{$this->selectedId}/stats")->body
         );
     }
 
     /**
      * Return pilots that are members of this virtual airline.
-     * @return AirlinePilots
+     * @return Pilots
      * @throws \FsHub\Sdk\Exceptions\ContextNotSetException
      */
-    public function pilots(): AirlinePilots
+    public function pilots(): Pilots
     {
         $this->requiresSetContext($this->selectedId);
-        return AirlinePilots::fromJson(
+        return Pilots::fromJson(
             $this->_connector->Get("airline/{$this->selectedId}/pilot?cursor={$this->cursor}&limit={$this->limit}")->body
         );
     }
@@ -165,7 +169,7 @@ class AirlineHandler extends BaseFeatureHandler
     {
         $this->requiresSetContext($this->selectedId);
         return Flights::fromJson(
-            $this->_connector->Get("airline/{$this->selectedId}/departure/{$this->departure}/arrival/{$this->arrival}?cursor={$this->cursor}&limit={$this->limit}")->body
+            $this->_connector->Get("airline/{$this->selectedId}/departure/{$departure}/arrival/{$arrival}?cursor={$this->cursor}&limit={$this->limit}")->body
         );
     }
 
