@@ -34,7 +34,7 @@ class FlightPlan
      */
     protected static $castMap = [
         'callsign' => 'callsign',
-        'cruise_level' => 'cruiseLevel',
+        'cruise_lvl' => 'cruiseLevel',
         'route' => 'route',
     ];
 

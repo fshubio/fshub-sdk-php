@@ -5,6 +5,7 @@ namespace FsHub\Sdk\Handlers;
 use FsHub\Sdk\Contracts\FsHubConnectorInterface;
 use FsHub\Sdk\Entities\Flight;
 use FsHub\Sdk\Entities\Flights;
+use FsHub\Sdk\Entities\Screenshots;
 
 class FlightHandler extends BaseFeatureHandler
 {
@@ -101,7 +102,7 @@ class FlightHandler extends BaseFeatureHandler
 
     /**
      * Return a collection of screenshots that have been uploaded against this flight report.
-     * @return Flights
+     * @return Screenshots
      */
     public function screenshots(): Screenshots
     {

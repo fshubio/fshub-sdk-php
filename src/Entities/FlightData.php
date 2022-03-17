@@ -28,7 +28,7 @@ class FlightData
      * The airline (optional)
      * @var AirlineData|null
      */
-    public ?AirlineData $airline;
+    public ?AirlineData $airline = null;
 
     /**
      * The aircraft
@@ -40,7 +40,7 @@ class FlightData
      * The flight plan (optional)
      * @var FlightPlan|null
      */
-    public ?FlightPlan $plan;
+    public ?FlightPlan $plan = null;
 
     /**
      * Amount of fuel burnt (in KGS)
@@ -76,7 +76,7 @@ class FlightData
      * Departure details.
      * @var Transition|null
      */
-    public ?Transition $departure;
+    public ?Transition $departure = null;
 
     /**
      * Arrival details.
@@ -111,6 +111,10 @@ class FlightData
         $this->landingRate = $data['landing_rate'];
         $this->distance = Distance::cast($data['distance']);
         $this->time = $data['time'];
+
+        $this->max = new FlightMaxValues();
+        $this->max->speed = $data['max']['spd'];
+        $this->max->altitude = $data['max']['alt'];
 
         if (isset($data['departure'])) {
             $departure = new Transition();
@@ -166,6 +170,7 @@ class FlightData
         $arrival->wind = new Wind();
         $arrival->wind->direction = $data['arrival']['wind']['dir'];
         $arrival->wind->speed = $data['arrival']['wind']['spd'];
+
 
         if (isset($data['arrival']['time'])) {
             $arrival->time = new \DateTime($data['arrival']['time']);

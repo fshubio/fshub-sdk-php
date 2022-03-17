@@ -17,7 +17,7 @@ class Aircraft
      * The aircraft official name as recognised by FsHub.
      * @var string
      */
-    public string $icaoName = Common::DEFAULT_STRING_VALUE;
+    public ?string $icaoName = Common::DEFAULT_NULL_VALUE;
 
     /**
      * The aircraft set name (simulator livery label)
@@ -42,7 +42,7 @@ class Aircraft
     {
 
         $this->icao = $data['icao'] ?? '';
-        $this->icaoName = $data['icao_name'] ?? '';
+        $this->icaoName = $data['icao_name'] ?? null;
         $this->name = $data['name'];
         $this->type = $data['type'] ?? '';
 

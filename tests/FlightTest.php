@@ -75,7 +75,7 @@ class FlightTest extends TestCase
             ->offset(1798819)
             ->get();
 
-        $this->assertEquals(10, $flights->data->count());
+        $this->assertEquals(10, $flights->count());
 
         // Check the first flight in our collection.
         $testFlight1 = $flights->data[0];
@@ -89,7 +89,7 @@ class FlightTest extends TestCase
         $this->assertEquals('AIRBUS', $testFlight1->aircraft->type);
 
         $this->assertEquals('EGLL', $testFlight1->departure->icao);
-        $this->assertEquals('LFBO', $testFlight1->arrival->type);
+        $this->assertEquals('LFBO', $testFlight1->arrival->icao);
 
         $nextCursor = $flights->meta->cursor->next;
 
@@ -106,9 +106,9 @@ class FlightTest extends TestCase
         $this->assertEquals('Anonymous', $testFlight2->pilot->name);
         $this->assertEquals('C172', $testFlight2->aircraft->icao);
 
-        $this->assertEquals(10, $testFlight2->meta->cursor->count);
-        $this->assertEquals(1798829, $testFlight2->meta->cursor->current);
-        $this->assertEquals(1798839, $testFlight2->meta->cursor->next);
+        $this->assertEquals(10, $flights->meta->cursor->count);
+        $this->assertEquals(1798829, $flights->meta->cursor->current);
+        $this->assertEquals(1798839, $flights->meta->cursor->next);
 
     }
 
@@ -120,7 +120,7 @@ class FlightTest extends TestCase
             ->select(1802858)
             ->screenshots();
 
-        $this->assertEquals(10, $screenshots->data->count());
+        $this->assertEquals(10, $screenshots->count());
 
         $this->assertEquals(68149, $screenshots->data[0]->id);
         $this->assertEquals('cf9eaf89168a626c99fd9b337149aea5.png', $screenshots->data[0]->name);

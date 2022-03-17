@@ -16,15 +16,15 @@ class FlightMaxValues
 
     /**
      * Altitude in Feet (ft)
-     * @var int
+     * @var int|null
      */
-    public int $altitude = 0;
+    public ?int $altitude = null;
 
     /**
      * Speed in Knots (kts)
-     * @var int
+     * @var int|null
      */
-    public int $speed = 0;
-    
+    public ?int $speed = null;
+
 
 }
