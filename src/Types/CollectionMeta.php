@@ -5,10 +5,15 @@ namespace FsHub\Sdk\Types;
 class CollectionMeta
 {
 
-    public function __construct(
-        public ?Cursor $cursor
-    ) {
-    }
+    /**
+     * The API Metadata Cursor.
+     * @var Cursor
+     */
+    public Cursor $cursor;
 
+    public function __construct()
+    {
+        $this->cursor = new Cursor();
+    }
 
 }

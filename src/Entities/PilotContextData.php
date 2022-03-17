@@ -1,6 +1,6 @@
 <?php
 
-namespace FsHub\Sdk\Entites;
+namespace FsHub\Sdk\Entities;
 
 use DateTime;
 use FsHub\Sdk\Types\CastableEntity;

@@ -3,7 +3,7 @@
 namespace FsHub\Sdk\Handlers;
 
 use FsHub\Sdk\Contracts\FsHubConnectorInterface;
-use FsHub\Sdk\Entites\PilotContext;
+use FsHub\Sdk\Entities\PilotContext;
 
 class PilotContextHandler extends BaseFeatureHandler
 {

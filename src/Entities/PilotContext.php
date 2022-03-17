@@ -1,6 +1,6 @@
 <?php
 
-namespace FsHub\Sdk\Entites;
+namespace FsHub\Sdk\Entities;
 
 use FsHub\Sdk\Contracts\PilotInterface;
 use FsHub\Sdk\Exceptions\EntityNotSetException;

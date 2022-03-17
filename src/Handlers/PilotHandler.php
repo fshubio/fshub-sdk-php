@@ -3,7 +3,11 @@
 namespace FsHub\Sdk\Handlers;
 
 use FsHub\Sdk\Contracts\FsHubConnectorInterface;
-use FsHub\Sdk\Entites\Pilot;
+use FsHub\Sdk\Entities\Airlines;
+use FsHub\Sdk\Entities\Flights;
+use FsHub\Sdk\Entities\Pilot;
+use FsHub\Sdk\Entities\Pilots;
+use FsHub\Sdk\Entities\PilotStats;
 
 class PilotHandler extends BaseFeatureHandler
 {
@@ -95,7 +99,7 @@ class PilotHandler extends BaseFeatureHandler
     public function get(): Pilots
     {
         return Pilots::fromJson(
-            $this->_connector->Get("airline?cursor={$this->cursor}&limit={$this->imit}")->body
+            $this->_connector->Get("pilot?cursor={$this->cursor}&limit={$this->limit}")->body
         );
     }
 
@@ -107,7 +111,9 @@ class PilotHandler extends BaseFeatureHandler
     public function flights(): Flights
     {
         $this->requiresSetContext($this->selectedId);
-        return Flights::fromJson("pilot/{$this->selectedId}/flight?cursor={$this->cursor}&limit={$this->limit}");
+        return Flights::fromJson(
+            $this->_connector->Get("pilot/{$this->selectedId}/flight?cursor={$this->cursor}&limit={$this->limit}")->body
+        );
     }
 
     /**
@@ -118,7 +124,9 @@ class PilotHandler extends BaseFeatureHandler
     public function airlines(): Airlines
     {
         $this->requiresSetContext($this->selectedId);
-        return Flights::fromJson("pilot/{$this->selectedId}/airline?cursor={$this->cursor}&limit={$this->limit}");
+        return Airlines::fromJson(
+            $this->_connector->Get("pilot/{$this->selectedId}/airline?cursor={$this->cursor}&limit={$this->limit}")->body
+        );
     }
 
     /**
@@ -129,7 +137,9 @@ class PilotHandler extends BaseFeatureHandler
     public function stats(): PilotStats
     {
         $this->requiresSetContext($this->selectedId);
-        return PilotStats::fromJson("pilot/{$this->selectedId}/stats");
+        return PilotStats::fromJson(
+            $this->_connector->Get("pilot/{$this->selectedId}/stats")->body
+        );
     }
 
     /**
@@ -141,7 +151,9 @@ class PilotHandler extends BaseFeatureHandler
     public function arrivals(string $icao): Flights
     {
         $this->requiresSetContext($this->selectedId);
-        return Flights::fromJson("pilot/{$this->selectedId}/flight/arrival/{$icao}?cursor={$this->cursor}&limit={$this->limit}");
+        return Flights::fromJson(
+            $this->_connector->Get("pilot/{$this->selectedId}/flight/arrival/{$icao}?cursor={$this->cursor}&limit={$this->limit}")->body
+        );
     }
 
     /**
@@ -153,7 +165,9 @@ class PilotHandler extends BaseFeatureHandler
     public function departures(string $icao): Flights
     {
         $this->requiresSetContext($this->selectedId);
-        return Flights::fromJson("pilot/{$this->selectedId}/flight/departure/{$icao}?cursor={$this->cursor}&limit={$this->limit}");
+        return Flights::fromJson(
+            $this->_connector->Get("pilot/{$this->selectedId}/flight/departure/{$icao}?cursor={$this->cursor}&limit={$this->limit}")->body
+        );
     }
 
     /**
@@ -166,6 +180,8 @@ class PilotHandler extends BaseFeatureHandler
     public function route(string $departure, string $arrival): Flights
     {
         $this->requiresSetContext($this->selectedId);
-        return Flights::fromJson("pilot/{$this->selectedId}/flight/departure/{$departure}/arrival/{$arrival}?cursor={$this->cursor}&limit={$this->limit}");
+        return Flights::fromJson(
+            $this->_connector->Get("pilot/{$this->selectedId}/flight/departure/{$departure}/arrival/{$arrival}?cursor={$this->cursor}&limit={$this->limit}")->body
+        );
     }
 }

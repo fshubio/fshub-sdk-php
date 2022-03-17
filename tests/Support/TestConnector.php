@@ -542,7 +542,7 @@ class TestConnector implements FsHubConnectorInterface
             'X-RateLimit-Remaining' => '99',
             'Context-Type' => 'application/json',
         ];
-        $response->status =429;
+        $response->status = 429;
         $response->body = FixtureReader::Read("General/Too-Many-Requests.json");
 
         // Validate and thrown exceptions if there are any...

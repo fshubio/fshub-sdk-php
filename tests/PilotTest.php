@@ -79,7 +79,7 @@ class PilotTest extends TestCase
             ->offset(0)
             ->get();
 
-        $this->assertEquals(10, $pilots->data->count());
+        $this->assertEquals(10, $pilots->count());
     }
 
     public function testPilotCollectionObjectValues()
@@ -89,7 +89,7 @@ class PilotTest extends TestCase
             ->offset(0)
             ->get();
 
-        $total = $pilots->data->count;
+        $total = $pilots->count();
         $this->assertEquals(10, $total);
 
         $testAccount1 = $pilots->data[3];
@@ -118,8 +118,8 @@ class PilotTest extends TestCase
         $this->assertEquals(7336, $pilots->meta->cursor->current);
         $this->assertEquals(7340, $pilots->meta->cursor->next);
 
-        $testAccount3 = $pilots->data[$pilots->data->count() - 1];
-        $this->assertEquals('Darrian Dorsey', $testAccount3);
+        $testAccount3 = $pilots->data[$pilots->count() - 1];
+        $this->assertEquals('Darrian Dorsey', $testAccount3->name);
 
 
     }
@@ -133,10 +133,10 @@ class PilotTest extends TestCase
             ->take(25)
             ->flights();
 
-        $total = $pilotFlights->data->count();
-        $this->assertEquals(1700000, $pilotFlights->meta->cursor->current);
+        $total = $pilotFlights->count();
+        //$this->assertEquals(1700000, $pilotFlights->meta->cursor->current);
         $this->assertEquals(25, $total);
-        $this->assertEquals(6, $pilotFlights->meta->cursor->count);
+        $this->assertEquals(25, $pilotFlights->meta->cursor->count);
 
         foreach ($pilotFlights->data as $flight) {
             $this->assertEquals(2, $flight->pilot->id);
@@ -151,7 +151,7 @@ class PilotTest extends TestCase
             ->select(2)
             ->airlines();
 
-        $total = $pilotAirlines->data->count();
+        $total = $pilotAirlines->count();
 
         $this->assertEquals(6, $total);
         $this->assertEquals(6, $pilotAirlines->meta->cursor->count);
@@ -181,15 +181,15 @@ class PilotTest extends TestCase
 
         $this->assertEquals(2, $pilotStats->data->id);
 
-        $this->assertEquals(536, $pilotStats->allTime->flights);
-        $this->assertEquals(572.7, $pilotStats->allTime->hours);
-        $this->assertEquals(215426, $pilotStats->allTime->distance);
-        $this->assertEquals(-140, $pilotStats->allTime->averageLandingRate);
+        $this->assertEquals(536, $pilotStats->data->allTime->flights);
+        $this->assertEquals(572.7, $pilotStats->data->allTime->hours);
+        $this->assertEquals(215426, $pilotStats->data->allTime->distance);
+        $this->assertEquals(-140, $pilotStats->data->allTime->averageLandingRate);
 
-        $this->assertEquals(39, $pilotStats->currentMonth->flights);
-        $this->assertEquals(56.2, $pilotStats->currentMonth->hours);
-        $this->assertEquals(21122, $pilotStats->currentMonth->distance);
-        $this->assertEquals(-159, $pilotStats->currentMonth->averageLandingRate);
+        $this->assertEquals(39, $pilotStats->data->currentMonth->flights);
+        $this->assertEquals(56.2, $pilotStats->data->currentMonth->hours);
+        $this->assertEquals(21122, $pilotStats->data->currentMonth->distance);
+        $this->assertEquals(-159, $pilotStats->data->currentMonth->averageLandingRate);
     }
 
     public function testPilotFlightsByDepartureIcao()
@@ -201,9 +201,9 @@ class PilotTest extends TestCase
         $pilotFlights = $client->pilots
             ->select(2)
             ->take(100)
-            ->arrivals($icao);
+            ->departures($icao);
 
-        $this->assertEquals(11, $pilotFlights->meta->cursor->count);
+        $this->assertEquals(72, $pilotFlights->meta->cursor->count);
 
         foreach ($pilotFlights->data as $flight) {
             $this->assertEquals(2, $flight->pilot->id);
