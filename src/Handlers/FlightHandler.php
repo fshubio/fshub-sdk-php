@@ -3,8 +3,8 @@
 namespace FsHub\Sdk\Handlers;
 
 use FsHub\Sdk\Contracts\FsHubConnectorInterface;
-use FsHub\Sdk\Entites\Flight;
-use FsHub\Sdk\Entites\Flights;
+use FsHub\Sdk\Entities\Flight;
+use FsHub\Sdk\Entities\Flights;
 
 class FlightHandler extends BaseFeatureHandler
 {
@@ -74,7 +74,7 @@ class FlightHandler extends BaseFeatureHandler
     public function first(int $id): Flight
     {
         return Flight::fromJson(
-            $this->_connector->Get("airline/{$id}")->body
+            $this->_connector->Get("flight/{$id}")->body
         );
     }
 

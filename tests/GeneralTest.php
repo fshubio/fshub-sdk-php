@@ -1,8 +1,14 @@
 <?php
 
 use FsHub\Sdk\Client;
-use FsHub\Sdk\Entites\UserConf;
+use FsHub\Sdk\Entities\FlightMaxValues;
+use FsHub\Sdk\Entities\UserConf;
+use FsHub\Sdk\Exceptions\ContextNotSetException;
+use FsHub\Sdk\Exceptions\InvalidApiKeyException;
+use FsHub\Sdk\Exceptions\RateLimitExceededException;
 use FsHub\Sdk\Tests\Support\TestConnector;
+use FsHub\Sdk\Types\Distance;
+use FsHub\Sdk\Types\Wind;
 use PHPUnit\Framework\TestCase;
 
 class GeneralTest extends TestCase
@@ -11,28 +17,23 @@ class GeneralTest extends TestCase
     public function testSelectedContextThrowsExceptionIfNotSet()
     {
         $client = new Client("FIXTURE_KEY", new TestConnector());
-
-        $this->expectException(\FsHub\Sdk\Exceptions\ContextNotSetException::class);
+        $this->expectException(ContextNotSetException::class);
         $this->expectExceptionMessage('No context has been set, use the Select(x) fluent method to set/select a context!');
         $client->airlines->screenshots();
-
     }
 
     public function testInvalidApiKeyThrowsCorrectException()
     {
         $client = new Client("FIXTURE_KEY", new TestConnector());
-
-        $this->expectException(\FsHub\Sdk\Exceptions\InvalidApiKeyException::class);
+        $this->expectException(InvalidApiKeyException::class);
         $this->expectExceptionMessage('The API key specified is not valid, please check and try again.');
         $client->flights->find(9997);
-
     }
 
     public function testTooManyApiAttemptsRateLimitShowsCorrectException()
     {
         $client = new Client("FIXTURE_KEY", new TestConnector());
-
-        $this->expectException(\FsHub\Sdk\Exceptions\RateLimitExceededException::class);
+        $this->expectException(RateLimitExceededException::class);
         $this->expectExceptionMessage('You have been rate limited due to the number of API requests you have performed, please wait before trying again.');
         $client->flights->find(9998);
 
@@ -47,22 +48,20 @@ class GeneralTest extends TestCase
         ]);
         $this->assertEquals('G-BOBY', $userConfEntity->tailNumber);
         $this->assertEquals('A20N', $userConfEntity->icao);
-
     }
 
     public function testCastFlightMaxValues()
     {
-        $test = new \FsHub\Sdk\Entites\FlightMaxValues();
+        $test = new FlightMaxValues();
         $this->assertEquals(null, $test->altitude);
         $this->assertEquals(null, $test->speed);
 
-        $test = \FsHub\Sdk\Entites\FlightMaxValues::cast([
+        $test = FlightMaxValues::cast([
             'spd' => 198,
             'alt' => 18734,
         ]);
         $this->assertEquals(18734, $test->altitude);
         $this->assertEquals(198, $test->speed);
-
     }
 
     public function testThatAFreshEntityHasEmptyValues()
@@ -120,7 +119,7 @@ class GeneralTest extends TestCase
 
     public function testWindCastMapping()
     {
-        $direction = \FsHub\Sdk\Types\Wind::cast([
+        $direction = Wind::cast([
             'spd' => 12,
             'dir' => 98,
         ]);
@@ -130,12 +129,11 @@ class GeneralTest extends TestCase
 
         $this->assertEquals(12, $direction->speed);
         $this->assertEquals(98, $direction->direction);
-
     }
 
     public function testDistanceCastMapping()
     {
-        $distance = \FsHub\Sdk\Types\Distance::cast([
+        $distance = Distance::cast([
             'nm' => 1.61987,
             'km' => 3,
         ]);
@@ -145,6 +143,5 @@ class GeneralTest extends TestCase
 
         $this->assertEquals(1.61987, $distance->nauticalMiles);
         $this->assertEquals(3, $distance->kilometres);
-
     }
 }

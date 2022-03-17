@@ -2,6 +2,10 @@
 
 namespace FsHub\Sdk\Connectors;
 
+use FsHub\Sdk\Exceptions\InvalidApiKeyException;
+use FsHub\Sdk\Exceptions\NoRecordsFoundException;
+use FsHub\Sdk\Exceptions\RateLimitExceededException;
+
 class ConnectorResponse
 {
     public int $status;
