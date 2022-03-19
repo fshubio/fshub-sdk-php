@@ -8,7 +8,7 @@ class Flights implements \Countable
 {
 
     /**
-     * List of flight resources.
+     * List of flight entities
      * @var Array<FlightData>
      */
     public array $data;

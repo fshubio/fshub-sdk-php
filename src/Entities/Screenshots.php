@@ -8,7 +8,7 @@ class Screenshots implements \Countable
 {
 
     /**
-     * List of screenshot resources.
+     * List of screenshot entities.
      * @var Array<ScreenshotData>
      */
     public array $data;

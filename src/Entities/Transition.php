@@ -10,13 +10,13 @@ use FsHub\Sdk\Types\Wind;
 class Transition
 {
     /**
-     * The airport ICAO.
+     * The airport ICAO Code.
      * @var string
      */
     public ?string $icao;
 
     /**
-     * The airport IATA.
+     * The airport IATA Code.
      * @var string|null
      */
     public ?string $iata;
@@ -28,7 +28,7 @@ class Transition
     public ?string $name;
 
     /**
-     * The date and time at the point of the transision.
+     * The date and time at the point of the transition.
      * @var \DateTime
      */
     public \DateTime $time;
@@ -46,7 +46,7 @@ class Transition
     public Direction $hdg;
 
     /**
-     * Aircraft speed at transision.
+     * Aircraft speed at transition.
      * @var Speed
      */
     public Speed $spd;
@@ -64,7 +64,7 @@ class Transition
     public int $pitch;
 
     /**
-     * The aircraft bank angle at the point of tranistion.
+     * The aircraft bank angle at the point of transition.
      * @var int
      */
     public int $bank;

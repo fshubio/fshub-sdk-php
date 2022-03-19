@@ -6,7 +6,7 @@ class CollectionMeta
 {
 
     /**
-     * The API Metadata Cursor.
+     * The API Metadata Cursor state.
      * @var Cursor
      */
     public Cursor $cursor;

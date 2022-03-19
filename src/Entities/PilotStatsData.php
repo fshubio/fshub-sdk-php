@@ -2,7 +2,9 @@
 
 namespace FsHub\Sdk\Entities;
 
-class PilotStatsData
+use FsHub\Sdk\Contracts\PilotInterface;
+
+class PilotStatsData implements PilotInterface
 {
 
     /**
@@ -44,5 +46,11 @@ class PilotStatsData
 
     }
 
-
+    /**
+     * @inheritdoc
+     */
+    public function getPilotId(): int
+    {
+        return $this->id;
+    }
 }

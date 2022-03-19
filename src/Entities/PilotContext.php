@@ -11,8 +11,18 @@ class PilotContext implements PilotInterface
 
     use CastableEntity;
 
+    /**
+     * Pilot Context Data
+     * @var PilotContextData
+     */
     public PilotContextData $data;
 
+    /**
+     * Constructs a new entity from a JSON string.
+     * @param string $json
+     * @return PilotContext
+     * @throws \Exception
+     */
     public static function fromJson(string $json): PilotContext
     {
         $pilot = new PilotContext();
@@ -25,6 +35,9 @@ class PilotContext implements PilotInterface
         return $pilot;
     }
 
+    /**
+     * @inheritdoc
+     */
     public function getPilotId(): int
     {
         if ($this->data != null) {

@@ -8,7 +8,7 @@ class Airlines implements \Countable
 {
 
     /**
-     * List of airline resources.
+     * List of airline entities.
      * @var Array<AirlineData>
      */
     public array $data;
@@ -18,7 +18,6 @@ class Airlines implements \Countable
      * @var CollectionMeta
      */
     public CollectionMeta $meta;
-
 
     public static function fromJson(string $json): Airlines
     {

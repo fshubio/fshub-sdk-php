@@ -5,6 +5,10 @@ namespace FsHub\Sdk\Entities;
 class Flight
 {
 
+    /**
+     * Airline Data
+     * @var FlightData
+     */
     public FlightData $data;
 
     public static function fromJson(string $json): Flight

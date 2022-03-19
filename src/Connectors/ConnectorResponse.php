@@ -12,6 +12,13 @@ class ConnectorResponse
     public array $meta = [];
     public ?string $body;
 
+    /**
+     * Validate the connector response and throw exceptions as required.
+     * @return bool
+     * @throws InvalidApiKeyException
+     * @throws NoRecordsFoundException
+     * @throws RateLimitExceededException
+     */
     public function validate(): bool
     {
         switch ($this->status) {

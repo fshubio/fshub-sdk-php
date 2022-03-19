@@ -64,7 +64,7 @@ class Frequencies
     public ?string $approach = Common::DEFAULT_NULL_VALUE;
 
     /**
-     * Departure requency
+     * Departure frequency
      * @var string|null
      */
     public ?string $departure = Common::DEFAULT_NULL_VALUE;

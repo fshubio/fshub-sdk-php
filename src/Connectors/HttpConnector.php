@@ -10,15 +10,30 @@ class HttpConnector implements FsHubConnectorInterface
 
     private readonly string $apiKey;
 
-    private const BASE_API_URL = "https://fshub.io/api/v3/";
+    /**
+     * The FsHub API Base URL
+     */
+    protected const BASE_API_URL = "https://fshub.io/api/v3/";
 
+    /**
+     * Create an instance of the standard HTTP connector.
+     * @param string $apiKey An FsHub.io API Key
+     * @throws ErrorException
+     */
     public function __construct(string $apiKey)
     {
         $this->apiKey = $apiKey;
         $this->checkCurlIsInstalled();
     }
 
-
+    /**
+     * Retrieve data from the FsHub API URI.
+     * @param string $resourceIdentifier
+     * @return ConnectorResponse
+     * @throws \FsHub\Sdk\Exceptions\InvalidApiKeyException
+     * @throws \FsHub\Sdk\Exceptions\NoRecordsFoundException
+     * @throws \FsHub\Sdk\Exceptions\RateLimitExceededException
+     */
     public function get(string $resourceIdentifier): ConnectorResponse
     {
         $connectorResponse = new ConnectorResponse();

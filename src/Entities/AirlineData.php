@@ -2,9 +2,10 @@
 
 namespace FsHub\Sdk\Entities;
 
+use FsHub\Sdk\Contracts\AirlineInterface;
 use FsHub\Sdk\Types\SocialHandles;
 
-class AirlineData
+class AirlineData implements AirlineInterface
 {
 
     /**
@@ -37,12 +38,6 @@ class AirlineData
      */
     public SocialHandles $handles;
 
-    /**
-     * Convert array data PilotData object properties.
-     * @param array $data
-     * @return void
-     * @throws \Exception
-     */
     public function fromArray(array $data)
     {
 
@@ -66,4 +61,11 @@ class AirlineData
 
     }
 
+    /***
+     * @inheritdoc
+     */
+    public function getAirlineId(): int
+    {
+        return $this->id;
+    }
 }

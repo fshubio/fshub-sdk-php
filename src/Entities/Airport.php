@@ -6,6 +6,10 @@ use FsHub\Sdk\Contracts\AirportInterface;
 
 class Airport implements AirportInterface
 {
+    /**
+     * Airport Data
+     * @var AirportData
+     */
     public AirportData $data;
 
     public static function fromJson(string $json): Airport
@@ -20,6 +24,9 @@ class Airport implements AirportInterface
         return $airport;
     }
 
+    /**
+     * @inheritdoc
+     */
     public function getAirportIcao(): string
     {
         return $this->data->icao;

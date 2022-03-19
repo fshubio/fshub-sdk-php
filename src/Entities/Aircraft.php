@@ -37,7 +37,6 @@ class Aircraft
      */
     public UserConf $userConf;
 
-
     public function fromArray(array $data)
     {
 

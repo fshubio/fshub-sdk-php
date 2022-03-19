@@ -55,9 +55,9 @@ class Client
     public readonly FlightHandler $flights;
 
     /**
-     * Create a new instance of the FsHub client library.
-     * @param string $apiKey
-     * @param FsHubConnectorInterface $connector
+     * Create new instance of the FsHub SDK (REST API client).
+     * @param string $apiKey An FsHub.io API key
+     * @param FsHubConnectorInterface $connector An FsHubConnectorInterface implementation
      */
     public function __construct(string $apiKey, FsHubConnectorInterface $connector)
     {
@@ -70,7 +70,7 @@ class Client
      * Configure API feature accessors.
      * @return void
      */
-    private function configureFeatures(): void
+    protected function configureFeatures(): void
     {
         $this->user = new PilotContextHandler($this->_connector);
         $this->pilots = new PilotHandler($this->_connector);

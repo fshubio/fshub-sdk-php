@@ -25,6 +25,9 @@ class PilotStats implements PilotInterface
         return $pilot;
     }
 
+    /**
+     * @inheritdoc
+     */
     public function getPilotId(): int
     {
         return $this->data->id;

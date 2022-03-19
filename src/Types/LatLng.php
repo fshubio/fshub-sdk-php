@@ -14,7 +14,16 @@ class LatLng implements GeolocatableInterface
         'lng' => 'longitude'
     ];
 
+    /**
+     * Latitude
+     * @var float
+     */
     public float $latitude = 0.0;
+
+    /**
+     * Longitude
+     * @var float
+     */
     public float $longitude = 0.0;
 
     /**
@@ -27,7 +36,7 @@ class LatLng implements GeolocatableInterface
     }
 
     /**
-     * Convert to an lat/lng JSON object.
+     * Convert to a JSON object.
      * @return string
      */
     public function toJson(): string

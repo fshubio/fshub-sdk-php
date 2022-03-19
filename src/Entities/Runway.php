@@ -14,7 +14,7 @@ class Runway
     public string $name;
 
     /**
-     * The runway surface typo.
+     * The runway surface type.
      * @var string
      */
     public string $surface;
@@ -26,7 +26,7 @@ class Runway
     public int $length;
 
     /**
-     * The runway heading
+     * The runway heading (in cardinal degrees)
      * @var int
      */
     public int $heading;
