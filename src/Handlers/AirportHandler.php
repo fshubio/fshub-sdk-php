@@ -3,14 +3,9 @@
 namespace FsHub\Sdk\Handlers;
 
 use FsHub\Sdk\Contracts\FsHubConnectorInterface;
-use FsHub\Sdk\Entities\Airline;
-use FsHub\Sdk\Entities\Airlines;
-use FsHub\Sdk\Entities\AirlineStats;
 use FsHub\Sdk\Entities\Airport;
 use FsHub\Sdk\Entities\Flights;
 use FsHub\Sdk\Entities\Metar;
-use FsHub\Sdk\Entities\Pilots;
-use FsHub\Sdk\Entities\Screenshots;
 use FsHub\Sdk\Exceptions\AirportNotFoundException;
 use FsHub\Sdk\Exceptions\NoMetarFoundException;
 
@@ -67,7 +62,7 @@ class AirportHandler extends BaseFeatureHandler
      * Resets the API cursor and limit values.
      * @return AirportHandler
      */
-    private function reset(): AirportHandler
+    protected function reset(): AirportHandler
     {
         $this->cursor = self::DEFAULT_CURSOR_POSITION;
         $this->limit = self::DEFAULT_LIMIT;
@@ -82,13 +77,13 @@ class AirportHandler extends BaseFeatureHandler
     public function first(string $icao): Airport
     {
         return Airport::fromJson(
-            $this->_connector->Get("airport/{$icao}")->body
+            $this->_connector->get("airport/{$icao}")->body
         );
     }
 
     /**
      * An alias of "First" - Returns a single airport entity by the airline ID.
-     * @param string $icao The airport ICAO to return.
+     * @param string $icao The airport ICAO.
      * @return Airport
      */
     public function find(string $icao): Airport
@@ -108,7 +103,7 @@ class AirportHandler extends BaseFeatureHandler
         $this->requiresSetContext($this->selectedIcao);
 
         $metar = Metar::fromJson(
-            $this->_connector->Get("airport/{$this->selectedIcao}/metar")->body
+            $this->_connector->get("airport/{$this->selectedIcao}/metar")->body
         );
 
         // If we could not find the airport we'll throw an Airport Not Found exception instead...
@@ -133,7 +128,7 @@ class AirportHandler extends BaseFeatureHandler
     {
         $this->requiresSetContext($this->selectedIcao);
         return Flights::fromJson(
-            $this->_connector->Get("airport/{$this->selectedIcao}/arrival?cursor={$this->cursor}&limit={$this->limit}")->body
+            $this->_connector->get("airport/{$this->selectedIcao}/arrival?cursor={$this->cursor}&limit={$this->limit}")->body
         );
     }
 
@@ -146,13 +141,13 @@ class AirportHandler extends BaseFeatureHandler
     {
         $this->requiresSetContext($this->selectedIcao);
         return Flights::fromJson(
-            $this->_connector->Get("airport/{$this->selectedIcao}/departure?cursor={$this->cursor}&limit={$this->limit}")->body
+            $this->_connector->get("airport/{$this->selectedIcao}/departure?cursor={$this->cursor}&limit={$this->limit}")->body
         );
     }
 
     /**
      * Return flights that departed from this airport and landed at the specified airport.
-     * @param string $icao
+     * @param string $icao The airport ICAO that you want to return flights that flew to.
      * @return Flights
      * @throws \FsHub\Sdk\Exceptions\ContextNotSetException
      */
@@ -160,13 +155,13 @@ class AirportHandler extends BaseFeatureHandler
     {
         $this->requiresSetContext($this->selectedIcao);
         return Flights::fromJson(
-            $this->_connector->Get("airport/{$this->selectedIcao}/departure/{$icao}?cursor={$this->cursor}&limit={$this->limit}")->body
+            $this->_connector->get("airport/{$this->selectedIcao}/departure/{$icao}?cursor={$this->cursor}&limit={$this->limit}")->body
         );
     }
 
     /**
      * Return flights that arrived at this airport from the specified airport.
-     * @param string $icao
+     * @param string $icao The airport ICAO that you want to return flights that flew from.
      * @return Flights
      * @throws \FsHub\Sdk\Exceptions\ContextNotSetException
      */
@@ -174,7 +169,7 @@ class AirportHandler extends BaseFeatureHandler
     {
         $this->requiresSetContext($this->selectedIcao);
         return Flights::fromJson(
-            $this->_connector->Get("airport/{$this->selectedIcao}/arrival/{$icao}?cursor={$this->cursor}&limit={$this->limit}")->body
+            $this->_connector->get("airport/{$this->selectedIcao}/arrival/{$icao}?cursor={$this->cursor}&limit={$this->limit}")->body
         );
     }
 

@@ -22,6 +22,12 @@ class BaseFeatureHandler
      */
     protected int $cursor = 0;
 
+    /**
+     * Validation checks for methods required a set context.
+     * @param $value
+     * @return void
+     * @throws ContextNotSetException
+     */
     protected function requiresSetContext($value): void
     {
         if ($value == null || $value == "" || $value == 0) {

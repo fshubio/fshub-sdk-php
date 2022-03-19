@@ -7,7 +7,7 @@ use FsHub\Sdk\Contracts\FsHubConnectorInterface;
 
 class TestConnector implements FsHubConnectorInterface
 {
-    public function Get(string $resourceIdentifier): ConnectorResponse
+    public function get(string $resourceIdentifier): ConnectorResponse
     {
         return match ($resourceIdentifier) {
             "user" => $this->User(),

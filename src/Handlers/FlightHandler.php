@@ -25,7 +25,7 @@ class FlightHandler extends BaseFeatureHandler
 
     /**
      * Sets the flight context.
-     * @param int $id The airline ID
+     * @param int $id The flight ID
      * @return FlightHandler
      */
     public function select(int $id): FlightHandler
@@ -60,7 +60,7 @@ class FlightHandler extends BaseFeatureHandler
      * Resets the API cursor and limit values.
      * @return FlightHandler
      */
-    private function reset(): FlightHandler
+    protected function reset(): FlightHandler
     {
         $this->cursor = self::DEFAULT_CURSOR_POSITION;
         $this->limit = self::DEFAULT_LIMIT;
@@ -75,7 +75,7 @@ class FlightHandler extends BaseFeatureHandler
     public function first(int $id): Flight
     {
         return Flight::fromJson(
-            $this->_connector->Get("flight/{$id}")->body
+            $this->_connector->get("flight/{$id}")->body
         );
     }
 
@@ -96,7 +96,7 @@ class FlightHandler extends BaseFeatureHandler
     public function get(): Flights
     {
         return Flights::fromJson(
-            $this->_connector->Get("flight?cursor={$this->cursor}&limit={$this->limit}")->body
+            $this->_connector->get("flight?cursor={$this->cursor}&limit={$this->limit}")->body
         );
     }
 
@@ -107,7 +107,7 @@ class FlightHandler extends BaseFeatureHandler
     public function screenshots(): Screenshots
     {
         return Screenshots::fromJson(
-            $this->_connector->Get("flight/{$this->selectedId}/screenshot?cursor={$this->cursor}&limit={$this->limit}")->body
+            $this->_connector->get("flight/{$this->selectedId}/screenshot?cursor={$this->cursor}&limit={$this->limit}")->body
         );
     }
 

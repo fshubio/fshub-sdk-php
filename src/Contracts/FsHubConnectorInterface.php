@@ -6,5 +6,5 @@ use FsHub\Sdk\Connectors\ConnectorResponse;
 
 interface FsHubConnectorInterface
 {
-    public function Get(string $resourceIdentifier): ConnectorResponse;
+    public function get(string $resourceIdentifier): ConnectorResponse;
 }

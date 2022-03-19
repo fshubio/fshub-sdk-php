@@ -63,7 +63,7 @@ class AirlineHandler extends BaseFeatureHandler
      * Resets the API cursor and limit values.
      * @return AirlineHandler
      */
-    private function reset(): AirlineHandler
+    protected function reset(): AirlineHandler
     {
         $this->cursor = self::DEFAULT_CURSOR_POSITION;
         $this->limit = self::DEFAULT_LIMIT;
@@ -78,7 +78,7 @@ class AirlineHandler extends BaseFeatureHandler
     public function first(int $id): Airline
     {
         return Airline::fromJson(
-            $this->_connector->Get("airline/{$id}")->body
+            $this->_connector->get("airline/{$id}")->body
         );
     }
 
@@ -99,7 +99,7 @@ class AirlineHandler extends BaseFeatureHandler
     public function get(): Airlines
     {
         return Airlines::fromJson(
-            $this->_connector->Get("airline?cursor={$this->cursor}&limit={$this->limit}")->body
+            $this->_connector->get("airline?cursor={$this->cursor}&limit={$this->limit}")->body
         );
     }
 
@@ -112,7 +112,7 @@ class AirlineHandler extends BaseFeatureHandler
     {
         $this->requiresSetContext($this->selectedId);
         return AirlineStats::fromJson(
-            $this->_connector->Get("airline/{$this->selectedId}/stats")->body
+            $this->_connector->get("airline/{$this->selectedId}/stats")->body
         );
     }
 
@@ -125,7 +125,7 @@ class AirlineHandler extends BaseFeatureHandler
     {
         $this->requiresSetContext($this->selectedId);
         return Pilots::fromJson(
-            $this->_connector->Get("airline/{$this->selectedId}/pilot?cursor={$this->cursor}&limit={$this->limit}")->body
+            $this->_connector->get("airline/{$this->selectedId}/pilot?cursor={$this->cursor}&limit={$this->limit}")->body
         );
     }
 
@@ -139,7 +139,7 @@ class AirlineHandler extends BaseFeatureHandler
     {
         $this->requiresSetContext($this->selectedId);
         return Flights::fromJson(
-            $this->_connector->Get("airline/{$this->selectedId}/arrival/{$icao}?cursor={$this->cursor}&limit={$this->limit}")->body
+            $this->_connector->get("airline/{$this->selectedId}/arrival/{$icao}?cursor={$this->cursor}&limit={$this->limit}")->body
         );
     }
 
@@ -153,7 +153,7 @@ class AirlineHandler extends BaseFeatureHandler
     {
         $this->requiresSetContext($this->selectedId);
         return Flights::fromJson(
-            $this->_connector->Get("airline/{$this->selectedId}/departure/{$icao}?cursor={$this->cursor}&limit={$this->limit}")->body
+            $this->_connector->get("airline/{$this->selectedId}/departure/{$icao}?cursor={$this->cursor}&limit={$this->limit}")->body
         );
     }
 
@@ -168,7 +168,7 @@ class AirlineHandler extends BaseFeatureHandler
     {
         $this->requiresSetContext($this->selectedId);
         return Flights::fromJson(
-            $this->_connector->Get("airline/{$this->selectedId}/departure/{$departure}/arrival/{$arrival}?cursor={$this->cursor}&limit={$this->limit}")->body
+            $this->_connector->get("airline/{$this->selectedId}/departure/{$departure}/arrival/{$arrival}?cursor={$this->cursor}&limit={$this->limit}")->body
         );
     }
 
@@ -181,7 +181,7 @@ class AirlineHandler extends BaseFeatureHandler
     {
         $this->requiresSetContext($this->selectedId);
         return Screenshots::fromJson(
-            $this->_connector->Get("airline/{$this->selectedId}/screenshot?cursor={$this->cursor}&limit={$this->limit}")->body
+            $this->_connector->get("airline/{$this->selectedId}/screenshot?cursor={$this->cursor}&limit={$this->limit}")->body
         );
     }
 
