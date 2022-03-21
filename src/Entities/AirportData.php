@@ -2,8 +2,6 @@
 
 namespace FsHub\Sdk\Entities;
 
-use FsHub\Sdk\Contracts\AirportInterface;
-use FsHub\Sdk\Types\Common;
 use FsHub\Sdk\Types\LatLng;
 
 class AirportData
@@ -75,7 +73,7 @@ class AirportData
         $this->locale->city = $data['locale']['city'] ?? '';
         $this->locale->state = $data['locale']['state'] ?? '';
         $this->locale->country = $data['locale']['county'] ?? '';
-        
+
         $this->frequencies = Frequencies::cast($data['frequencies']);
         $this->geo = LatLng::cast($data['geo']);
 

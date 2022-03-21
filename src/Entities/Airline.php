@@ -2,7 +2,9 @@
 
 namespace FsHub\Sdk\Entities;
 
-class Airline
+use FsHub\Sdk\Contracts\AirlineInterface;
+
+class Airline implements AirlineInterface
 {
 
     /**
@@ -24,4 +26,8 @@ class Airline
         return $airline;
     }
 
+    public function getAirlineId(): int
+    {
+        return $this->data->id;
+    }
 }

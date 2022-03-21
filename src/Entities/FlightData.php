@@ -8,7 +8,6 @@ use FsHub\Sdk\Types\Distance;
 use FsHub\Sdk\Types\LatLng;
 use FsHub\Sdk\Types\Speed;
 use FsHub\Sdk\Types\Wind;
-use http\Header;
 
 class FlightData implements FlightInterface
 {

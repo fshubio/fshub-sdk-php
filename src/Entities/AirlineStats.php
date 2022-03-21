@@ -2,8 +2,6 @@
 
 namespace FsHub\Sdk\Entities;
 
-use FsHub\Sdk\Contracts\PilotInterface;
-
 class AirlineStats
 {
 

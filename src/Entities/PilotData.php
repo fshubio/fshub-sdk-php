@@ -3,10 +3,11 @@
 namespace FsHub\Sdk\Entities;
 
 use DateTime;
+use FsHub\Sdk\Contracts\PilotInterface;
 use FsHub\Sdk\Types\LatLng;
 use FsHub\Sdk\Types\SocialHandles;
 
-class PilotData
+class PilotData implements PilotInterface
 {
 
     /**
@@ -123,4 +124,8 @@ class PilotData
         }
     }
 
+    public function getPilotId(): int
+    {
+        return $this->id;
+    }
 }

@@ -2,7 +2,9 @@
 
 namespace FsHub\Sdk\Entities;
 
-class Flight
+use FsHub\Sdk\Contracts\FlightInterface;
+
+class Flight implements FlightInterface
 {
 
     /**
@@ -24,4 +26,11 @@ class Flight
         return $flight;
     }
 
+    /**
+     * @inheritdoc
+     */
+    public function getFlightId(): int
+    {
+        return $this->data->id;
+    }
 }
