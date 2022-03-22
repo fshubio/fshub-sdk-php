@@ -2,6 +2,7 @@
 
 namespace FsHub\Sdk\Handlers;
 
+use FsHub\Sdk\Contracts\FlightInterface;
 use FsHub\Sdk\Contracts\FsHubConnectorInterface;
 use FsHub\Sdk\Entities\Flight;
 use FsHub\Sdk\Entities\Flights;
@@ -31,6 +32,17 @@ class FlightHandler extends BaseFeatureHandler
     public function select(int $id): FlightHandler
     {
         $this->selectedId = $id;
+        return $this;
+    }
+
+    /**
+     * Sets the airline context from an implementation of FlightInterface.
+     * @param FlightInterface $flight The flight entity
+     * @return FlightHandler
+     */
+    public function selectByEntity(FlightInterface $flight): FlightHandler
+    {
+        $this->selectedId = $flight->getFlightId();
         return $this;
     }
 

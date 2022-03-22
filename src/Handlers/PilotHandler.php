@@ -3,6 +3,7 @@
 namespace FsHub\Sdk\Handlers;
 
 use FsHub\Sdk\Contracts\FsHubConnectorInterface;
+use FsHub\Sdk\Contracts\PilotInterface;
 use FsHub\Sdk\Entities\Airlines;
 use FsHub\Sdk\Entities\Flights;
 use FsHub\Sdk\Entities\Pilot;
@@ -33,6 +34,17 @@ class PilotHandler extends BaseFeatureHandler
     public function select(int $id): PilotHandler
     {
         $this->selectedId = $id;
+        return $this;
+    }
+
+    /**
+     * Sets the pilot context from an implementation of PilotInterface.
+     * @param PilotInterface $pilot The pilot entity
+     * @return PilotHandler
+     */
+    public function selectByEntity(PilotInterface $pilot): PilotHandler
+    {
+        $this->selectedId = $pilot->getPilotId();
         return $this;
     }
 

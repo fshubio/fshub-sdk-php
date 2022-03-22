@@ -2,6 +2,7 @@
 
 namespace FsHub\Sdk\Handlers;
 
+use FsHub\Sdk\Contracts\AirportInterface;
 use FsHub\Sdk\Contracts\FsHubConnectorInterface;
 use FsHub\Sdk\Entities\Airport;
 use FsHub\Sdk\Entities\Flights;
@@ -33,6 +34,17 @@ class AirportHandler extends BaseFeatureHandler
     public function select(string $icao): AirportHandler
     {
         $this->selectedIcao = $icao;
+        return $this;
+    }
+
+    /**
+     * Sets the airport context from an implementation of AirportInterface.
+     * @param AirportInterface $airport The airport entity
+     * @return AirportHandler
+     */
+    public function selectByEntity(AirportInterface $airport): AirportHandler
+    {
+        $this->selectedIcao = $airport->getAirportIcao();
         return $this;
     }
 

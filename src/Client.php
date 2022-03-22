@@ -2,6 +2,7 @@
 
 namespace FsHub\Sdk;
 
+use FsHub\Sdk\Connectors\HttpConnector;
 use FsHub\Sdk\Contracts\FsHubConnectorInterface;
 use FsHub\Sdk\Handlers\AirlineHandler;
 use FsHub\Sdk\Handlers\AirportHandler;
@@ -57,12 +58,13 @@ class Client
     /**
      * Create new instance of the FsHub SDK (REST API client).
      * @param string $apiKey An FsHub.io API key
-     * @param FsHubConnectorInterface $connector An FsHubConnectorInterface implementation
+     * @param FsHubConnectorInterface|null $connector An FsHubConnectorInterface implementation
      */
-    public function __construct(string $apiKey, FsHubConnectorInterface $connector)
+    public function __construct(string $apiKey, ?FsHubConnectorInterface $connector = null)
     {
         $this->_apiKey = $apiKey;
-        $this->_connector = $connector;
+        $this->_connector = $connect ?? new HttpConnector($apiKey);
+
         $this->configureFeatures();
     }
 
