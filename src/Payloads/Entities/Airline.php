@@ -41,7 +41,6 @@ class Airline implements AirlineInterface
     {
         $this->id = $data['id'];
         $this->name = $data['name'];
-
         $this->owner = (new User())->fromArray($data['owner']);
         $this->profile = (new Profile())->fromArray($data['profile']);
         $this->handles = (new SocialHandles())->cast($data['handles']);

@@ -111,7 +111,7 @@ class FlightArrivedData
 
         $this->pilot = (new User())->fromArray($data['user']);
         $this->aircraft = (new Aircraft())->fromArray($data['aircraft']);
-        $this->airline = (new Airline())->fromArray($data['airline']);
+        $this->airline = isset($data['airline']) ? (new Airline())->fromArray($data['airline']) : null;
         $this->plan = isset($data['plan']) ? (new FlightPlan())->fromArray($data['plan']) : null;
         $this->airport = isset($data['airport']) ? (new Airport())->fromArray($data['airport']) : null;
 
@@ -120,7 +120,7 @@ class FlightArrivedData
         $this->bank = $data['bank'];
         $this->speed = $data['speed_tas'];
         $this->heading = (new Heading())->fromArray($data['heading']);
-        $this->wind =  (new Wind())->fromArray($data['wind']);
+        $this->wind = (new Wind())->fromArray($data['wind']);
         $this->weight = (new Weight())->fromArray($data['weight']);
 
         $gps = new LatLng();

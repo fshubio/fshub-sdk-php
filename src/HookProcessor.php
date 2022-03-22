@@ -5,7 +5,9 @@ namespace FsHub\Sdk;
 use FsHub\Sdk\Contracts\FsHubWebhookInterface;
 use FsHub\Sdk\Exceptions\IncompatibleHookException;
 use FsHub\Sdk\Payloads\FlightArrived;
+use FsHub\Sdk\Payloads\FlightCompleted;
 use FsHub\Sdk\Payloads\FlightDeparted;
+use FsHub\Sdk\Payloads\FlightUpdated;
 use FsHub\Sdk\Payloads\ProfileUpdated;
 use FsHub\Sdk\Types\WebhookEvent;
 use FsHub\Sdk\Types\WebhookVariant;
@@ -91,6 +93,7 @@ class HookProcessor
     /**
      *  Retrieve data entity for the "profile.updated" event type.
      * @return ProfileUpdated
+     * @throws IncompatibleHookException
      */
     public function profileUpdated(): ProfileUpdated
     {
@@ -101,6 +104,7 @@ class HookProcessor
     /**
      * Retrieve data entity for the "flight.departed" event type.
      * @return FlightDeparted
+     * @throws IncompatibleHookException
      */
     public function flightDeparted(): FlightDeparted
     {
@@ -111,6 +115,7 @@ class HookProcessor
     /**
      * Retrieve data entity for the "flight.arrived" event type.
      * @return FlightArrived
+     * @throws IncompatibleHookException
      */
     public function flightArrived(): FlightArrived
     {
@@ -121,19 +126,23 @@ class HookProcessor
     /**
      * Retrieve data entity for the "flight.completed" event type.
      * @return FlightCompleted
+     * @throws IncompatibleHookException
      */
     public function flightCompleted(): FlightCompleted
     {
         $this->requiresNamedEventType(WebhookEvent::FlightCompleted);
+        return FlightCompleted::fromJson($this->payload);
     }
 
     /**
      * Retrieve data entity for the "flight.updated" event type.
      * @return FlightUpdated
+     * @throws IncompatibleHookException
      */
     public function flightUpdated(): FlightUpdated
     {
         $this->requiresNamedEventType(WebhookEvent::FlightUpdated);
+        return FlightUpdated::fromJson($this->payload);
     }
 
 

@@ -292,5 +292,140 @@ class HookProcessorTestSuite extends TestCase
 
     }
 
+    public function testFlightCompleted()
+    {
+
+        $webhook = new TestWebhookProvider(
+            WebhookVariant::User,
+            WebhookEvent::FlightCompleted,
+            1647768875,
+            "Webhooks/1647768875_5275.json"
+        );
+
+        $processor = new HookProcessor($webhook);
+
+        $this->assertEquals("03/20/2022 09:34:35", $processor->eventTime->format("m/d/Y H:i:s"));
+        $this->assertEquals(WebhookEvent::FlightCompleted, $processor->eventType);
+        $this->assertEquals(WebhookVariant::User, $processor->variant);
+
+        $flight = $processor->flightCompleted();
+
+        $this->assertEquals(1647768875, $flight->sent); // Test that the RAW UNIX timestamp is returned.
+        $this->assertEquals("User", $flight->variant); // The the RAW event type is returned.
+
+        $this->assertEquals(1814099, $flight->data->id); // The flight Id.
+
+        $this->assertEquals(2, $flight->data->pilot->id);
+        $this->assertEquals("Bobby Allen", $flight->data->pilot->name);
+        $this->assertEquals("bobbyallen.uk@gmail.com", $flight->data->pilot->email);
+        $this->assertEquals("https://fshub.ams3.digitaloceanspaces.com/avatars/u_2_80.png?c=1647768872",
+            $flight->data->pilot->profile->avatarUrl);
+        $this->assertEquals("Developer of FsHub and the LRM Client. Airbus and GA virtual pilot!",
+            $flight->data->pilot->profile->bio);
+
+        $this->assertEquals("EGSS", $flight->data->pilot->location->base);
+        $this->assertEquals("NZQN", $flight->data->pilot->location->locale);
+
+        $this->assertNull($flight->data->pilot->handles->website);
+        $this->assertEquals("@allebb87", $flight->data->pilot->handles->twitter);
+        $this->assertNull($flight->data->pilot->handles->facebook);
+        $this->assertEquals("1167426", $flight->data->pilot->handles->vatsim);
+        $this->assertEquals("458562", $flight->data->pilot->handles->ivao);
+
+        $this->assertEquals("Europe/London", $flight->data->pilot->timezone);
+        $this->assertEquals("GB", $flight->data->pilot->country);
+
+        $this->assertNull($flight->data->airline); // No airline was set for this flight, was logged as a "Personal Flight".
+        $this->assertNull($flight->data->plan); // No flight plan was added for this flight.
+
+        $this->assertEquals(55, $flight->data->distance->nauticalMiles);
+        $this->assertEquals(103, $flight->data->distance->kilometres);
+
+        $this->assertEquals(8913, $flight->data->max->altitude);
+        $this->assertEquals(175, $flight->data->max->speed);
+        $this->assertEquals(15, $flight->data->fuelUsed);
+
+        $this->assertTrue(str_contains($flight->data->geoJson,
+            "[749,786,1051,1322,1603,1878,2149,2422,2687,2951,3210,3477,3743,4012,4283,4551"));
+        $this->assertNull($flight->data->remarks);
+        $this->assertNull($flight->data->tags);
+
+        $arrival = $flight->data->arrival;
+        $departure = $flight->data->departure;
+
+        // Generally we have already fully tested the Arrival and Departure entities so we'll just check the ICAO codes here only...
+        $this->assertEquals("NZMO", $departure->airport->icao);
+        $this->assertEquals("NZQN", $arrival->airport->icao);
+
+    }
+
+    public function testFlightUpdated()
+    {
+
+        $webhook = new TestWebhookProvider(
+            WebhookVariant::User,
+            WebhookEvent::FlightUpdated,
+            1647768875,
+            "Webhooks/1647589241_5332.json"
+        );
+
+        $processor = new HookProcessor($webhook);
+
+        $this->assertEquals("03/20/2022 09:34:35", $processor->eventTime->format("m/d/Y H:i:s"));
+        $this->assertEquals(WebhookEvent::FlightUpdated, $processor->eventType);
+        $this->assertEquals(WebhookVariant::User, $processor->variant);
+
+        $flight = $processor->flightUpdated();
+
+        $this->assertEquals(1647589241, $flight->sent); // Test that the RAW UNIX timestamp is returned.
+        $this->assertEquals("User", $flight->variant); // The RAW event type is returned.
+
+        $this->assertEquals(1812362, $flight->data->id); // The flight Id.
+
+        $this->assertEquals(2385, $flight->data->pilot->id);
+        $this->assertEquals("Clorix", $flight->data->pilot->name);
+        $this->assertEquals("clorix1@gmail.com", $flight->data->pilot->email);
+        $this->assertEquals("https://fshub.ams3.digitaloceanspaces.com/avatars/u_2385_80.png?c=1647556833",
+            $flight->data->pilot->profile->avatarUrl);
+        $this->assertEquals("FsHub/LRM Community Manager and Support.  I've most recently been enjoying flying the Daher Kodiak 100 in MSFS.  You'll almost always find me in a GA aircraft of some kind.  Always looking for scenic places to go flying!",
+            $flight->data->pilot->profile->bio);
+
+        $this->assertEquals("KFSM", $flight->data->pilot->location->base);
+        $this->assertEquals("KFSM", $flight->data->pilot->location->locale);
+
+        $this->assertNull($flight->data->pilot->handles->website);
+        $this->assertNull($flight->data->pilot->handles->twitter);
+        $this->assertNull($flight->data->pilot->handles->facebook);
+        $this->assertNull($flight->data->pilot->handles->vatsim);
+        $this->assertNull($flight->data->pilot->handles->ivao);
+
+        $this->assertEquals("America/Chicago", $flight->data->pilot->timezone);
+        $this->assertEquals("US", $flight->data->pilot->country);
+
+        $this->assertNull($flight->data->airline); // No airline was set for this flight, was logged as a "Personal Flight".
+        $this->assertNull($flight->data->plan); // No flight plan was added for this flight.
+
+        $this->assertEquals(26, $flight->data->distance->nauticalMiles);
+        $this->assertEquals(47, $flight->data->distance->kilometres);
+
+        $this->assertEquals(5080, $flight->data->max->altitude);
+        $this->assertEquals(138, $flight->data->max->speed);
+        $this->assertEquals(8, $flight->data->fuelUsed);
+
+        $this->assertTrue(str_contains($flight->data->chartJson, "\"coordinates\":[-94.364708,35.342123]}"));
+        $this->assertEquals("First test flight using my new PC build.  Seems to work about as well as my old computer, but I mostly expected that since I'm still using the very same GPU from that build.  LRM and my other flight sim apps seem to work okay so far as well!",
+            $flight->data->remarks);
+        $this->assertEquals("Microsoft Flight Simulator,MFS,MSFS,FS2020,MFS2020,MSFS2020,Microsoft Flight Simulator 2020,2020,c172,cessna 172,skyhawk,g1000,garmin g1000,KFSM,Fort Smith Regional Airport,Fort Smith,Arkansas,United States,wind,gusts,wind gusts,gusty,ILS,approach,cat i approach,cat i,cat i ils,cat i ils approach,cat 1,category 1,category i,visual,greased it,butter,greaser,amazing landing,landing",
+            $flight->data->tags);
+
+        $arrival = $flight->data->arrival;
+        $departure = $flight->data->departure;
+
+        // Generally we have already fully tested the Arrival and Departure entities so we'll just check the ICAO codes here only...
+        $this->assertEquals("KFSM", $departure->airport->icao);
+        $this->assertEquals("KFSM", $arrival->airport->icao);
+
+    }
+
 
 }
