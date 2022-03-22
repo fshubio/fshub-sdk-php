@@ -60,10 +60,10 @@ class Client
      * @param string $apiKey An FsHub.io API key
      * @param FsHubConnectorInterface|null $connector An FsHubConnectorInterface implementation
      */
-    public function __construct(string $apiKey, ?FsHubConnectorInterface $connector = null)
+    public function __construct(string $apiKey, FsHubConnectorInterface $connector = null)
     {
         $this->_apiKey = $apiKey;
-        $this->_connector = $connect ?? new HttpConnector($apiKey);
+        $this->_connector = $connector ?? new HttpConnector($apiKey);
 
         $this->configureFeatures();
     }
