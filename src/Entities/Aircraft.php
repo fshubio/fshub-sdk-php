@@ -6,7 +6,6 @@ use FsHub\Sdk\Types\Common;
 
 class Aircraft
 {
-
     /**
      * The aircraft ICAO as recognised by FsHub.
      * @var string
@@ -39,7 +38,6 @@ class Aircraft
 
     public function fromArray(array $data)
     {
-
         $this->icao = $data['icao'] ?? '';
         $this->icaoName = $data['icao_name'] ?? null;
         $this->name = $data['name'];
@@ -50,6 +48,4 @@ class Aircraft
         $userConfiguration->icao = $data['user_conf']['icao'];
         $this->userConf = $userConfiguration;
     }
-
-
 }

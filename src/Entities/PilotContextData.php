@@ -9,7 +9,6 @@ use FsHub\Sdk\Types\LatLng;
 
 class PilotContextData
 {
-
     use CastableEntity;
 
     /**
@@ -59,7 +58,6 @@ class PilotContextData
      */
     public function fromArray(array $data)
     {
-
         $this->id = $data['id'];
         $this->name = $data['name'];
         $this->base = $data['base'];

@@ -4,14 +4,12 @@ namespace FsHub\Sdk\Entities;
 
 class Metar
 {
-
     public bool $error = false;
     public ?MetarData $data = null;
     public ?string $message = null;
 
     public static function fromJson(string $json): Metar
     {
-
         $metar = new Metar();
         $data = json_decode($json, true);
 
@@ -27,5 +25,4 @@ class Metar
 
         return $metar;
     }
-
 }

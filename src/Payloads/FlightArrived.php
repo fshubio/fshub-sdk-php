@@ -4,7 +4,6 @@ namespace FsHub\Sdk\Payloads;
 
 class FlightArrived
 {
-
     /**
      * The webhook event variant - this is the variation trigger type (eg. User or Airline) action triggered.
      * @var string

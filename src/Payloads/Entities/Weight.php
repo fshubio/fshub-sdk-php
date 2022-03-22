@@ -7,7 +7,6 @@ namespace FsHub\Sdk\Payloads\Entities;
  */
 class Weight
 {
-
     /**
      * Aircraft fuel weight (in KGS)
      * @var int
@@ -49,6 +48,4 @@ class Weight
         $this->zfw = $data['zfw'];
         return $this;
     }
-
-
 }

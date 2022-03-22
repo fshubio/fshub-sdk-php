@@ -7,7 +7,6 @@ use FsHub\Sdk\Types\Common;
 
 class FlightPlan
 {
-
     use CastableEntity;
 
     /**
@@ -37,5 +36,4 @@ class FlightPlan
         'cruise_lvl' => 'cruiseLevel',
         'route' => 'route',
     ];
-
 }

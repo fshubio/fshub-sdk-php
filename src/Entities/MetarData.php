@@ -2,11 +2,8 @@
 
 namespace FsHub\Sdk\Entities;
 
-use FsHub\Sdk\Exceptions\AirportNotFoundException;
-
 class MetarData
 {
-
     public string $icao;
     public ?string $iata = null;
     public ?string $name = null;
@@ -14,7 +11,6 @@ class MetarData
 
     public function fromArray(array $data)
     {
-
         $this->icao = $data['icao'];
         $this->iata = $data['iata'] ?? null;
         $this->name = $data['name'] ?? null;

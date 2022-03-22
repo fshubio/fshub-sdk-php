@@ -4,7 +4,6 @@ namespace FsHub\Sdk\Payloads\Entities;
 
 class Wind
 {
-
     /**
      * Wind Speed (kts)
      * @var int

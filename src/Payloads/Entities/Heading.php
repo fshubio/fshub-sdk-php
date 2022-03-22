@@ -4,7 +4,6 @@ namespace FsHub\Sdk\Payloads\Entities;
 
 class Heading
 {
-
     /**
      * Magnetic heading (direction) in cardinal degrees.
      * @var int

@@ -4,7 +4,6 @@ namespace FsHub\Sdk\Entities;
 
 class AirlineStatsData
 {
-
     /**
      * The airline ID.
      * @var int
@@ -25,7 +24,6 @@ class AirlineStatsData
 
     public function fromArray(array $data)
     {
-
         $this->id = $data['id'];
 
         $allTime = new StatsData();
@@ -41,8 +39,5 @@ class AirlineStatsData
         $currentMonth->distance = $data['month']['total_distance'];
         $currentMonth->averageLandingRate = $data['month']['average_landing'];
         $this->currentMonth = $currentMonth;
-
     }
-
-
 }

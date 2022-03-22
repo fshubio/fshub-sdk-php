@@ -4,7 +4,6 @@ namespace FsHub\Sdk\Types;
 
 class Cursor
 {
-
     use CastableEntity;
 
     /**
@@ -30,6 +29,4 @@ class Cursor
      * @var int
      */
     public int $count = Common::DEFAULT_INTEGER_VALUE;
-
-
 }

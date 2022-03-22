@@ -9,7 +9,6 @@ use FsHub\Sdk\Types\SocialHandles;
 
 class PilotData implements PilotInterface
 {
-
     /**
      * The Pilot ID
      * @var int
@@ -90,7 +89,6 @@ class PilotData implements PilotInterface
      */
     public function fromArray(array $data)
     {
-
         $this->id = $data['id'];
         $this->name = $data['name'];
         $this->bio = $data['bio'] ?? null;

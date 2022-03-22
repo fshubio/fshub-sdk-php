@@ -4,7 +4,6 @@ namespace FsHub\Sdk\Types;
 
 trait CastableEntity
 {
-
     /**
      * Cast entity properties from a key-value based array.
      * @param array $properties

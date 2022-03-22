@@ -2,9 +2,10 @@
 
 namespace FsHub\Sdk\Entities;
 
+use DateTime;
+
 class ScreenshotData
 {
-
     /**
      * The screenshot ID
      * @var int
@@ -31,23 +32,21 @@ class ScreenshotData
 
     /**
      * The date and time the screenshot was uploaded to FsHub.
-     * @var \DateTime
+     * @var DateTime
      */
-    public \DateTime $createdAt;
+    public DateTime $createdAt;
+
 
     public function fromArray(array $data)
     {
-
         $this->id = $data['id'];
         $this->name = $data['name'];
         $this->description = $data['desc'];
-        $this->createdAt = new \DateTime($data['created_at']);
+        $this->createdAt = new DateTime($data['created_at']);
 
         $renditions = new ScreenshotRenditions();
         $renditions->fullsizeUrl = $data['urls']['fullsize'];
         $renditions->thumbnailUrl = $data['urls']['thumbnail'];
         $this->url = $renditions;
-
     }
-
 }

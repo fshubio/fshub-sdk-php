@@ -12,18 +12,17 @@ use FsHub\Sdk\Handlers\PilotHandler;
 
 class Client
 {
-
     /**
      * An FsHub.io API key.
      * @var string
      */
-    private readonly string $_apiKey;
+    private readonly string $apiKey;
 
     /**
      * An FsHub data connector instance (implementation).
      * @var FsHubConnectorInterface
      */
-    private readonly FsHubConnectorInterface $_connector;
+    private readonly FsHubConnectorInterface $connector;
 
     /**
      * Current user (token) context
@@ -62,8 +61,8 @@ class Client
      */
     public function __construct(string $apiKey, FsHubConnectorInterface $connector = null)
     {
-        $this->_apiKey = $apiKey;
-        $this->_connector = $connector ?? new HttpConnector($apiKey);
+        $this->apiKey = $apiKey;
+        $this->connector = $connector ?? new HttpConnector($apiKey);
 
         $this->configureFeatures();
     }
@@ -74,11 +73,10 @@ class Client
      */
     protected function configureFeatures(): void
     {
-        $this->user = new PilotContextHandler($this->_connector);
-        $this->pilots = new PilotHandler($this->_connector);
-        $this->flights = new FlightHandler($this->_connector);
-        $this->airlines = new AirlineHandler($this->_connector);
-        $this->airports = new AirportHandler($this->_connector);
+        $this->user = new PilotContextHandler($this->connector);
+        $this->pilots = new PilotHandler($this->connector);
+        $this->flights = new FlightHandler($this->connector);
+        $this->airlines = new AirlineHandler($this->connector);
+        $this->airports = new AirportHandler($this->connector);
     }
-
 }

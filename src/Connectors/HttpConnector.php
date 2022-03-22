@@ -7,7 +7,6 @@ use FsHub\Sdk\Contracts\FsHubConnectorInterface;
 
 class HttpConnector implements FsHubConnectorInterface
 {
-
     private readonly string $apiKey;
 
     /**
@@ -58,7 +57,6 @@ class HttpConnector implements FsHubConnectorInterface
         $connectorResponse->validate();
 
         return $connectorResponse;
-
     }
 
     private function checkCurlIsInstalled()

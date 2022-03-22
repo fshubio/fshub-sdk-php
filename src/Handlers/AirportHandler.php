@@ -12,7 +12,7 @@ use FsHub\Sdk\Exceptions\NoMetarFoundException;
 
 class AirportHandler extends BaseFeatureHandler
 {
-    protected FsHubConnectorInterface $_connector;
+    protected FsHubConnectorInterface $connector;
 
     private const DEFAULT_LIMIT = 10;
 
@@ -23,7 +23,7 @@ class AirportHandler extends BaseFeatureHandler
     public function __construct(FsHubConnectorInterface $connector)
     {
         $this->reset();
-        $this->_connector = $connector;
+        $this->connector = $connector;
     }
 
     /**
@@ -89,7 +89,7 @@ class AirportHandler extends BaseFeatureHandler
     public function first(string $icao): Airport
     {
         return Airport::fromJson(
-            $this->_connector->get("airport/{$icao}")->body
+            $this->connector->get("airport/{$icao}")->body
         );
     }
 
@@ -115,7 +115,7 @@ class AirportHandler extends BaseFeatureHandler
         $this->requiresSetContext($this->selectedIcao);
 
         $metar = Metar::fromJson(
-            $this->_connector->get("airport/{$this->selectedIcao}/metar")->body
+            $this->connector->get("airport/{$this->selectedIcao}/metar")->body
         );
 
         // If we could not find the airport we'll throw an Airport Not Found exception instead...
@@ -140,7 +140,7 @@ class AirportHandler extends BaseFeatureHandler
     {
         $this->requiresSetContext($this->selectedIcao);
         return Flights::fromJson(
-            $this->_connector->get("airport/{$this->selectedIcao}/arrival?cursor={$this->cursor}&limit={$this->limit}")->body
+            $this->connector->get("airport/{$this->selectedIcao}/arrival?cursor={$this->cursor}&limit={$this->limit}")->body
         );
     }
 
@@ -153,7 +153,7 @@ class AirportHandler extends BaseFeatureHandler
     {
         $this->requiresSetContext($this->selectedIcao);
         return Flights::fromJson(
-            $this->_connector->get("airport/{$this->selectedIcao}/departure?cursor={$this->cursor}&limit={$this->limit}")->body
+            $this->connector->get("airport/{$this->selectedIcao}/departure?cursor={$this->cursor}&limit={$this->limit}")->body
         );
     }
 
@@ -167,7 +167,7 @@ class AirportHandler extends BaseFeatureHandler
     {
         $this->requiresSetContext($this->selectedIcao);
         return Flights::fromJson(
-            $this->_connector->get("airport/{$this->selectedIcao}/departure/{$icao}?cursor={$this->cursor}&limit={$this->limit}")->body
+            $this->connector->get("airport/{$this->selectedIcao}/departure/{$icao}?cursor={$this->cursor}&limit={$this->limit}")->body
         );
     }
 
@@ -181,8 +181,7 @@ class AirportHandler extends BaseFeatureHandler
     {
         $this->requiresSetContext($this->selectedIcao);
         return Flights::fromJson(
-            $this->_connector->get("airport/{$this->selectedIcao}/arrival/{$icao}?cursor={$this->cursor}&limit={$this->limit}")->body
+            $this->connector->get("airport/{$this->selectedIcao}/arrival/{$icao}?cursor={$this->cursor}&limit={$this->limit}")->body
         );
     }
-
 }

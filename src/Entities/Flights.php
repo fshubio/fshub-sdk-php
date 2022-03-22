@@ -6,7 +6,6 @@ use FsHub\Sdk\Types\CollectionMeta;
 
 class Flights implements \Countable
 {
-
     /**
      * List of flight entities
      * @var Array<FlightData>

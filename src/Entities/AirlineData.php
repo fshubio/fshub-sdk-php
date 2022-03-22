@@ -7,7 +7,6 @@ use FsHub\Sdk\Types\SocialHandles;
 
 class AirlineData implements AirlineInterface
 {
-
     /**
      * The airline ID.
      * @var int
@@ -40,7 +39,6 @@ class AirlineData implements AirlineInterface
 
     public function fromArray(array $data)
     {
-
         $this->id = $data['id'];
         $this->name = $data['name'];
         $this->abbreviation = $data['abbr'];
@@ -58,7 +56,6 @@ class AirlineData implements AirlineInterface
             $this->handles->vatsim = null; // Airlines don't have the option to set VATSIM ID so we set this to null by default!
             $this->handles->ivao = null; // Airlines don't have the option to set IVAO so we set this to null by default!
         }
-
     }
 
     /***

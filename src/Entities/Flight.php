@@ -6,7 +6,6 @@ use FsHub\Sdk\Contracts\FlightInterface;
 
 class Flight implements FlightInterface
 {
-
     /**
      * Airline Data
      * @var FlightData
@@ -15,7 +14,6 @@ class Flight implements FlightInterface
 
     public static function fromJson(string $json): Flight
     {
-
         $flight = new Flight();
         $data = json_decode($json, true);
 

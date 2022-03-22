@@ -4,7 +4,6 @@ namespace FsHub\Sdk\Types;
 
 class Wind
 {
-
     use CastableEntity;
 
     protected static $castMap = [
@@ -23,5 +22,4 @@ class Wind
      * @var int
      */
     public int $direction = Common::DEFAULT_INTEGER_VALUE;
-
 }

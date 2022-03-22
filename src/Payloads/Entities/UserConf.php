@@ -24,5 +24,4 @@ class UserConf
         $this->icao = $data['icao'];
         return $this;
     }
-
 }

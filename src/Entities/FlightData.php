@@ -2,6 +2,7 @@
 
 namespace FsHub\Sdk\Entities;
 
+use DateTime;
 use FsHub\Sdk\Contracts\FlightInterface;
 use FsHub\Sdk\Types\Direction;
 use FsHub\Sdk\Types\Distance;
@@ -11,7 +12,6 @@ use FsHub\Sdk\Types\Wind;
 
 class FlightData implements FlightInterface
 {
-
     /**
      * The flight ID
      * @var int
@@ -86,7 +86,6 @@ class FlightData implements FlightInterface
 
     public function fromArray(array $data)
     {
-
         $pilotData = new PilotData();
         $pilotData->fromArray($data['user']);
 
@@ -142,7 +141,7 @@ class FlightData implements FlightInterface
             $departure->wind->speed = $data['departure']['wind']['spd'];
 
             if (isset($data['departure']['time'])) {
-                $departure->time = new \DateTime($data['departure']['time']);
+                $departure->time = new DateTime($data['departure']['time']);
             }
             $this->departure = $departure;
         }
@@ -173,7 +172,7 @@ class FlightData implements FlightInterface
 
 
         if (isset($data['arrival']['time'])) {
-            $arrival->time = new \DateTime($data['arrival']['time']);
+            $arrival->time = new DateTime($data['arrival']['time']);
         }
 
         $this->arrival = $arrival;

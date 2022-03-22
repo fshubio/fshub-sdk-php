@@ -6,7 +6,6 @@ use FsHub\Sdk\Types\CollectionMeta;
 
 class Screenshots implements \Countable
 {
-
     /**
      * List of screenshot entities.
      * @var Array<ScreenshotData>

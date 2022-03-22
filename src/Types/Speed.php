@@ -4,7 +4,6 @@ namespace FsHub\Sdk\Types;
 
 class Speed
 {
-
     use CastableEntity;
 
     /**
@@ -12,5 +11,4 @@ class Speed
      * @var int
      */
     public int $tas = Common::DEFAULT_INTEGER_VALUE;
-
 }

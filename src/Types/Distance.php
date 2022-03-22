@@ -4,7 +4,6 @@ namespace FsHub\Sdk\Types;
 
 class Distance
 {
-
     use CastableEntity;
 
     protected static $castMap = [
@@ -23,6 +22,4 @@ class Distance
      * @var float
      */
     public float $kilometres = Common::DEFAULT_DOUBLE_VALUE;
-
-
 }

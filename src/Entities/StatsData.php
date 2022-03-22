@@ -4,7 +4,6 @@ namespace FsHub\Sdk\Entities;
 
 class StatsData
 {
-
     /**
      * Total number of flights.
      * @var int

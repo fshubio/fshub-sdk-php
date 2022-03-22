@@ -6,7 +6,6 @@ use FsHub\Sdk\Types\Common;
 
 class Profile
 {
-
     /**
      * Avatar URL (if applicable).
      * @var string|null
@@ -32,5 +31,4 @@ class Profile
         $this->abbreviation = $data['abbreviation'] ?? null;
         return $this;
     }
-
 }

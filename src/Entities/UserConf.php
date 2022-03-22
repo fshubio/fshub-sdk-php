@@ -3,12 +3,10 @@
 namespace FsHub\Sdk\Entities;
 
 use FsHub\Sdk\Types\CastableEntity;
+use FsHub\Sdk\Types\Common;
 
 class UserConf
 {
-
-    const DEFAULT_STRING_VALUE = "";
-
     use CastableEntity;
 
     public static array $castMap = [
@@ -20,12 +18,11 @@ class UserConf
      * The aircraft tail number (as set by the user through the LRM Aircraft Manager feature.
      * @var string
      */
-    public string $tailNumber = self::DEFAULT_STRING_VALUE;
+    public string $tailNumber = Common::DEFAULT_STRING_VALUE;
 
     /**
      * The aircraft ICAO code (as set by the user through the LRM Aircraft Manager feature.
      * @var string
      */
-    public string $icao = self::DEFAULT_STRING_VALUE;
-
+    public string $icao = Common::DEFAULT_STRING_VALUE;
 }

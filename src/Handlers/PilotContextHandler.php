@@ -7,20 +7,19 @@ use FsHub\Sdk\Entities\PilotContext;
 
 class PilotContextHandler extends BaseFeatureHandler
 {
-
-    protected FsHubConnectorInterface $_connector;
+    protected FsHubConnectorInterface $connector;
 
     public function __construct(FsHubConnectorInterface $connector)
     {
-        $this->_connector = $connector;
+        $this->connector = $connector;
     }
 
     /**
      * Return the current pilot context - The API token owner pilot object.
      * @return PilotContext
      */
-    public function Context(): PilotContext
+    public function context(): PilotContext
     {
-        return (new PilotContext())->fromJson($this->_connector->get("user")->body);
+        return (new PilotContext())->fromJson($this->connector->get("user")->body);
     }
 }

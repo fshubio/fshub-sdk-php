@@ -4,7 +4,6 @@ namespace FsHub\Sdk\Types;
 
 class CollectionMeta
 {
-
     /**
      * The API Metadata Cursor state.
      * @var Cursor
@@ -15,5 +14,4 @@ class CollectionMeta
     {
         $this->cursor = new Cursor();
     }
-
 }

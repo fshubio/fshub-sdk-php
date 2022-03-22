@@ -10,7 +10,7 @@ use FsHub\Sdk\Entities\Screenshots;
 
 class FlightHandler extends BaseFeatureHandler
 {
-    protected FsHubConnectorInterface $_connector;
+    protected FsHubConnectorInterface $connector;
 
     private const DEFAULT_LIMIT = 10;
 
@@ -21,7 +21,7 @@ class FlightHandler extends BaseFeatureHandler
     public function __construct(FsHubConnectorInterface $connector)
     {
         $this->reset();
-        $this->_connector = $connector;
+        $this->connector = $connector;
     }
 
     /**
@@ -87,7 +87,7 @@ class FlightHandler extends BaseFeatureHandler
     public function first(int $id): Flight
     {
         return Flight::fromJson(
-            $this->_connector->get("flight/{$id}")->body
+            $this->connector->get("flight/{$id}")->body
         );
     }
 
@@ -108,7 +108,7 @@ class FlightHandler extends BaseFeatureHandler
     public function get(): Flights
     {
         return Flights::fromJson(
-            $this->_connector->get("flight?cursor={$this->cursor}&limit={$this->limit}")->body
+            $this->connector->get("flight?cursor={$this->cursor}&limit={$this->limit}")->body
         );
     }
 
@@ -119,9 +119,7 @@ class FlightHandler extends BaseFeatureHandler
     public function screenshots(): Screenshots
     {
         return Screenshots::fromJson(
-            $this->_connector->get("flight/{$this->selectedId}/screenshot?cursor={$this->cursor}&limit={$this->limit}")->body
+            $this->connector->get("flight/{$this->selectedId}/screenshot?cursor={$this->cursor}&limit={$this->limit}")->body
         );
     }
-
-
 }

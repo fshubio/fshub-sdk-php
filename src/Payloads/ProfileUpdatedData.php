@@ -8,7 +8,6 @@ use FsHub\Sdk\Types\SocialHandles;
 
 class ProfileUpdatedData
 {
-
     /**
      * The Pilot ID.
      * @var int
@@ -82,6 +81,5 @@ class ProfileUpdatedData
         $handles->vatsim = $data['handles']['vatsim'];
         $handles->ivao = $data['handles']['ivao'];
         $this->handles = $handles;
-
     }
 }

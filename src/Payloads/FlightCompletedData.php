@@ -6,19 +6,12 @@ use FsHub\Sdk\Contracts\FlightInterface;
 use FsHub\Sdk\Entities\FlightMaxValues;
 use FsHub\Sdk\Payloads\Entities\Aircraft;
 use FsHub\Sdk\Payloads\Entities\Airline;
-use FsHub\Sdk\Payloads\Entities\Airport;
 use FsHub\Sdk\Payloads\Entities\FlightPlan;
-use FsHub\Sdk\Payloads\Entities\Heading;
 use FsHub\Sdk\Payloads\Entities\User;
-use FsHub\Sdk\Payloads\Entities\Weight;
-use FsHub\Sdk\Payloads\Entities\Wind;
 use FsHub\Sdk\Types\Distance;
-use FsHub\Sdk\Types\LatLng;
-use mysql_xdevapi\SqlStatementResult;
 
 class FlightCompletedData implements FlightInterface
 {
-
     /**
      * The flight ID
      * @var int
@@ -130,7 +123,6 @@ class FlightCompletedData implements FlightInterface
         $this->chartJson = $data['chart'];
         $this->remarks = $data['remarks'] ?? null;
         $this->tags = $data['tags'] ?? null;
-
     }
 
     /**

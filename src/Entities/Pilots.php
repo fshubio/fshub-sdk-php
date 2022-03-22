@@ -6,7 +6,6 @@ use FsHub\Sdk\Types\CollectionMeta;
 
 class Pilots implements \Countable
 {
-
     /**
      * List of pilot resources.
      * @var Array<PilotData>

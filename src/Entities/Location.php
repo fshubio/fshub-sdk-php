@@ -2,12 +2,10 @@
 
 namespace FsHub\Sdk\Entities;
 
-use FsHub\Sdk\Types\CastableEntity;
 use FsHub\Sdk\Types\Common;
 
 class Location
 {
-
     /**
      * City name
      * @var string

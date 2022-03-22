@@ -7,7 +7,6 @@ use FsHub\Sdk\Types\SocialHandles;
 
 class User implements PilotInterface
 {
-
     /**
      * The user/pilot ID
      * @var int
@@ -69,7 +68,6 @@ class User implements PilotInterface
         $this->location = (new Locations())->fromArray($data['locations']);
         $this->handles = (new SocialHandles())->cast($data['handles']);
         return $this;
-
     }
 
     /**

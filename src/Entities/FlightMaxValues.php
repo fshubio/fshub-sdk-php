@@ -6,7 +6,6 @@ use FsHub\Sdk\Types\CastableEntity;
 
 class FlightMaxValues
 {
-
     use CastableEntity;
 
     public static array $castMap = [
@@ -25,6 +24,4 @@ class FlightMaxValues
      * @var int|null
      */
     public ?int $speed = null;
-
-
 }

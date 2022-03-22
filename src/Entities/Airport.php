@@ -31,5 +31,4 @@ class Airport implements AirportInterface
     {
         return $this->data->icao;
     }
-
 }

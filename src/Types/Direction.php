@@ -4,7 +4,6 @@ namespace FsHub\Sdk\Types;
 
 class Direction
 {
-
     use CastableEntity;
 
     protected static $castMap = [
@@ -23,5 +22,4 @@ class Direction
      * @var int
      */
     public int $true = Common::DEFAULT_INTEGER_VALUE;
-
 }

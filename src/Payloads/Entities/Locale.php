@@ -6,7 +6,6 @@ use FsHub\Sdk\Types\LatLng;
 
 class Locale
 {
-
     /**
      * The City name.
      * @var string|null

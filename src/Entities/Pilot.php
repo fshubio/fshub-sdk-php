@@ -6,7 +6,6 @@ use FsHub\Sdk\Contracts\PilotInterface;
 
 class Pilot implements PilotInterface
 {
-
     /**
      * Pilot Data
      * @var PilotData

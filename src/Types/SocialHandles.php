@@ -4,7 +4,6 @@ namespace FsHub\Sdk\Types;
 
 class SocialHandles
 {
-
     use CastableEntity;
 
     /**

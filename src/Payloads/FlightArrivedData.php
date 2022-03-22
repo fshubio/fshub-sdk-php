@@ -2,6 +2,7 @@
 
 namespace FsHub\Sdk\Payloads;
 
+use DateTime;
 use FsHub\Sdk\Payloads\Entities\Aircraft;
 use FsHub\Sdk\Payloads\Entities\Airline;
 use FsHub\Sdk\Payloads\Entities\Airport;
@@ -14,7 +15,6 @@ use FsHub\Sdk\Types\LatLng;
 
 class FlightArrivedData
 {
-
     /**
      * The arrival ID.
      * @var int
@@ -101,9 +101,9 @@ class FlightArrivedData
 
     /**
      * The date and time of the arrival (touchdown).
-     * @var \DateTime
+     * @var DateTime
      */
-    public readonly \DateTime $createdAt;
+    public readonly DateTime $createdAt;
 
     public function fromArray(array $data)
     {
@@ -128,7 +128,6 @@ class FlightArrivedData
         $gps->longitude = $data['gps']['lng'];
         $this->gps = $gps;
 
-        $this->createdAt = new \DateTime($data['datetime']);
-
+        $this->createdAt = new DateTime($data['datetime']);
     }
 }

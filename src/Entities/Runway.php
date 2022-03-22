@@ -6,7 +6,6 @@ use FsHub\Sdk\Types\LatLng;
 
 class Runway
 {
-
     /**
      * The runway number/identifier.
      * @var string
@@ -45,7 +44,6 @@ class Runway
 
     public static function fromArray(array $data): Runway
     {
-
         $runway = new Runway();
         $runway->name = $data['name'];
         $runway->surface = $data['type'];

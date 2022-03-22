@@ -4,7 +4,6 @@ namespace FsHub\Sdk\Entities;
 
 class AirlineStats
 {
-
     /**
      * Airline statistics data
      * @var AirlineStatsData
@@ -22,5 +21,4 @@ class AirlineStats
 
         return $airline;
     }
-
 }

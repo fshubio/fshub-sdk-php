@@ -30,5 +30,4 @@ interface FsHubWebhookInterface
      * @return string
      */
     public function rawPayload(): string;
-
 }

@@ -7,7 +7,6 @@ use FsHub\Sdk\Types\Common;
 
 class Frequencies
 {
-
     use CastableEntity;
 
     private static $castMap = [
@@ -68,5 +67,4 @@ class Frequencies
      * @var string|null
      */
     public ?string $departure = Common::DEFAULT_NULL_VALUE;
-
 }

@@ -14,11 +14,10 @@ use FsHub\Sdk\Types\WebhookVariant;
 
 class HookProcessor
 {
-
     /**
      * @var FsHubWebhookInterface
      */
-    protected FsHubWebhookInterface $_payload;
+    protected FsHubWebhookInterface $payload;
 
     /**
      *The processed webhook variant (eg. user, airline).
@@ -42,7 +41,7 @@ class HookProcessor
      * The raw JSON payload.
      * @var string
      */
-    public readonly string $payload;
+    public readonly string $rawPayload;
 
     /**
      * Create a new instance of the webhook processor.
@@ -62,12 +61,12 @@ class HookProcessor
      */
     public function process(FsHubWebhookInterface $payload): HookProcessor
     {
-        $this->_payload = $payload;
+        $this->payload = $payload;
 
-        $this->variant = $this->_payload->variant();
-        $this->eventType = $this->_payload->event();
-        $this->eventTime = $this->_payload->timeSent();
-        $this->payload = $this->_payload->rawPayload();
+        $this->variant = $this->payload->variant();
+        $this->eventType = $this->payload->event();
+        $this->eventTime = $this->payload->timeSent();
+        $this->rawPayload = $this->payload->rawPayload();
 
         return $this;
     }
@@ -98,7 +97,7 @@ class HookProcessor
     public function profileUpdated(): ProfileUpdated
     {
         $this->requiresNamedEventType(WebhookEvent::ProfileUpdated);
-        return ProfileUpdated::fromJson($this->payload);
+        return ProfileUpdated::fromJson($this->rawPayload);
     }
 
     /**
@@ -109,7 +108,7 @@ class HookProcessor
     public function flightDeparted(): FlightDeparted
     {
         $this->requiresNamedEventType(WebhookEvent::FlightDeparted);
-        return FlightDeparted::fromJson($this->payload);
+        return FlightDeparted::fromJson($this->rawPayload);
     }
 
     /**
@@ -120,7 +119,7 @@ class HookProcessor
     public function flightArrived(): FlightArrived
     {
         $this->requiresNamedEventType(WebhookEvent::FlightArrived);
-        return FlightArrived::fromJson($this->payload);
+        return FlightArrived::fromJson($this->rawPayload);
     }
 
     /**
@@ -131,7 +130,7 @@ class HookProcessor
     public function flightCompleted(): FlightCompleted
     {
         $this->requiresNamedEventType(WebhookEvent::FlightCompleted);
-        return FlightCompleted::fromJson($this->payload);
+        return FlightCompleted::fromJson($this->rawPayload);
     }
 
     /**
@@ -142,8 +141,6 @@ class HookProcessor
     public function flightUpdated(): FlightUpdated
     {
         $this->requiresNamedEventType(WebhookEvent::FlightUpdated);
-        return FlightUpdated::fromJson($this->payload);
+        return FlightUpdated::fromJson($this->rawPayload);
     }
-
-
 }

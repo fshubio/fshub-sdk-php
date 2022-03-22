@@ -8,7 +8,6 @@ use FsHub\Sdk\Types\SocialHandles;
 
 class Airport implements AirportInterface
 {
-
     /**
      * The airport ICAO code
      * @var string

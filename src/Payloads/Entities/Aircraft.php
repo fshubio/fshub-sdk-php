@@ -4,7 +4,6 @@ namespace FsHub\Sdk\Payloads\Entities;
 
 class Aircraft
 {
-
     /**
      * The aircraft ICAO as recognised by FsHub.
      * @var string
@@ -48,7 +47,5 @@ class Aircraft
         $this->userConf = (new UserConf())->fromArray($data['user_conf']);
 
         return $this;
-
     }
-
 }

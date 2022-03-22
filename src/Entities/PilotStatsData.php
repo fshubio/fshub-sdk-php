@@ -6,7 +6,6 @@ use FsHub\Sdk\Contracts\PilotInterface;
 
 class PilotStatsData implements PilotInterface
 {
-
     /**
      * The pilot ID.
      * @var int
@@ -27,7 +26,6 @@ class PilotStatsData implements PilotInterface
 
     public function fromArray(array $data)
     {
-
         $this->id = $data['id'];
 
         $allTime = new StatsData();
@@ -43,7 +41,6 @@ class PilotStatsData implements PilotInterface
         $currentMonth->distance = $data['month']['total_distance'];
         $currentMonth->averageLandingRate = $data['month']['average_landing'];
         $this->currentMonth = $currentMonth;
-
     }
 
     /**

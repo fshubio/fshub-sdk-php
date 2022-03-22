@@ -6,7 +6,6 @@ use FsHub\Sdk\Contracts\GeolocatableInterface;
 
 class LatLng implements GeolocatableInterface
 {
-
     use CastableEntity;
 
     protected static $castMap = [

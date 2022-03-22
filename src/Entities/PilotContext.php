@@ -8,7 +8,6 @@ use FsHub\Sdk\Types\CastableEntity;
 
 class PilotContext implements PilotInterface
 {
-
     use CastableEntity;
 
     /**

@@ -4,7 +4,6 @@ namespace FsHub\Sdk\Contracts;
 
 interface AirportInterface
 {
-
     /**
      * The airport ICAO code.
      * @return string

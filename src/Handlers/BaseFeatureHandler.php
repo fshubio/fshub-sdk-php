@@ -7,7 +7,7 @@ use FsHub\Sdk\Exceptions\ContextNotSetException;
 
 class BaseFeatureHandler
 {
-    protected FsHubConnectorInterface $_connector;
+    protected FsHubConnectorInterface $connector;
 
     private const ERROR_MESSAGE = "No context has been set, use the Select(x) fluent method to set/select a context!";
 
@@ -34,5 +34,4 @@ class BaseFeatureHandler
             throw new ContextNotSetException(self::ERROR_MESSAGE);
         }
     }
-
 }

@@ -4,7 +4,6 @@ namespace FsHub\Sdk\Payloads;
 
 class FlightUpdated
 {
-
     /**
      * The webhook event variant - this is the variation trigger type (eg. User or Airline) action triggered.
      * @var string
@@ -23,7 +22,7 @@ class FlightUpdated
      * @var FlightCompletedData
      */
     public readonly FlightCompletedData $data;
-    
+
     public static function fromJson(string $json): FlightUpdated
     {
 

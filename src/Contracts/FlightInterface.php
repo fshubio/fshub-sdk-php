@@ -4,7 +4,6 @@ namespace FsHub\Sdk\Contracts;
 
 interface FlightInterface
 {
-
     /**
      * The Flight ID.
      * @return int

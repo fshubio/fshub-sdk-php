@@ -4,6 +4,6 @@ namespace FsHub\Sdk\Types;
 
 enum WebhookVariant
 {
-    case User;
-    case Airline;
-}
+case User;
+case Airline;
+    }

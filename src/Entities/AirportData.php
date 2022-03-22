@@ -6,7 +6,6 @@ use FsHub\Sdk\Types\LatLng;
 
 class AirportData
 {
-
     /**
      * The Airport ICAO code.
      * @var string
@@ -81,7 +80,5 @@ class AirportData
         foreach ($data['runways'] as $runway) {
             $this->runways[] = Runway::fromArray($runway);
         }
-
-
     }
 }
