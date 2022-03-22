@@ -24,14 +24,13 @@ class FlightDeparted
      */
     public readonly FlightDepartedData $data;
 
-
     public static function fromJson(string $json): FlightDeparted
     {
         $flight = new FlightDeparted();
         $data = json_decode($json, true);
 
-        $flight->variant = $data['_variant'];
         $flight->sent = $data['_sent'];
+        $flight->variant = $data['_variant'];
 
         $casted = new FlightDepartedData();
         $casted->fromArray($data['_data']);

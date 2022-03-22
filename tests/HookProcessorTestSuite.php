@@ -24,6 +24,107 @@ class HookProcessorTestSuite extends TestCase
         $this->assertEquals("Thursday, 24 February 2022", $processor->eventTime->format("l, j F Y"));
     }
 
+    public function testFlightADeparted()
+    {
+
+        $webhook = new TestWebhookProvider(
+            WebhookVariant::User,
+            WebhookEvent::FlightDeparted,
+            1645553364,
+            "Webhooks/1645553364_6499.json"
+        );
+
+        $processor = new HookProcessor();
+        $processor->process($webhook);
+
+        $this->assertEquals("02/22/2022 18:09:24", $processor->eventTime->format("m/d/Y H:i:s"));
+        $this->assertEquals(WebhookEvent::FlightDeparted, $processor->eventType);
+        $this->assertEquals(WebhookVariant::User, $processor->variant);
+
+        $departure = $processor->flightDeparted();
+
+        $this->assertEquals(1645553364, $departure->sent); // Test that the RAW UNIX timestamp is returned.
+        $this->assertEquals("User", $departure->variant); // The the RAW event type is returned.
+
+        $this->assertEquals(2196919, $departure->data->id);
+
+        $this->assertEquals(2, $departure->data->pilot->GetPilotId());
+        $this->assertEquals(2, $departure->data->pilot->id);
+        $this->assertEquals("Bobby Allen", $departure->data->pilot->name);
+        $this->assertEquals("bobbyallen.uk@gmail.com", $departure->data->pilot->email);
+        $this->assertEquals("https://fshub.ams3.digitaloceanspaces.com/avatars/u_2_80.png?c=1645446821",
+            $departure->data->pilot->profile->avatarUrl);
+
+        $this->assertEquals("EGSS", $departure->data->pilot->location->base);
+        $this->assertEquals("KJFK", $departure->data->pilot->location->locale);
+
+        $this->assertNull($departure->data->pilot->handles->website);
+        $this->assertEquals("@allebb87", $departure->data->pilot->handles->twitter);
+        $this->assertNull($departure->data->pilot->handles->facebook);
+        $this->assertEquals("1167426", $departure->data->pilot->handles->vatsim);
+        $this->assertEquals("458562", $departure->data->pilot->handles->ivao);
+
+        $this->assertEquals("Europe/London", $departure->data->pilot->timezone);
+        $this->assertEquals("GB", $departure->data->pilot->country);
+
+        $this->assertEquals("C172", $departure->data->aircraft->icao);
+        $this->assertEquals("Cessna Skyhawk", $departure->data->aircraft->icaoName);
+        $this->assertEquals("Cessna Skyhawk Asobo", $departure->data->aircraft->name);
+        $this->assertEquals("TT:ATCCOM.ATC_NAME CESS", $departure->data->aircraft->type);
+
+        $this->assertEquals("G-BOBY", $departure->data->aircraft->userConf->tailNumber);
+        $this->assertEquals("C172", $departure->data->aircraft->userConf->icao);
+
+        $this->assertEquals(3, $departure->data->airline->id);
+        $this->assertEquals($departure->data->pilot, $departure->data->airline->owner);
+        $this->assertEquals("JetSetGo!", $departure->data->airline->name);
+        $this->assertEquals(
+            "\"Europe's favourite budget airline\" - The official test VA for FsHub development team! test",
+            $departure->data->airline->profile->bio);
+        $this->assertEquals(
+            "JSG",
+            $departure->data->airline->profile->abbreviation);
+        $this->assertEquals("http://fshub.io", $departure->data->airline->handles->website);
+        $this->assertNull($departure->data->airline->handles->twitter);
+        $this->assertNull($departure->data->airline->handles->facebook);
+
+        $this->assertNull($departure->data->plan);
+
+        $this->assertEquals("EGSS", $departure->data->airport->GetAirportIcao());
+        $this->assertEquals("EGSS", $departure->data->airport->icao);
+        $this->assertEquals("STN", $departure->data->airport->iata);
+        $this->assertEquals("Stansted", $departure->data->airport->name);
+        $this->assertEquals("London", $departure->data->airport->locale->city);
+        $this->assertEquals("United Kingdom", $departure->data->airport->locale->country);
+        $this->assertNull($departure->data->airport->locale->state);
+        $this->assertEquals("51.884998,0.235", (string)$departure->data->airport->locale->gps);
+
+        $this->assertEquals(-4, $departure->data->pitch);
+        $this->assertEquals(3, $departure->data->bank);
+        $this->assertEquals(68, $departure->data->speed);
+
+        $this->assertEquals(10, $departure->data->wind->speed);
+        $this->assertEquals(300, $departure->data->wind->direction);
+
+        $this->assertEquals(0, $departure->data->heading->magnetic);
+        $this->assertEquals(226, $departure->data->heading->true);
+
+        $this->assertEquals(76, $departure->data->weight->fuel);
+        $this->assertEquals(921, $departure->data->weight->zfw);
+        $this->assertEquals(997, $departure->data->weight->oew);
+
+        $this->assertEquals(51.891881, $departure->data->gps->latitude);
+        $this->assertEquals(0.245043, $departure->data->gps->longitude);
+        $this->assertEquals("{\"lat\":51.891881,\"lng\":0.245043}", $departure->data->gps->toJson());
+
+        $this->assertEquals("02/22/2022 18:09:23", $departure->data->createdAt->format("m/d/Y H:i:s"));
+
+        $this->assertEquals(2, $departure->data->pilot->getPilotId());
+        $this->assertEquals(3, $departure->data->airline->getAirlineId());
+        $this->assertEquals("EGSS", $departure->data->airport->getAirportIcao());
+
+    }
+
 
     public function testProfileUpdated()
     {
