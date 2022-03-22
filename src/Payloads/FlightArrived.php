@@ -27,8 +27,12 @@ class FlightArrived
 
     public static function fromJson(string $json): FlightArrived
     {
+
         $flight = new FlightArrived();
         $data = json_decode($json, true);
+
+        $flight->sent = $data['_sent'];
+        $flight->variant = $data['_variant'];
 
         $casted = new FlightArrivedData();
         $casted->fromArray($data['_data']);

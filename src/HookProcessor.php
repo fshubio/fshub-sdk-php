@@ -4,6 +4,7 @@ namespace FsHub\Sdk;
 
 use FsHub\Sdk\Contracts\FsHubWebhookInterface;
 use FsHub\Sdk\Exceptions\IncompatibleHookException;
+use FsHub\Sdk\Payloads\FlightArrived;
 use FsHub\Sdk\Payloads\ProfileUpdated;
 use FsHub\Sdk\Types\WebhookEvent;
 use FsHub\Sdk\Types\WebhookVariant;
@@ -112,6 +113,7 @@ class HookProcessor
     public function flightArrived(): FlightArrived
     {
         $this->requiresNamedEventType(WebhookEvent::FlightArrived);
+        return FlightArrived::fromJson($this->payload);
     }
 
     /**

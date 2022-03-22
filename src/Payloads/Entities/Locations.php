@@ -6,19 +6,21 @@ class Locations
 {
     /**
      * The pilot's home airport (base)
-     * @var string
+     * @var string|null
      */
-    public string $base;
+    public readonly string $base;
 
     /**
      * The pilot's last known location (where they last landed)
      * @var string|null
      */
-    public ?string $locale;
+    public readonly ?string $locale;
 
-    public function fromArray(array $data)
+    public function fromArray(array $data): Locations
     {
-        $this->base = isset($data['base']) ? $data['base'] : null;
-        $this->locale = isset($data['locale']) ? $data['locale'] : null;
+        $this->base = $data['base'] ?? null;
+        $this->locale = $data['locale'] ?? null;
+
+        return $this;
     }
 }

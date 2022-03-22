@@ -2,7 +2,14 @@
 
 namespace FsHub\Sdk\Payloads;
 
-
+use FsHub\Sdk\Payloads\Entities\Aircraft;
+use FsHub\Sdk\Payloads\Entities\Airline;
+use FsHub\Sdk\Payloads\Entities\Airport;
+use FsHub\Sdk\Payloads\Entities\FlightPlan;
+use FsHub\Sdk\Payloads\Entities\Heading;
+use FsHub\Sdk\Payloads\Entities\User;
+use FsHub\Sdk\Payloads\Entities\Weight;
+use FsHub\Sdk\Payloads\Entities\Wind;
 use FsHub\Sdk\Types\LatLng;
 
 class FlightArrivedData
@@ -45,7 +52,7 @@ class FlightArrivedData
     public readonly ?Airport $airport;
 
     /**
-     * The arrival landing rate (in feet per minute)
+     * The arrival landing rate (in feet per minute).
      * @var int
      */
     public readonly int $landingRate;
@@ -70,9 +77,9 @@ class FlightArrivedData
 
     /**
      * The aircraft's heading at touchdown.
-     * @var int
+     * @var Heading
      */
-    public readonly int $heading;
+    public readonly Heading $heading;
 
     /**
      * Wind characteristics at touchdown.
@@ -93,22 +100,35 @@ class FlightArrivedData
     public readonly LatLng $gps;
 
     /**
-     * The date and time of the arrival (touchdown)
+     * The date and time of the arrival (touchdown).
      * @var \DateTime
      */
     public readonly \DateTime $createdAt;
 
-    public function fromArray(string $json)
+    public function fromArray(array $data)
     {
-        $data = json_decode($json, true);
-        $this->id = $data['_data']['id'];
+        $this->id = $data['id'];
 
-        $this->landingRate = $data['_data']['landing_rate'];
-        $this->pitch = $data['_data']['pitch'];
-        $this->bank = $data['_data']['bank'];
-        $this->speed = $data['_data']['speed_tas'];
-        $this->heading = $data['_data']['heading'];
-        $this->createdAt = new \DateTime($data['_data']['datetime']);
+        $this->pilot = (new User())->fromArray($data['user']);
+        $this->aircraft = (new Aircraft())->fromArray($data['aircraft']);
+        $this->airline = (new Airline())->fromArray($data['airline']);
+        $this->plan = isset($data['plan']) ? (new FlightPlan())->fromArray($data['plan']) : null;
+        $this->airport = isset($data['airport']) ? (new Airport())->fromArray($data['airport']) : null;
+
+        $this->landingRate = $data['landing_rate'];
+        $this->pitch = $data['pitch'];
+        $this->bank = $data['bank'];
+        $this->speed = $data['speed_tas'];
+        $this->heading = (new Heading())->fromArray($data['heading']);
+        $this->wind =  (new Wind())->fromArray($data['wind']);
+        $this->weight = (new Weight())->fromArray($data['weight']);
+
+        $gps = new LatLng();
+        $gps->latitude = $data['gps']['lat'];
+        $gps->longitude = $data['gps']['lng'];
+        $this->gps = $gps;
+
+        $this->createdAt = new \DateTime($data['datetime']);
 
     }
 }

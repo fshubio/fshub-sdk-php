@@ -23,7 +23,7 @@ class Locale
      * The Country name.
      * @var string
      */
-    public string $county;
+    public string $country;
 
     /**
      * GPS representation of the location.
@@ -31,15 +31,17 @@ class Locale
      */
     public LatLng $gps;
 
-    public function fromArray(array $data)
+    public function fromArray(array $data): Locale
     {
         $this->city = isset($data['city']) ? $data['city'] : null;
         $this->state = isset($data['state']) ? $data['state'] : null;
-        $this->county = $data['country'];
+        $this->country = $data['country'];
 
         $gps = new LatLng();
         $gps->latitude = $data['gps']['lat'];
         $gps->longitude = $data['gps']['lng'];
         $this->gps = $gps;
+
+        return $this;
     }
 }
