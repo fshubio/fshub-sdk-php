@@ -39,15 +39,20 @@ class HttpConnector implements FsHubConnectorInterface
         $connectorResponse = new ConnectorResponse();
 
         $headers = [
-            'X-Pilot-Token' => $this->apiKey,
-            'User-Agent' => 'FsHub-Sdk-Php/1.0',
+            'X-Pilot-Token: ' . $this->apiKey,
+            'User-Agent: FsHub-Sdk-Php/1.0',
         ];
 
-        // @todo Make the API request to FsHub (using cURL)
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, self::BASE_API_URL . $resourceIdentifier);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        $head = curl_exec($ch);
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
 
-
-        $connectorResponse->status = 200;
-        $connectorResponse->body = "This is where the text body will got..";
+        $connectorResponse->status = $httpCode;
+        $connectorResponse->body = $head;
 
         // Validate and throw exceptions if there are any issues...
         $connectorResponse->validate();
