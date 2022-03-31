@@ -6,27 +6,12 @@ This repository contains the official PHP SDK client for the FsHub platform inte
 
 > This client library (SDK) is supported on PHP 8.1+
 
-This SDK is available to download using Composer into your own projects, the package repository can be found
-here:
+This SDK is available to download using Composer, the [official package repository](), you can install the package using your terminal by running the following command:
 
-https://tbc
-
-## Publishing the package to Packagist
-
-Publishing to Packagist is fully automatic when a new GitHub "release" is published and requires zero manual steps.
-
-## Examples
-
-```php
-<?php
-
-namespace YouProjectNamespace;
-
-use FsHub\Sdk\Client;
-
-$fshub = new Client('YOUR_API_KEY_HERE');
-
-$airport = $fshub->airport->find('EGSS');
-
-// @todo I will update example when I have completed more of the library.
+```shell
+composer install fshub/fshub-sdk-php
 ```
+
+Usage examples, tips and tricks can be found on our [official documentation page over](https://fshub.io/a/39/sdk--php) on our wiki.
+
+Further information regards our API's and platform integration information can be found on [our official website](https://fshub.io/docs/platform).
