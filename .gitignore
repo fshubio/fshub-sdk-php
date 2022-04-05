@@ -6,3 +6,4 @@ composer.phar
 Thumbs.db
 .phpunit.result.cache
 !*.yml
+.scannerwork

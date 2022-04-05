@@ -84,7 +84,7 @@ class HookProcessorTestSuite extends TestCase
         $this->assertEquals(
             "JSG",
             $departure->data->airline->profile->abbreviation);
-        $this->assertEquals("http://fshub.io", $departure->data->airline->handles->website);
+        $this->assertEquals("https://fshub.io", $departure->data->airline->handles->website);
         $this->assertNull($departure->data->airline->handles->twitter);
         $this->assertNull($departure->data->airline->handles->facebook);
 
