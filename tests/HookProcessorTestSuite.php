@@ -11,12 +11,14 @@ class HookProcessorTestSuite extends TestCase
 
     public function testBasicInstantiation()
     {
-        $processor = new HookProcessor(new TestWebhookProvider(
-            WebhookVariant::User,
-            WebhookEvent::FlightUpdated,
-            1645713143,
-            "Webhooks/FlightUpdated-1.json"
-        ));
+        $processor = new HookProcessor(
+            new TestWebhookProvider(
+                WebhookVariant::User,
+                WebhookEvent::FlightUpdated,
+                1645713143,
+                "Webhooks/FlightUpdated-1.json"
+            )
+        );
 
         $this->assertEquals(WebhookVariant::User, $processor->variant);
         $this->assertEquals(WebhookEvent::FlightUpdated, $processor->eventType);
@@ -26,7 +28,6 @@ class HookProcessorTestSuite extends TestCase
 
     public function testFlightADeparted()
     {
-
         $webhook = new TestWebhookProvider(
             WebhookVariant::User,
             WebhookEvent::FlightDeparted,
@@ -52,8 +53,10 @@ class HookProcessorTestSuite extends TestCase
         $this->assertEquals(2, $departure->data->pilot->id);
         $this->assertEquals("Bobby Allen", $departure->data->pilot->name);
         $this->assertEquals("bobbyallen.uk@gmail.com", $departure->data->pilot->email);
-        $this->assertEquals("https://fshub.ams3.digitaloceanspaces.com/avatars/u_2_80.png?c=1645446821",
-            $departure->data->pilot->profile->avatarUrl);
+        $this->assertEquals(
+            "https://fshub.ams3.digitaloceanspaces.com/avatars/u_2_80.png?c=1645446821",
+            $departure->data->pilot->profile->avatarUrl
+        );
 
         $this->assertEquals("EGSS", $departure->data->pilot->location->base);
         $this->assertEquals("KJFK", $departure->data->pilot->location->locale);
@@ -80,10 +83,12 @@ class HookProcessorTestSuite extends TestCase
         $this->assertEquals("JetSetGo!", $departure->data->airline->name);
         $this->assertEquals(
             "\"Europe's favourite budget airline\" - The official test VA for FsHub development team! test",
-            $departure->data->airline->profile->bio);
+            $departure->data->airline->profile->bio
+        );
         $this->assertEquals(
             "JSG",
-            $departure->data->airline->profile->abbreviation);
+            $departure->data->airline->profile->abbreviation
+        );
         $this->assertEquals("https://fshub.io", $departure->data->airline->handles->website);
         $this->assertNull($departure->data->airline->handles->twitter);
         $this->assertNull($departure->data->airline->handles->facebook);
@@ -122,13 +127,11 @@ class HookProcessorTestSuite extends TestCase
         $this->assertEquals(2, $departure->data->pilot->getPilotId());
         $this->assertEquals(3, $departure->data->airline->getAirlineId());
         $this->assertEquals("EGSS", $departure->data->airport->getAirportIcao());
-
     }
 
 
     public function testProfileUpdated()
     {
-
         $webhook = new TestWebhookProvider(
             WebhookVariant::User,
             WebhookEvent::ProfileUpdated,
@@ -145,14 +148,14 @@ class HookProcessorTestSuite extends TestCase
         $this->assertEquals(WebhookVariant::User, $processor->variant);
 
         $this->expectException(\FsHub\Sdk\Exceptions\IncompatibleHookException::class);
-        $this->expectExceptionMessage("Payload request for FlightDeparted is incompatible with the processed ProfileUpdated type.");
+        $this->expectExceptionMessage(
+            "Payload request for FlightDeparted is incompatible with the processed ProfileUpdated type."
+        );
         $departure = $handled->flightDeparted();
-
     }
 
     public function testProfileUpdatedProperties()
     {
-
         $processor = new HookProcessor();
         $webhook = new TestWebhookProvider(
             WebhookVariant::User,
@@ -171,10 +174,14 @@ class HookProcessorTestSuite extends TestCase
         $this->assertEquals(2, $profileUpdate->data->id);
         $this->assertEquals("Bobby Allen", $profileUpdate->data->name);
         $this->assertEquals("bobbyallen.uk@gmail.com", $profileUpdate->data->email);
-        $this->assertEquals("https://fshub.ams3.digitaloceanspaces.com/avatars/u_2_80.png?c=1645553444",
-            $profileUpdate->data->profile->avatarUrl);
-        $this->assertEquals("Developer of FSHub and the LRM Client. Airbus A320 and GA virtual pilot!",
-            $profileUpdate->data->profile->bio);
+        $this->assertEquals(
+            "https://fshub.ams3.digitaloceanspaces.com/avatars/u_2_80.png?c=1645553444",
+            $profileUpdate->data->profile->avatarUrl
+        );
+        $this->assertEquals(
+            "Developer of FSHub and the LRM Client. Airbus A320 and GA virtual pilot!",
+            $profileUpdate->data->profile->bio
+        );
 
         $this->assertEquals("EGSS", $profileUpdate->data->locations->base);
         $this->assertEquals("EGSS", $profileUpdate->data->locations->locale);
@@ -214,11 +221,14 @@ class HookProcessorTestSuite extends TestCase
         $this->assertEquals(2558, $arrival->data->pilot->id);
         $this->assertEquals("thunfischbaum", $arrival->data->pilot->name);
         $this->assertEquals("fshub@thunfischbaum.de", $arrival->data->pilot->email);
-        $this->assertEquals("https://fshub.ams3.digitaloceanspaces.com/avatars/u_2558_80.png?c=1645611016",
-            $arrival->data->pilot->profile->avatarUrl);
+        $this->assertEquals(
+            "https://fshub.ams3.digitaloceanspaces.com/avatars/u_2558_80.png?c=1645611016",
+            $arrival->data->pilot->profile->avatarUrl
+        );
         $this->assertEquals(
             "You might see this Bio Text update from time to time. If so, I'm just testing my Webhook integration. :D\r\nTesting the webhook rn. again.test test test",
-            $arrival->data->pilot->profile->bio);
+            $arrival->data->pilot->profile->bio
+        );
 
         $this->assertEquals("EDDH", $arrival->data->pilot->location->base);
         $this->assertEquals("EGPD", $arrival->data->pilot->location->locale);
@@ -245,11 +255,13 @@ class HookProcessorTestSuite extends TestCase
         $this->assertEquals("FlyFuwu", $arrival->data->airline->name);
         $this->assertEquals(
             "Welcome to the FlyFuwu Airline. \r\nThis is the place where you pay low and we fly high!\r\nWe take you all around the work in all types of aircraft. \r\nTake your seat, fasten your seatbelt and enjoy the flight!",
-            $arrival->data->airline->profile->bio);
+            $arrival->data->airline->profile->bio
+        );
         $this->assertEquals(
             "FUW",
-            $arrival->data->airline->profile->abbreviation);
-        $this->assertEquals("http://flyfuwu.de", $arrival->data->airline->handles->website);
+            $arrival->data->airline->profile->abbreviation
+        );
+        $this->assertEquals("https://flyfuwu.de", $arrival->data->airline->handles->website);
         $this->assertEquals("https://twitter.com/thunfischbaum", $arrival->data->airline->handles->twitter);
         $this->assertNull($arrival->data->airline->handles->facebook);
 
@@ -277,8 +289,10 @@ class HookProcessorTestSuite extends TestCase
 
         $this->assertEquals(9254, $arrival->data->weight->fuel);
         $this->assertEquals(69382, $arrival->data->weight->zfw);
-        $this->assertEquals($arrival->data->weight->fuel + $arrival->data->weight->zfw,
-            $arrival->data->weight->oew);
+        $this->assertEquals(
+            $arrival->data->weight->fuel + $arrival->data->weight->zfw,
+            $arrival->data->weight->oew
+        );
 
         $this->assertEquals(39.554392, $arrival->data->gps->latitude);
         $this->assertEquals(2.726016, $arrival->data->gps->longitude);
@@ -289,12 +303,10 @@ class HookProcessorTestSuite extends TestCase
         $this->assertEquals(2558, $arrival->data->pilot->GetPilotId());
         $this->assertEquals(851, $arrival->data->airline->GetAirlineId());
         $this->assertEquals("LEPA", $arrival->data->airport->GetAirportIcao());
-
     }
 
     public function testFlightCompleted()
     {
-
         $webhook = new TestWebhookProvider(
             WebhookVariant::User,
             WebhookEvent::FlightCompleted,
@@ -318,10 +330,14 @@ class HookProcessorTestSuite extends TestCase
         $this->assertEquals(2, $flight->data->pilot->id);
         $this->assertEquals("Bobby Allen", $flight->data->pilot->name);
         $this->assertEquals("bobbyallen.uk@gmail.com", $flight->data->pilot->email);
-        $this->assertEquals("https://fshub.ams3.digitaloceanspaces.com/avatars/u_2_80.png?c=1647768872",
-            $flight->data->pilot->profile->avatarUrl);
-        $this->assertEquals("Developer of FsHub and the LRM Client. Airbus and GA virtual pilot!",
-            $flight->data->pilot->profile->bio);
+        $this->assertEquals(
+            "https://fshub.ams3.digitaloceanspaces.com/avatars/u_2_80.png?c=1647768872",
+            $flight->data->pilot->profile->avatarUrl
+        );
+        $this->assertEquals(
+            "Developer of FsHub and the LRM Client. Airbus and GA virtual pilot!",
+            $flight->data->pilot->profile->bio
+        );
 
         $this->assertEquals("EGSS", $flight->data->pilot->location->base);
         $this->assertEquals("NZQN", $flight->data->pilot->location->locale);
@@ -335,7 +351,9 @@ class HookProcessorTestSuite extends TestCase
         $this->assertEquals("Europe/London", $flight->data->pilot->timezone);
         $this->assertEquals("GB", $flight->data->pilot->country);
 
-        $this->assertNull($flight->data->airline); // No airline was set for this flight, was logged as a "Personal Flight".
+        $this->assertNull(
+            $flight->data->airline
+        ); // No airline was set for this flight, was logged as a "Personal Flight".
         $this->assertNull($flight->data->plan); // No flight plan was added for this flight.
 
         $this->assertEquals(55, $flight->data->distance->nauticalMiles);
@@ -345,8 +363,12 @@ class HookProcessorTestSuite extends TestCase
         $this->assertEquals(175, $flight->data->max->speed);
         $this->assertEquals(15, $flight->data->fuelUsed);
 
-        $this->assertTrue(str_contains($flight->data->geoJson,
-            "[749,786,1051,1322,1603,1878,2149,2422,2687,2951,3210,3477,3743,4012,4283,4551"));
+        $this->assertTrue(
+            str_contains(
+                $flight->data->geoJson,
+                "[749,786,1051,1322,1603,1878,2149,2422,2687,2951,3210,3477,3743,4012,4283,4551"
+            )
+        );
         $this->assertNull($flight->data->remarks);
         $this->assertNull($flight->data->tags);
 
@@ -356,12 +378,10 @@ class HookProcessorTestSuite extends TestCase
         // Generally we have already fully tested the Arrival and Departure entities so we'll just check the ICAO codes here only...
         $this->assertEquals("NZMO", $departure->airport->icao);
         $this->assertEquals("NZQN", $arrival->airport->icao);
-
     }
 
     public function testFlightUpdated()
     {
-
         $webhook = new TestWebhookProvider(
             WebhookVariant::User,
             WebhookEvent::FlightUpdated,
@@ -385,10 +405,14 @@ class HookProcessorTestSuite extends TestCase
         $this->assertEquals(2385, $flight->data->pilot->id);
         $this->assertEquals("Clorix", $flight->data->pilot->name);
         $this->assertEquals("clorix1@gmail.com", $flight->data->pilot->email);
-        $this->assertEquals("https://fshub.ams3.digitaloceanspaces.com/avatars/u_2385_80.png?c=1647556833",
-            $flight->data->pilot->profile->avatarUrl);
-        $this->assertEquals("FsHub/LRM Community Manager and Support.  I've most recently been enjoying flying the Daher Kodiak 100 in MSFS.  You'll almost always find me in a GA aircraft of some kind.  Always looking for scenic places to go flying!",
-            $flight->data->pilot->profile->bio);
+        $this->assertEquals(
+            "https://fshub.ams3.digitaloceanspaces.com/avatars/u_2385_80.png?c=1647556833",
+            $flight->data->pilot->profile->avatarUrl
+        );
+        $this->assertEquals(
+            "FsHub/LRM Community Manager and Support.  I've most recently been enjoying flying the Daher Kodiak 100 in MSFS.  You'll almost always find me in a GA aircraft of some kind.  Always looking for scenic places to go flying!",
+            $flight->data->pilot->profile->bio
+        );
 
         $this->assertEquals("KFSM", $flight->data->pilot->location->base);
         $this->assertEquals("KFSM", $flight->data->pilot->location->locale);
@@ -402,7 +426,9 @@ class HookProcessorTestSuite extends TestCase
         $this->assertEquals("America/Chicago", $flight->data->pilot->timezone);
         $this->assertEquals("US", $flight->data->pilot->country);
 
-        $this->assertNull($flight->data->airline); // No airline was set for this flight, was logged as a "Personal Flight".
+        $this->assertNull(
+            $flight->data->airline
+        ); // No airline was set for this flight, was logged as a "Personal Flight".
         $this->assertNull($flight->data->plan); // No flight plan was added for this flight.
 
         $this->assertEquals(26, $flight->data->distance->nauticalMiles);
@@ -413,10 +439,14 @@ class HookProcessorTestSuite extends TestCase
         $this->assertEquals(8, $flight->data->fuelUsed);
 
         $this->assertTrue(str_contains($flight->data->chartJson, "\"coordinates\":[-94.364708,35.342123]}"));
-        $this->assertEquals("First test flight using my new PC build.  Seems to work about as well as my old computer, but I mostly expected that since I'm still using the very same GPU from that build.  LRM and my other flight sim apps seem to work okay so far as well!",
-            $flight->data->remarks);
-        $this->assertEquals("Microsoft Flight Simulator,MFS,MSFS,FS2020,MFS2020,MSFS2020,Microsoft Flight Simulator 2020,2020,c172,cessna 172,skyhawk,g1000,garmin g1000,KFSM,Fort Smith Regional Airport,Fort Smith,Arkansas,United States,wind,gusts,wind gusts,gusty,ILS,approach,cat i approach,cat i,cat i ils,cat i ils approach,cat 1,category 1,category i,visual,greased it,butter,greaser,amazing landing,landing",
-            $flight->data->tags);
+        $this->assertEquals(
+            "First test flight using my new PC build.  Seems to work about as well as my old computer, but I mostly expected that since I'm still using the very same GPU from that build.  LRM and my other flight sim apps seem to work okay so far as well!",
+            $flight->data->remarks
+        );
+        $this->assertEquals(
+            "Microsoft Flight Simulator,MFS,MSFS,FS2020,MFS2020,MSFS2020,Microsoft Flight Simulator 2020,2020,c172,cessna 172,skyhawk,g1000,garmin g1000,KFSM,Fort Smith Regional Airport,Fort Smith,Arkansas,United States,wind,gusts,wind gusts,gusty,ILS,approach,cat i approach,cat i,cat i ils,cat i ils approach,cat 1,category 1,category i,visual,greased it,butter,greaser,amazing landing,landing",
+            $flight->data->tags
+        );
 
         $arrival = $flight->data->arrival;
         $departure = $flight->data->departure;
@@ -424,7 +454,6 @@ class HookProcessorTestSuite extends TestCase
         // Generally we have already fully tested the Arrival and Departure entities so we'll just check the ICAO codes here only...
         $this->assertEquals("KFSM", $departure->airport->icao);
         $this->assertEquals("KFSM", $arrival->airport->icao);
-
     }
 
 
