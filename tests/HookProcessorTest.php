@@ -9,6 +9,8 @@ use PHPUnit\Framework\TestCase;
 class HookProcessorTest extends TestCase
 {
 
+    private const DEFAULT_TIME_FORMAT = "m/d/Y H:i:s";
+
     public function testBasicInstantiation()
     {
         $processor = new HookProcessor(
@@ -38,7 +40,7 @@ class HookProcessorTest extends TestCase
         $processor = new HookProcessor();
         $processor->process($webhook);
 
-        $this->assertEquals("02/22/2022 18:09:24", $processor->eventTime->format("m/d/Y H:i:s"));
+        $this->assertEquals("02/22/2022 18:09:24", $processor->eventTime->format(self::DEFAULT_TIME_FORMAT));
         $this->assertEquals(WebhookEvent::FlightDeparted, $processor->eventType);
         $this->assertEquals(WebhookVariant::User, $processor->variant);
 
@@ -122,7 +124,7 @@ class HookProcessorTest extends TestCase
         $this->assertEquals(0.245043, $departure->data->gps->longitude);
         $this->assertEquals("{\"lat\":51.891881,\"lng\":0.245043}", $departure->data->gps->toJson());
 
-        $this->assertEquals("02/22/2022 18:09:23", $departure->data->createdAt->format("m/d/Y H:i:s"));
+        $this->assertEquals("02/22/2022 18:09:23", $departure->data->createdAt->format(self::DEFAULT_TIME_FORMAT));
 
         $this->assertEquals(2, $departure->data->pilot->getPilotId());
         $this->assertEquals(3, $departure->data->airline->getAirlineId());
@@ -143,7 +145,7 @@ class HookProcessorTest extends TestCase
 
         $handled = $processor->process($webhook);
 
-        $this->assertEquals("02/22/2022 18:10:46", $processor->eventTime->format("m/d/Y H:i:s"));
+        $this->assertEquals("02/22/2022 18:10:46", $processor->eventTime->format(self::DEFAULT_TIME_FORMAT));
         $this->assertEquals(WebhookEvent::ProfileUpdated, $processor->eventType);
         $this->assertEquals(WebhookVariant::User, $processor->variant);
 
@@ -208,7 +210,7 @@ class HookProcessorTest extends TestCase
 
         $processor->process($webhook);
 
-        $this->assertEquals("02/23/2022 10:30:37", $processor->eventTime->format("m/d/Y H:i:s"));
+        $this->assertEquals("02/23/2022 10:30:37", $processor->eventTime->format(self::DEFAULT_TIME_FORMAT));
         $this->assertEquals(WebhookEvent::FlightArrived, $processor->eventType);
         $this->assertEquals(WebhookVariant::Airline, $processor->variant);
 
@@ -298,7 +300,7 @@ class HookProcessorTest extends TestCase
         $this->assertEquals(2.726016, $arrival->data->gps->longitude);
         $this->assertEquals("{\"lat\":39.554392,\"lng\":2.726016}", $arrival->data->gps->toJson());
 
-        $this->assertEquals("02/23/2022 10:30:35", $arrival->data->createdAt->format("m/d/Y H:i:s"));
+        $this->assertEquals("02/23/2022 10:30:35", $arrival->data->createdAt->format(self::DEFAULT_TIME_FORMAT));
 
         $this->assertEquals(2558, $arrival->data->pilot->GetPilotId());
         $this->assertEquals(851, $arrival->data->airline->GetAirlineId());
@@ -316,7 +318,7 @@ class HookProcessorTest extends TestCase
 
         $processor = new HookProcessor($webhook);
 
-        $this->assertEquals("03/20/2022 09:34:35", $processor->eventTime->format("m/d/Y H:i:s"));
+        $this->assertEquals("03/20/2022 09:34:35", $processor->eventTime->format(self::DEFAULT_TIME_FORMAT));
         $this->assertEquals(WebhookEvent::FlightCompleted, $processor->eventType);
         $this->assertEquals(WebhookVariant::User, $processor->variant);
 
@@ -391,7 +393,7 @@ class HookProcessorTest extends TestCase
 
         $processor = new HookProcessor($webhook);
 
-        $this->assertEquals("03/20/2022 09:34:35", $processor->eventTime->format("m/d/Y H:i:s"));
+        $this->assertEquals("03/20/2022 09:34:35", $processor->eventTime->format(self::DEFAULT_TIME_FORMAT));
         $this->assertEquals(WebhookEvent::FlightUpdated, $processor->eventType);
         $this->assertEquals(WebhookVariant::User, $processor->variant);
 

@@ -39,6 +39,8 @@ class Weight
         switch ($propertyName) {
             case "oew":
                 return $this->getOperatingEmptyWeight();
+            default:
+                return 0; // Default to zero for now...
         }
     }
 

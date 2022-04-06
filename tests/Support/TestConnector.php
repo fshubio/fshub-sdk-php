@@ -7,6 +7,9 @@ use FsHub\Sdk\Contracts\FsHubConnectorInterface;
 
 class TestConnector implements FsHubConnectorInterface
 {
+
+    private const RQST_CONTENT_TYPE = "application/json";
+
     public function get(string $resourceIdentifier): ConnectorResponse
     {
         return match ($resourceIdentifier) {
@@ -63,7 +66,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 200;
         $response->body = FixtureReader::Read("Pilots/PilotContext.json");
@@ -81,7 +84,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 200;
         $response->body = FixtureReader::Read("Pilots/Pilot-{$id}.json");
@@ -98,7 +101,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 200;
         $response->body = FixtureReader::Read("Pilots/Pilots-Cursor{$page}.json");
@@ -115,7 +118,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 200;
         $response->body = FixtureReader::Read("Airports/Airport-{$icao}.json");
@@ -132,7 +135,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 200;
         $response->body = FixtureReader::Read("Airports/Airport-{$icao}-Departure.json");
@@ -149,7 +152,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 200;
         $response->body = FixtureReader::Read("Airports/Airport-{$icao}-Arrival.json");
@@ -166,7 +169,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 200;
         $response->body = FixtureReader::Read("Airports/Airport-{$icao}-ArrivalsFrom-{$arrival}.json");
@@ -183,7 +186,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 200;
         $response->body = FixtureReader::Read("Airports/Airport-{$icao}-DepartingTo-{$departure}.json");
@@ -200,7 +203,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 200;
         $response->body = FixtureReader::Read("Airlines/Airline-{$id}.json");
@@ -217,7 +220,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 200;
         $response->body = FixtureReader::Read("Airlines/Airline-{$id}-Stats.json");
@@ -234,7 +237,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 200;
         $response->body = FixtureReader::Read("Airlines/Airlines-Cursor{$page}.json");
@@ -251,7 +254,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 200;
         $response->body = FixtureReader::Read("Flights/Flight-{$id}.json");
@@ -268,7 +271,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 200;
         $response->body = FixtureReader::Read("Flights/Flights-Cursor{$cursor}.json");
@@ -285,7 +288,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 200;
         $response->body = FixtureReader::Read("Airports/Airport-{$icao}-Metar.json");
@@ -302,7 +305,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 200;
         $response->body = FixtureReader::Read("Airlines/Airline-{$id}-Pilot.json");
@@ -319,7 +322,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 200;
         $response->body = FixtureReader::Read("Airlines/Airline-{$id}-Departure-{$icao}.json");
@@ -336,7 +339,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 200;
         $response->body = FixtureReader::Read("Airlines/Airline-{$id}-Arrivial-{$icao}.json");
@@ -353,7 +356,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 200;
         $response->body = FixtureReader::Read("Airlines/Airline-{$id}-Screenshots.json");
@@ -370,7 +373,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 200;
         $response->body = FixtureReader::Read("Airlines/Airline-{$id}-Depart-{$departure}-Arrive-{$arrival}.json");
@@ -387,7 +390,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 404;
         $response->body = FixtureReader::Read("Airlines/Airline-{$id}-Depart-{$departure}-Arrive-{$arrival}.json");
@@ -404,7 +407,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 200;
         $response->body = FixtureReader::Read("Flights/Flight-{$id}-Screenshots.json");
@@ -421,7 +424,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 200;
         $response->body = FixtureReader::Read("Pilots/Pilot-{$id}-Flights.json");
@@ -438,7 +441,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 200;
         $response->body = FixtureReader::Read("Pilots/Pilot-{$id}-Airlines.json");
@@ -455,7 +458,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 200;
         $response->body = FixtureReader::Read("Pilots/Pilot-{$id}-Stats.json");
@@ -472,7 +475,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 200;
         $response->body = FixtureReader::Read("Pilots/Pilot-{$id}-Flights-Departing-{$icao}.json");
@@ -489,7 +492,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 200;
         $response->body = FixtureReader::Read("Pilots/Pilot-{$id}-Flights-Arriving-{$icao}.json");
@@ -506,7 +509,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 200;
         $response->body = FixtureReader::Read("Pilots/Pilot-{$id}-Flights-Departing-{$departure}-Arriving-{$arrival}.json");
@@ -523,7 +526,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 401;
         $response->body = FixtureReader::Read("General/Invalid-API-Token.json");
@@ -540,7 +543,7 @@ class TestConnector implements FsHubConnectorInterface
         $response->meta = [
             'X-RateLimit-Limit' => '100',
             'X-RateLimit-Remaining' => '99',
-            'Context-Type' => 'application/json',
+            'Context-Type' => self::RQST_CONTENT_TYPE,
         ];
         $response->status = 429;
         $response->body = FixtureReader::Read("General/Too-Many-Requests.json");
