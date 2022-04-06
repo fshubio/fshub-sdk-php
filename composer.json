@@ -1,6 +1,6 @@
 {
   "name": "fshub/sdk",
-  "description": "The official FsHub SDK (API Client).",
+  "description": "The official PHP SDK for FsHub.",
   "type": "library",
   "keywords": [
     "fshub",
