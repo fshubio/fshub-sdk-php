@@ -6,7 +6,7 @@ use FsHub\Sdk\Types\WebhookEvent;
 use FsHub\Sdk\Types\WebhookVariant;
 use PHPUnit\Framework\TestCase;
 
-class HookProcessorTestSuite extends TestCase
+class HookProcessorTest extends TestCase
 {
 
     public function testBasicInstantiation()

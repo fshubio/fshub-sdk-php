@@ -14,4 +14,4 @@ composer install fshub/sdk
 
 Usage examples, tips and tricks can be found on our [official documentation page over](https://fshub.io/a/39/sdk--php) on our wiki.
 
-Further information regards our API's and platform integration information can be found on [our official website](https://fshub.io/docs/platform).
+Further information regards our API's and platform integration information can be found on the [official website](https://fshub.io/docs/platform).
